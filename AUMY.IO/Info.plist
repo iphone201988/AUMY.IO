@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>UIUserInterfaceStyle</key>
+        <string>Light</string>
+        <key>UIApplicationSceneManifest</key>
+        <dict>
+            <key>UIApplicationSupportsMultipleScenes</key>
+            <false/>
+            <key>UISceneConfigurations</key>
+            <dict>
+                <key>UIWindowSceneSessionRoleApplication</key>
+                <array>
+                    <dict>
+                        <key>UISceneConfigurationName</key>
+                        <string>Default Configuration</string>
+                        <key>UISceneDelegateClassName</key>
+                        <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                        <key>UISceneStoryboardFile</key>
+                        <string>Main</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+        
+        <key>UIAppFonts</key>
+        <array>
+            <!-- Inter Thin -->
+            <string>InterDisplay-Thin.ttf</string>
+            <string>InterDisplay-ThinItalic.ttf</string>
+            
+            <!-- Inter ExtraLight -->
+            <string>InterDisplay-ExtraLight.ttf</string>
+            <string>InterDisplay-ExtraLightItalic.ttf</string>
+            
+            <!-- Inter Light -->
+            <string>Inter-Light.ttf</string>
+            <string>Inter-LightItalic.ttf</string>
+            
+            <!-- Inter Regular -->
+            <string>Inter-Regular.ttf</string>
+            <string>Inter-Italic.ttf</string>
+            
+            <!-- Inter Medium -->
+            <string>Inter-Medium.ttf</string>
+            <string>Inter-MediumItalic.ttf</string>
+            
+            <!-- Inter SemiBold -->
+            <string>Inter-SemiBold.ttf</string>
+            <string>Inter-SemiBoldItalic.ttf</string>
+            
+            <!-- Inter Bold -->
+            <string>Inter-Bold.ttf</string>
+            <string>Inter-BoldItalic.ttf</string>
+            
+            <!-- Inter ExtraBold -->
+            <string>Inter-ExtraBold.ttf</string>
+            <string>Inter-ExtraBoldItalic.ttf</string>
+            
+            <!-- Inter Black -->
+            <string>Inter-Black.ttf</string>
+            <string>Inter-BlackItalic.ttf</string>
+        </array>
+        
+    </dict>
+</plist>

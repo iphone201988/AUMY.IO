@@ -1,0 +1,16 @@
+PODS:
+  - DTTextField (0.7.0)
+
+DEPENDENCIES:
+  - DTTextField
+
+SPEC REPOS:
+  trunk:
+    - DTTextField
+
+SPEC CHECKSUMS:
+  DTTextField: 768d5991211599145f289971e5936f8bb29990bb
+
+PODFILE CHECKSUM: 5fe86915baf806a1bbbaad595d5d1c6b8aa32ebb
+
+COCOAPODS: 1.16.2
