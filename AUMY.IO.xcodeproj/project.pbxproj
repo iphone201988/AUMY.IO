@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B8DBCCD2E9388E8005F8231 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCCB2E9388E8005F8231 /* OptionCell.swift */; };
+		8B8DBCCE2E9388E8005F8231 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8DBCCC2E9388E8005F8231 /* OptionCell.xib */; };
+		8B8DBCD02E9392DF005F8231 /* BookingDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */; };
+		8B8DBCD22E93B84B005F8231 /* RescheduleBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */; };
+		8B8DBCD52E93BB15005F8231 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCD32E93BB15005F8231 /* DateCell.swift */; };
+		8B8DBCD62E93BB15005F8231 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8DBCD42E93BB15005F8231 /* DateCell.xib */; };
+		8B8DBCD92E93C122005F8231 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCD72E93C122005F8231 /* TimeCell.swift */; };
+		8B8DBCDA2E93C122005F8231 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8DBCD82E93C122005F8231 /* TimeCell.xib */; };
+		8B8DBCDC2E93C5E7005F8231 /* CancelBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */; };
+		8B8DBCDF2E93C7FF005F8231 /* ReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCDD2E93C7FF005F8231 /* ReasonCell.swift */; };
+		8B8DBCE02E93C7FF005F8231 /* ReasonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8DBCDE2E93C7FF005F8231 /* ReasonCell.xib */; };
+		8B8DBCE22E93CD99005F8231 /* CancelConfirmPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCE12E93CD99005F8231 /* CancelConfirmPopupVC.swift */; };
+		8B8DBCE42E93D1BC005F8231 /* RescheduledBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */; };
+		8B8DBCE62E93D77B005F8231 /* CompletedBookingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */; };
+		8B8DBCE92E93EFB0005F8231 /* SettingOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DBCE72E93EFB0005F8231 /* SettingOptionCell.swift */; };
+		8B8DBCEA2E93EFB0005F8231 /* SettingOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8DBCE82E93EFB0005F8231 /* SettingOptionCell.xib */; };
 		8B97E7B02E8F8B2C006C5F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B97E7A72E8F8B2C006C5F30 /* Assets.xcassets */; };
 		8B97E7B22E8F8B2C006C5F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B97E7AA2E8F8B2C006C5F30 /* LaunchScreen.storyboard */; };
 		8B97E7B32E8F8B2C006C5F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B97E7AC2E8F8B2C006C5F30 /* Main.storyboard */; };
@@ -208,6 +224,22 @@
 		1F722A850D71B9FE10181645 /* Pods-AUMY.IO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUMY.IO.debug.xcconfig"; path = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO.debug.xcconfig"; sourceTree = "<group>"; };
 		299CD0D9EA9D00F3BA2F8FE3 /* Pods_AUMY_IO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUMY_IO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A4056D61E18A28D13A0325 /* Pods-AUMY.IO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUMY.IO.release.xcconfig"; path = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO.release.xcconfig"; sourceTree = "<group>"; };
+		8B8DBCCB2E9388E8005F8231 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+		8B8DBCCC2E9388E8005F8231 /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
+		8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsVC.swift; sourceTree = "<group>"; };
+		8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescheduleBookingVC.swift; sourceTree = "<group>"; };
+		8B8DBCD32E93BB15005F8231 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		8B8DBCD42E93BB15005F8231 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		8B8DBCD72E93C122005F8231 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		8B8DBCD82E93C122005F8231 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
+		8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBookingVC.swift; sourceTree = "<group>"; };
+		8B8DBCDD2E93C7FF005F8231 /* ReasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonCell.swift; sourceTree = "<group>"; };
+		8B8DBCDE2E93C7FF005F8231 /* ReasonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReasonCell.xib; sourceTree = "<group>"; };
+		8B8DBCE12E93CD99005F8231 /* CancelConfirmPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmPopupVC.swift; sourceTree = "<group>"; };
+		8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescheduledBookingVC.swift; sourceTree = "<group>"; };
+		8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedBookingDetails.swift; sourceTree = "<group>"; };
+		8B8DBCE72E93EFB0005F8231 /* SettingOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingOptionCell.swift; sourceTree = "<group>"; };
+		8B8DBCE82E93EFB0005F8231 /* SettingOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingOptionCell.xib; sourceTree = "<group>"; };
 		8B97E78E2E8F8B21006C5F30 /* AUMY.IO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUMY.IO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B97E7A62E8F8B2C006C5F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B97E7A72E8F8B2C006C5F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -445,8 +477,10 @@
 				8B97E8A72E8F90C6006C5F30 /* AppVault.plist */,
 				8B97E7A82E8F8B2C006C5F30 /* Info.plist */,
 				8B97EBAE2E8FDB53006C5F30 /* AccountCreatedVC.swift */,
+				8B8DBCE12E93CD99005F8231 /* CancelConfirmPopupVC.swift */,
 				8B97E7A62E8F8B2C006C5F30 /* AppDelegate.swift */,
 				8B97EBB42E8FDF1A006C5F30 /* BookingsVC.swift */,
+				8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */,
 				8B97EBAC2E8FCD44006C5F30 /* HomeAddressVC.swift */,
 				8B97EBB02E8FDEF0006C5F30 /* HomeVC.swift */,
 				8B97EBAA2E8FCA6A006C5F30 /* LocationPermissionVC.swift */,
@@ -458,12 +492,16 @@
 				8B97E8A92E8F90E4006C5F30 /* VaultInfo.swift */,
 				8B97EBA82E8FC465006C5F30 /* VerifyOTPVC.swift */,
 				8B97E7AE2E8F8B2C006C5F30 /* ViewController.swift */,
+				8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */,
+				8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */,
 				8B97EBB82E8FDFCD006C5F30 /* TabbarsVC.swift */,
 				8B97E7A72E8F8B2C006C5F30 /* Assets.xcassets */,
 				8B97EA7E2E8F92D5006C5F30 /* Inter-4.1 */,
 				8B97E7AA2E8F8B2C006C5F30 /* LaunchScreen.storyboard */,
 				8B97E7AC2E8F8B2C006C5F30 /* Main.storyboard */,
 				8B97EB6B2E8FACB4006C5F30 /* SharedComponents */,
+				8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */,
+				8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */,
 			);
 			path = AUMY.IO;
 			sourceTree = "<group>";
@@ -726,14 +764,24 @@
 		8B97EBC72E8FF0B1006C5F30 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				8B8DBCD32E93BB15005F8231 /* DateCell.swift */,
 				8B97EBC32E8FF0B1006C5F30 /* HeaderCell.swift */,
-				8B97EBC42E8FF0B1006C5F30 /* HeaderCell.xib */,
-				8B97EBC52E8FF0B1006C5F30 /* ServiceCell.swift */,
-				8B97EBC62E8FF0B1006C5F30 /* ServiceCell.xib */,
-				8B97EBCC2E8FF8C6006C5F30 /* TaskCell.swift */,
-				8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */,
+				8B8DBCCB2E9388E8005F8231 /* OptionCell.swift */,
 				8B97EBD02E8FFAFB006C5F30 /* PopularServiceCell.swift */,
+				8B8DBCDD2E93C7FF005F8231 /* ReasonCell.swift */,
+				8B97EBC52E8FF0B1006C5F30 /* ServiceCell.swift */,
+				8B8DBCE72E93EFB0005F8231 /* SettingOptionCell.swift */,
+				8B97EBCC2E8FF8C6006C5F30 /* TaskCell.swift */,
+				8B8DBCD72E93C122005F8231 /* TimeCell.swift */,
+				8B8DBCD42E93BB15005F8231 /* DateCell.xib */,
+				8B97EBC42E8FF0B1006C5F30 /* HeaderCell.xib */,
+				8B8DBCCC2E9388E8005F8231 /* OptionCell.xib */,
 				8B97EBD12E8FFAFB006C5F30 /* PopularServiceCell.xib */,
+				8B8DBCDE2E93C7FF005F8231 /* ReasonCell.xib */,
+				8B97EBC62E8FF0B1006C5F30 /* ServiceCell.xib */,
+				8B8DBCE82E93EFB0005F8231 /* SettingOptionCell.xib */,
+				8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */,
+				8B8DBCD82E93C122005F8231 /* TimeCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -816,6 +864,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8DBCDA2E93C122005F8231 /* TimeCell.xib in Resources */,
 				8B97E7B02E8F8B2C006C5F30 /* Assets.xcassets in Resources */,
 				8B97EA7F2E8F92D5006C5F30 /* Inter-Black.otf in Resources */,
 				8B97EA802E8F92D5006C5F30 /* Inter-BlackItalic.otf in Resources */,
@@ -840,6 +889,7 @@
 				8B97EA902E8F92D5006C5F30 /* Inter-ThinItalic.otf in Resources */,
 				8B97EA912E8F92D5006C5F30 /* InterDisplay-Black.otf in Resources */,
 				8B97EA922E8F92D5006C5F30 /* InterDisplay-BlackItalic.otf in Resources */,
+				8B8DBCD62E93BB15005F8231 /* DateCell.xib in Resources */,
 				8B97EA932E8F92D5006C5F30 /* InterDisplay-Bold.otf in Resources */,
 				8B97EA942E8F92D5006C5F30 /* InterDisplay-BoldItalic.otf in Resources */,
 				8B97EBA62E8FACB4006C5F30 /* LocalizableMessage.strings in Resources */,
@@ -880,6 +930,7 @@
 				8B97EAB62E8F92D5006C5F30 /* InterDisplay-BlackItalic.ttf in Resources */,
 				8B97EAB72E8F92D5006C5F30 /* InterDisplay-Bold.ttf in Resources */,
 				8B97EAB82E8F92D5006C5F30 /* InterDisplay-BoldItalic.ttf in Resources */,
+				8B8DBCCE2E9388E8005F8231 /* OptionCell.xib in Resources */,
 				8B97EAB92E8F92D5006C5F30 /* InterDisplay-ExtraBold.ttf in Resources */,
 				8B97EABA2E8F92D5006C5F30 /* InterDisplay-ExtraBoldItalic.ttf in Resources */,
 				8B97EABB2E8F92D5006C5F30 /* InterDisplay-ExtraLight.ttf in Resources */,
@@ -906,6 +957,7 @@
 				8B97EAD02E8F92D5006C5F30 /* Inter-Light.woff2 in Resources */,
 				8B97EAD12E8F92D5006C5F30 /* Inter-LightItalic.woff2 in Resources */,
 				8B97EAD22E8F92D5006C5F30 /* Inter-Medium.woff2 in Resources */,
+				8B8DBCEA2E93EFB0005F8231 /* SettingOptionCell.xib in Resources */,
 				8B97EAD32E8F92D5006C5F30 /* Inter-MediumItalic.woff2 in Resources */,
 				8B97EAD42E8F92D5006C5F30 /* Inter-Regular.woff2 in Resources */,
 				8B97EAD52E8F92D5006C5F30 /* Inter-SemiBold.woff2 in Resources */,
@@ -932,6 +984,7 @@
 				8B97EAE92E8F92D5006C5F30 /* InterDisplay-Thin.woff2 in Resources */,
 				8B97EAEA2E8F92D5006C5F30 /* InterDisplay-ThinItalic.woff2 in Resources */,
 				8B97EB122E8F92D5006C5F30 /* help.txt in Resources */,
+				8B8DBCE02E93C7FF005F8231 /* ReasonCell.xib in Resources */,
 				8B97EB132E8F92D5006C5F30 /* Inter.ttc in Resources */,
 				8B97EB142E8F92D5006C5F30 /* InterVariable.ttf in Resources */,
 				8B97EB152E8F92D5006C5F30 /* InterVariable-Italic.ttf in Resources */,
@@ -1005,6 +1058,7 @@
 				8B97EB702E8FACB4006C5F30 /* LimitedAssetsViewController.swift in Sources */,
 				8B97EB712E8FACB4006C5F30 /* LoaderUtil.swift in Sources */,
 				8B97EB732E8FACB4006C5F30 /* BebasLabel.swift in Sources */,
+				8B8DBCDC2E93C5E7005F8231 /* CancelBookingVC.swift in Sources */,
 				8B97EB742E8FACB4006C5F30 /* MediaPicker.swift in Sources */,
 				8B97EB752E8FACB4006C5F30 /* UIImageViewExtension.swift in Sources */,
 				8B97EBB72E8FDF33006C5F30 /* ProfileVC.swift in Sources */,
@@ -1015,18 +1069,22 @@
 				8B97EB7B2E8FACB4006C5F30 /* URLExt.swift in Sources */,
 				8B97EB7C2E8FACB4006C5F30 /* CircularGradientLoader.swift in Sources */,
 				8B97EB7D2E8FACB4006C5F30 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				8B8DBCD22E93B84B005F8231 /* RescheduleBookingVC.swift in Sources */,
 				8B97EB7E2E8FACB4006C5F30 /* TextFieldExt.swift in Sources */,
 				8B97EB7F2E8FACB4006C5F30 /* UIButtonExtension.swift in Sources */,
 				8B97EBB52E8FDF1A006C5F30 /* BookingsVC.swift in Sources */,
 				8B97EB802E8FACB4006C5F30 /* Protocols.swift in Sources */,
+				8B8DBCE22E93CD99005F8231 /* CancelConfirmPopupVC.swift in Sources */,
 				8B97EB812E8FACB4006C5F30 /* ViewExt.swift in Sources */,
 				8B97EBC82E8FF0B1006C5F30 /* HeaderCell.swift in Sources */,
+				8B8DBCD02E9392DF005F8231 /* BookingDetailsVC.swift in Sources */,
 				8B97EBC92E8FF0B1006C5F30 /* ServiceCell.swift in Sources */,
 				8B97EB822E8FACB4006C5F30 /* PopupUtil.swift in Sources */,
 				8B97EB832E8FACB4006C5F30 /* CollectionViewLayouts.swift in Sources */,
 				8B97EB852E8FACB4006C5F30 /* SharedMethods.swift in Sources */,
 				8B97EB862E8FACB4006C5F30 /* Transitions.swift in Sources */,
 				8B97EB872E8FACB4006C5F30 /* LimitedAssetPreviewCell.swift in Sources */,
+				8B8DBCE42E93D1BC005F8231 /* RescheduledBookingVC.swift in Sources */,
 				8B97EB882E8FACB4006C5F30 /* CometLoader.swift in Sources */,
 				8B97EBB32E8FDF02006C5F30 /* ServicesVC.swift in Sources */,
 				8B97EB892E8FACB4006C5F30 /* TableViewExt.swift in Sources */,
@@ -1035,10 +1093,12 @@
 				8B97EB8B2E8FACB4006C5F30 /* UITextViewExtension.swift in Sources */,
 				8B97EBB12E8FDEF0006C5F30 /* HomeVC.swift in Sources */,
 				8B97EB8C2E8FACB4006C5F30 /* Keyname.swift in Sources */,
+				8B8DBCE62E93D77B005F8231 /* CompletedBookingDetails.swift in Sources */,
 				8B97EB8D2E8FACB4006C5F30 /* Constants.swift in Sources */,
 				8B97EB8E2E8FACB4006C5F30 /* Enums.swift in Sources */,
 				8B97EB8F2E8FACB4006C5F30 /* Settings.swift in Sources */,
 				8B97EB902E8FACB4006C5F30 /* StringExtension.swift in Sources */,
+				8B8DBCCD2E9388E8005F8231 /* OptionCell.swift in Sources */,
 				8B97EB912E8FACB4006C5F30 /* DropdownManager.swift in Sources */,
 				8B97EBAB2E8FCA6A006C5F30 /* LocationPermissionVC.swift in Sources */,
 				8B97EBAD2E8FCD44006C5F30 /* HomeAddressVC.swift in Sources */,
@@ -1052,7 +1112,9 @@
 				8B97EB992E8FACB4006C5F30 /* Toast.swift in Sources */,
 				8B97EB9A2E8FACB4006C5F30 /* Extension.swift in Sources */,
 				8B97EB9B2E8FACB4006C5F30 /* CustomPageControlls.swift in Sources */,
+				8B8DBCD92E93C122005F8231 /* TimeCell.swift in Sources */,
 				8B97EB9C2E8FACB4006C5F30 /* InputFieldValidator.swift in Sources */,
+				8B8DBCD52E93BB15005F8231 /* DateCell.swift in Sources */,
 				8B97EB9E2E8FACB4006C5F30 /* KeyboardEventListener.swift in Sources */,
 				8B97EB9F2E8FACB4006C5F30 /* DataExt.swift in Sources */,
 				8B97EBA02E8FACB4006C5F30 /* DateUtils.swift in Sources */,
@@ -1063,9 +1125,11 @@
 				8B97EBCE2E8FF8C6006C5F30 /* TaskCell.swift in Sources */,
 				8B97E7B52E8F8B2C006C5F30 /* SceneDelegate.swift in Sources */,
 				8B97E7B62E8F8B2C006C5F30 /* ViewController.swift in Sources */,
+				8B8DBCE92E93EFB0005F8231 /* SettingOptionCell.swift in Sources */,
 				8B97E8A42E8F9089006C5F30 /* InterLabel.swift in Sources */,
 				8B97EBB92E8FDFCD006C5F30 /* TabbarsVC.swift in Sources */,
 				8B97EB212E8FAC31006C5F30 /* SignupVC.swift in Sources */,
+				8B8DBCDF2E93C7FF005F8231 /* ReasonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

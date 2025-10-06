@@ -11,9 +11,13 @@ class ServiceCell: UICollectionViewCell {
     
     @IBOutlet weak var imgHeight: NSLayoutConstraint!
     @IBOutlet weak var rescheduleView: UIView!
+    @IBOutlet weak var viewDetailsView: UIView!
+    @IBOutlet weak var giveReviewView: UIView!
+    @IBOutlet weak var bookAgainView: UIView!
     @IBOutlet weak var serviceStatusView: UIView!
     @IBOutlet weak var serviceStatusLbl: InterLabel!
     @IBOutlet weak var serviceNameLbl: InterLabel!
+    @IBOutlet weak var cancelledView: UIView!
     
     class var identifier: String {
         return String(describing: self)

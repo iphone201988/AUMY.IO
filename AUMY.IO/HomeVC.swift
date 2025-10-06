@@ -60,9 +60,7 @@ class HomeVC: UIViewController {
 }
 
 // MARK: Delegates and DataSources
-extension HomeVC: UICollectionViewDataSource,
-                  UICollectionViewDelegate,
-                  UICollectionViewDelegateFlowLayout {
+extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -76,9 +74,6 @@ extension HomeVC: UICollectionViewDataSource,
         } else {
             return 10
         }
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

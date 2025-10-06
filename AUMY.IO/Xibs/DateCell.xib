@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DateCell" customModule="AUMY_IO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="253" height="348"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="253" height="348"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wey-Vu-Ep6">
+                        <rect key="frame" x="99" y="118" width="55" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVs-pN-KgE" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="8" width="55" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-Lh-tWG" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="27.333333333333343" width="55" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="454C57_40"/>
+                        <constraints>
+                            <constraint firstItem="e1U-Lh-tWG" firstAttribute="top" secondItem="FVs-pN-KgE" secondAttribute="bottom" constant="5" id="427-CD-AzZ"/>
+                            <constraint firstAttribute="width" constant="55" id="5G0-Hk-o7G"/>
+                            <constraint firstItem="FVs-pN-KgE" firstAttribute="leading" secondItem="wey-Vu-Ep6" secondAttribute="leading" id="FvG-jp-glz"/>
+                            <constraint firstItem="FVs-pN-KgE" firstAttribute="centerX" secondItem="wey-Vu-Ep6" secondAttribute="centerX" id="LIf-5j-IIv"/>
+                            <constraint firstAttribute="height" constant="55" id="TxM-b9-CFG"/>
+                            <constraint firstItem="FVs-pN-KgE" firstAttribute="top" secondItem="wey-Vu-Ep6" secondAttribute="top" constant="8" id="bEu-9n-Rw2"/>
+                            <constraint firstItem="e1U-Lh-tWG" firstAttribute="centerX" secondItem="FVs-pN-KgE" secondAttribute="centerX" id="cRl-Ii-CBn"/>
+                            <constraint firstItem="e1U-Lh-tWG" firstAttribute="leading" secondItem="FVs-pN-KgE" secondAttribute="leading" id="fwf-R7-pxg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="FFFFFF_40"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="wey-Vu-Ep6" secondAttribute="top" id="MAA-8Q-Vjx"/>
+                <constraint firstItem="wey-Vu-Ep6" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="dbk-3k-MXE"/>
+            </constraints>
+            <size key="customSize" width="253" height="348"/>
+            <connections>
+                <outlet property="dateLbl" destination="e1U-Lh-tWG" id="R4V-Vs-lwm"/>
+                <outlet property="dateView" destination="wey-Vu-Ep6" id="n0m-AO-Osk"/>
+                <outlet property="dayLbl" destination="FVs-pN-KgE" id="GYT-f1-CMV"/>
+            </connections>
+            <point key="canvasLocation" x="200.76335877862596" y="92.957746478873247"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="454C57_40">
+            <color red="0.27058823529411763" green="0.29803921568627451" blue="0.3411764705882353" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FFFFFF_40">
+            <color red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
