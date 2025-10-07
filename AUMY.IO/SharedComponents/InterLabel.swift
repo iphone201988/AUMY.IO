@@ -42,8 +42,6 @@ class InterLabel: UILabel {
     }
 }
 
-import UIKit
-
 @IBDesignable
 class InterButton: UIButton {
     
@@ -88,11 +86,9 @@ class InterButton: UIButton {
     }
 }
 
-import UIKit
-
 @IBDesignable
 class InterTextField: UITextField {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         updateFont()
@@ -133,8 +129,6 @@ class InterTextField: UITextField {
         }
     }
 }
-
-import UIKit
 
 @IBDesignable
 class InterTextView: UITextView {

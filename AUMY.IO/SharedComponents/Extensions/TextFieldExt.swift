@@ -1,7 +1,8 @@
 import UIKit
+import DTTextField
 
 extension UITextField {
-
+    
     @IBInspectable var placeHolderColor: UIColor? {
         get { return self.placeHolderColor }
         set {
@@ -12,14 +13,14 @@ extension UITextField {
             }
         }
     }
-
+    
     @IBInspectable var doneAccessory: Bool {
         get { return self.doneAccessory }
         set (hasDone) {
             if hasDone { addDoneButtonOnKeyboard() }
         }
     }
-
+    
     func addDoneButtonOnKeyboard() {
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
@@ -32,7 +33,7 @@ extension UITextField {
         keyboardToolbar.items = [flexibleSpace, doneButton]
         self.inputAccessoryView = keyboardToolbar
     }
-
+    
     func addInputViewDatePicker(_ target: Any, _ selector: Selector, _ maximumLimit: Date? = nil) {
         let screenWidth = UIScreen.main.bounds.width
         // Add DatePicker as inputView
@@ -49,8 +50,32 @@ extension UITextField {
         toolBar.setItems([cancelBarButton, flexibleSpace, doneBarButton], animated: false)
         self.inputAccessoryView = toolBar
     }
-
+    
     @objc func cancelPressed() {
         self.resignFirstResponder()
+    }
+}
+
+func customPlaceHolder(_ fields: [UITextField]) {
+    for field in fields {
+        field.attributedPlaceholder = NSAttributedString(
+            string: field.placeholder ?? "",
+            attributes: [
+                .foregroundColor: UIColor(named: "454C57") ?? .darkGray,
+                .font: UIFont(name: "Inter-Light", size: 16.0) ?? .systemFont(ofSize: 16.0, weight: .light)
+            ]
+        )
+    }
+}
+
+func setFloatPlaceholderFont(_ fields: [DTTextField]) {
+    for field in fields {
+        field.floatPlaceholderFont = Constants.lblFloatPlaceholderFont
+    }
+}
+
+func setEditableTextFieldFont(_ fields: [UITextField]) {
+    for field in fields {
+        field.font = Constants.editableTextFieldFont
     }
 }

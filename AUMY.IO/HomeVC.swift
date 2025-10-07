@@ -49,12 +49,9 @@ class HomeVC: UIViewController {
     }
     
     // MARK: IB Actions
-    
-    
     @IBAction func search(_ sender: UIButton) {
-        
+        SharedMethods.shared.pushToWithoutData(destVC: SearchVC.self, isAnimated: true)
     }
-    
     
     // MARK: Shared Methods
 }
@@ -70,7 +67,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return 1
+            return 2
         } else {
             return 10
         }
@@ -103,7 +100,11 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
                 cell.imgHeight.constant = 160
                 cell.rescheduleView.isHidden = true
                 cell.serviceStatusView.backgroundColor = UIColor(named: "4FB200")
-                cell.serviceStatusLbl.text = "Ongoing Service"
+                if indexPath.row == 0 {
+                    cell.serviceStatusLbl.text = "Ongoing Service"
+                } else {
+                    cell.serviceStatusLbl.text = "Service Completed"
+                }
                 cell.serviceNameLbl.text = "House Cleaning Service"
                 
             } else if indexPath.section == 1 {
@@ -133,5 +134,17 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
             return header
         }
         fatalError("Unsupported supplementary view kind")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let destVC = AppStoryboards.main.storyboardInstance.instantiateViewController(withIdentifier: "OngoingServiceDetailsVC") as! OngoingServiceDetailsVC
+            if indexPath.row == 0 {
+                destVC.isCompleted = false
+            } else {
+                destVC.isCompleted = true
+            }
+            SharedMethods.shared.pushTo(destVC: destVC, isAnimated: true)
+        }
     }
 }

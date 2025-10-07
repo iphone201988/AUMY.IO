@@ -22,14 +22,9 @@ class HomeAddressVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        houseNoTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        streetTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        apartmentTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        floorTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        houseNoTF.font = UIFont(name: "Inter-Regula", size: 16.0)
-        streetTF.font = UIFont(name: "Inter-Regular", size: 16.0)
-        apartmentTF.font = UIFont(name: "Inter-Regula", size: 16.0)
-        floorTF.font = UIFont(name: "Inter-Regular", size: 16.0)
+        setFloatPlaceholderFont([houseNoTF, streetTF, apartmentTF, floorTF])
+        setEditableTextFieldFont([houseNoTF, streetTF, apartmentTF, floorTF])
+        customPlaceHolder([houseNoTF, streetTF, apartmentTF, floorTF])
     }
     
     func validateData() -> Bool {

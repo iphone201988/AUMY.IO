@@ -23,7 +23,8 @@ extension UITextView {
             placeholderLabel.frame.size.height = size.height
             placeholderLabel.frame.size.width = width
             placeholderLabel.frame.origin = CGPoint(x: textContainer.lineFragmentPadding, y: textContainerInset.top)
-            placeholderLabel.textColor = .lightGray
+            placeholderLabel.textColor = UIColor(named: "454C57") ?? .lightGray
+            placeholderLabel.font = UIFont(name: "Inter-Light", size: 16.0)
             textStorage.delegate = self
         }
     }

@@ -27,13 +27,9 @@ class SignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        passwordTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        nameTF.font = UIFont(name: "Inter-Regula", size: 16.0)
-        emailTF.font = UIFont(name: "Inter-Regular", size: 16.0)
-        phoneCodeTF.font = UIFont(name: "Inter-Regula", size: 16.0)
-        phoneNoTF.font = UIFont(name: "Inter-Regular", size: 16.0)
-        passwordTF.font = UIFont(name: "Inter-Regular", size: 16.0)
+        setFloatPlaceholderFont([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
+        setEditableTextFieldFont([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
+        customPlaceHolder([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
     }
     
     func validateData() -> Bool {

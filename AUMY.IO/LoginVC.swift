@@ -22,10 +22,9 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        passwordTF.lblFloatPlaceholder.font = UIFont(name: "Inter-Light", size: 11.0)
-        emailTF.font = UIFont(name: "Inter-Regula", size: 16.0)
-        passwordTF.font = UIFont(name: "Inter-Regular", size: 16.0)
+        setFloatPlaceholderFont([emailTF, passwordTF])
+        setEditableTextFieldFont([emailTF, passwordTF])
+        customPlaceHolder([emailTF, passwordTF])
     }
     
     func validateData() -> Bool {

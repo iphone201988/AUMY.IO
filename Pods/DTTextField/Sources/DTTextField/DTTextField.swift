@@ -232,9 +232,11 @@ public class DTTextField: UITextField {
         }
     }
     
-    override public var attributedPlaceholder: NSAttributedString?{
-        didSet{ lblFloatPlaceholder.text = placeholderFinal }
-    }
+//    override public var attributedPlaceholder: NSAttributedString?{
+//        didSet {
+//            lblFloatPlaceholder.text = placeholderFinal
+//        }
+//    }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -261,7 +263,7 @@ public class DTTextField: UITextField {
         dtborderStyle               = .rounded
         dtLayer.backgroundColor     = UIColor.clear.cgColor
         
-        floatPlaceholderColor       = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+        floatPlaceholderColor       = UIColor(red: 55.0/255.0, green: 65.0/255.0, blue: 81.0/255.0, alpha: 1.0) //UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         floatPlaceholderActiveColor = UIColor(red: 55.0/255.0, green: 65.0/255.0, blue: 81.0/255.0, alpha: 1.0)
         lblFloatPlaceholder.frame   = CGRect.zero
         lblFloatPlaceholder.alpha   = 0.0
@@ -277,7 +279,7 @@ public class DTTextField: UITextField {
         lblError.isHidden           = true
         
         addTarget(self, action: #selector(textFieldTextChanged), for: .editingChanged)
-        
+
         addSubview(lblError)
         
         layer.insertSublayer(dtLayer, at: 0)
@@ -518,5 +520,4 @@ public class DTTextField: UITextField {
             }
         }
     }
-
 }

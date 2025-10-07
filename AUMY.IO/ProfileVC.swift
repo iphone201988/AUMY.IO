@@ -12,6 +12,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerCellFromNib(cellID: SettingOptionCell.identifier)
+            tableView.showsVerticalScrollIndicator = false
+            tableView.showsHorizontalScrollIndicator = false
         }
     }
     
@@ -28,6 +30,9 @@ class ProfileVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func notification(_ sender: UIButton) {
+        SharedMethods.shared.pushToWithoutData(destVC: NotificationVC.self, isAnimated: true)
+    }
 }
 
 // MARK: Delegates and DataSources
@@ -64,5 +69,26 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let optionDetails = options[indexPath.row]
+        let title = optionDetails["option"]
+        
+        if title == "Edit Profile" {
+            SharedMethods.shared.pushToWithoutData(destVC: EditProfileVC.self, isAnimated: true)
+        }
+        
+        if title == "Change Password" {
+            SharedMethods.shared.pushToWithoutData(destVC: ChangePasswordVC.self, isAnimated: true)
+        }
+        
+        if title == "Change Address" {
+            SharedMethods.shared.pushToWithoutData(destVC: ChangeAddressVC.self, isAnimated: true)
+        }
+        
+        if title == "Your Reviews" {
+            SharedMethods.shared.pushToWithoutData(destVC: YourReviewsVC.self, isAnimated: true)
+        }
     }
 }

@@ -12,6 +12,8 @@ class CancelBookingVC: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerCellFromNib(cellID: ReasonCell.identifier)
+            tableView.showsVerticalScrollIndicator = false
+            tableView.showsHorizontalScrollIndicator = false
         }
     }
     
