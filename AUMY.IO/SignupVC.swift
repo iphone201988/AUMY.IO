@@ -16,6 +16,15 @@ class SignupVC: UIViewController {
     @IBOutlet weak var phoneNoTF: DTTextField!
     @IBOutlet weak var passwordTF: DTTextField!
     
+    @IBOutlet weak var appleView: UIView!
+    @IBOutlet weak var appleSpaciousView: UIView!
+    @IBOutlet weak var googleView: UIView!
+    @IBOutlet weak var googleSpaciousView: UIView!
+    @IBOutlet weak var orView: UIImageView!
+    @IBOutlet weak var orSpaciousView: UIView!
+    @IBOutlet weak var termsConditionSpaciousView: UIView!
+    @IBOutlet weak var termsConditionView: UIView!
+    
     let firstNameMessage        = NSLocalizedString("First name is required.", comment: "")
     let lastNameMessage         = NSLocalizedString("Last name is required.", comment: "")
     let nameMessage         = NSLocalizedString("Name is required.", comment: "")
@@ -30,6 +39,28 @@ class SignupVC: UIViewController {
         setFloatPlaceholderFont([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
         setEditableTextFieldFont([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
         customPlaceHolder([nameTF, emailTF, phoneCodeTF, phoneNoTF, passwordTF])
+        
+        switch Constants.role {
+        case .serviceProvider:
+            appleView.isHidden = true
+            appleSpaciousView.isHidden = true
+            googleView.isHidden = true
+            googleSpaciousView.isHidden = true
+            orView.isHidden = true
+            orSpaciousView.isHidden = true
+            termsConditionSpaciousView.isHidden = true
+            termsConditionView.isHidden = true
+            
+        case .user:
+            appleView.isHidden = false
+            appleSpaciousView.isHidden = false
+            googleView.isHidden = false
+            googleSpaciousView.isHidden = false
+            orView.isHidden = false
+            orSpaciousView.isHidden = false
+            termsConditionSpaciousView.isHidden = false
+            termsConditionView.isHidden = false
+        }
     }
     
     func validateData() -> Bool {

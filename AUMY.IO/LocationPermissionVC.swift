@@ -39,7 +39,7 @@ class LocationPermissionVC: UIViewController {
             showLocationSettingsAlert()
         case .authorizedWhenInUse, .authorizedAlways:
             // Already authorized
-            print("Location permission already granted")
+            LogHandler.debugLog("Location permission already granted")
         @unknown default:
             break
         }
@@ -69,11 +69,11 @@ extension LocationPermissionVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
-            print("User granted location access")
+            LogHandler.debugLog("User granted location access")
             // You can now fetch location if needed
             manager.startUpdatingLocation()
         case .denied, .restricted:
-            print("User denied location access")
+            LogHandler.debugLog("User denied location access")
         case .notDetermined:
             break
         @unknown default:
@@ -83,11 +83,11 @@ extension LocationPermissionVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        print("User's current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
+        LogHandler.debugLog("User's current location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
         manager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to get location: \(error.localizedDescription)")
+        LogHandler.debugLog("Failed to get location: \(error.localizedDescription)")
     }
 }

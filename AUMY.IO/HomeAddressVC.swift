@@ -66,8 +66,16 @@ class HomeAddressVC: UIViewController {
 
 extension HomeAddressVC: ServicesEvents {
     func dismissVC() {
-        let storyboard = AppStoryboards.main.storyboardInstance
-        let rootVC = storyboard.instantiateViewController(withIdentifier: "TabbarsVC") as! TabbarsVC
-        SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+        switch Constants.role {
+        case .serviceProvider:
+            let storyboard = AppStoryboards.main.storyboardInstance
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "ReviewedVC") as! ReviewedVC
+            SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+            
+        case .user:
+            let storyboard = AppStoryboards.main.storyboardInstance
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "TabbarsVC") as! TabbarsVC
+            SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+        }
     }
 }

@@ -65,7 +65,7 @@ class InterButton: UIButton {
         if let customFont = UIFont(name: fontName, size: titleFont.pointSize) {
             self.titleLabel?.font = customFont
         } else {
-            print("⚠️ Font '\(fontName)' not found. Check Info.plist and bundle.")
+            LogHandler.debugLog("⚠️ Font '\(fontName)' not found. Check Info.plist and bundle.")
         }
     }
     
@@ -109,7 +109,7 @@ class InterTextField: UITextField {
         if let customFont = UIFont(name: fontName, size: currentFont.pointSize) {
             self.font = customFont
         } else {
-            print("⚠️ Font '\(fontName)' not found. Check Info.plist and bundle.")
+            LogHandler.debugLog("⚠️ Font '\(fontName)' not found. Check Info.plist and bundle.")
         }
     }
     
@@ -155,7 +155,7 @@ class InterTextView: UITextView {
         if let customFont = UIFont(name: fontName, size: currentFont.pointSize) {
             self.font = customFont
         } else {
-            print("⚠️ Font '\(fontName)' not found. Make sure it’s added to your project and Info.plist.")
+            LogHandler.debugLog("⚠️ Font '\(fontName)' not found. Make sure it’s added to your project and Info.plist.")
         }
     }
     

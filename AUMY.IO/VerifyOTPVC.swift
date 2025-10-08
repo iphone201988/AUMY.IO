@@ -47,7 +47,14 @@ class VerifyOTPVC: UIViewController {
         } else {
             let otp = otp1 + otp2 + otp3 + otp4
             let _ = Int(otp) ?? 0
-            SharedMethods.shared.pushToWithoutData(destVC: LocationPermissionVC.self, isAnimated: true)
+            
+            switch Constants.role {
+            case .serviceProvider:
+                SharedMethods.shared.pushToWithoutData(destVC: AboutYourServiceVC.self, isAnimated: true)
+                
+            case .user:
+                SharedMethods.shared.pushToWithoutData(destVC: LocationPermissionVC.self, isAnimated: true)
+            }
         }
     }
     

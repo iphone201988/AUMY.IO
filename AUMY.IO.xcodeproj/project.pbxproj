@@ -217,6 +217,17 @@
 		8B97EBCF2E8FF8C6006C5F30 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */; };
 		8B97EBD22E8FFAFB006C5F30 /* PopularServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EBD02E8FFAFB006C5F30 /* PopularServiceCell.swift */; };
 		8B97EBD32E8FFAFB006C5F30 /* PopularServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B97EBD12E8FFAFB006C5F30 /* PopularServiceCell.xib */; };
+		8BB5E93E2E96233100EA9E07 /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E93D2E96233100EA9E07 /* ServiceDetailsVC.swift */; };
+		8BB5E9412E962E0B00EA9E07 /* ServiceReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E93F2E962E0B00EA9E07 /* ServiceReviewCell.swift */; };
+		8BB5E9422E962E0B00EA9E07 /* ServiceReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB5E9402E962E0B00EA9E07 /* ServiceReviewCell.xib */; };
+		8BB5E9442E96378900EA9E07 /* BookServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E9432E96378900EA9E07 /* BookServiceDetailsVC.swift */; };
+		8BB5E9462E96456E00EA9E07 /* PaymentMethodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E9452E96456E00EA9E07 /* PaymentMethodVC.swift */; };
+		8BB5E9492E96468600EA9E07 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E9472E96468600EA9E07 /* PaymentMethodCell.swift */; };
+		8BB5E94A2E96468600EA9E07 /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB5E9482E96468600EA9E07 /* PaymentMethodCell.xib */; };
+		8BB5E94C2E96598C00EA9E07 /* BookingConfirmedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E94B2E96598C00EA9E07 /* BookingConfirmedVC.swift */; };
+		8BB5E94E2E965C8B00EA9E07 /* BookedCancelledVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E94D2E965C8B00EA9E07 /* BookedCancelledVC.swift */; };
+		8BB5E9502E9695D500EA9E07 /* AboutYourServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */; };
+		8BB5E9522E969C4A00EA9E07 /* ReviewedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */; };
 		8BB83A512E94CE02000FF710 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A502E94CE02000FF710 /* EditProfileVC.swift */; };
 		8BB83A532E94EC71000FF710 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A522E94EC71000FF710 /* ChangePasswordVC.swift */; };
 		8BB83A552E94EEC2000FF710 /* ChangeAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A542E94EEC2000FF710 /* ChangeAddressVC.swift */; };
@@ -461,6 +472,17 @@
 		8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		8B97EBD02E8FFAFB006C5F30 /* PopularServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularServiceCell.swift; sourceTree = "<group>"; };
 		8B97EBD12E8FFAFB006C5F30 /* PopularServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularServiceCell.xib; sourceTree = "<group>"; };
+		8BB5E93D2E96233100EA9E07 /* ServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsVC.swift; sourceTree = "<group>"; };
+		8BB5E93F2E962E0B00EA9E07 /* ServiceReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReviewCell.swift; sourceTree = "<group>"; };
+		8BB5E9402E962E0B00EA9E07 /* ServiceReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceReviewCell.xib; sourceTree = "<group>"; };
+		8BB5E9432E96378900EA9E07 /* BookServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceDetailsVC.swift; sourceTree = "<group>"; };
+		8BB5E9452E96456E00EA9E07 /* PaymentMethodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodVC.swift; sourceTree = "<group>"; };
+		8BB5E9472E96468600EA9E07 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		8BB5E9482E96468600EA9E07 /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
+		8BB5E94B2E96598C00EA9E07 /* BookingConfirmedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmedVC.swift; sourceTree = "<group>"; };
+		8BB5E94D2E965C8B00EA9E07 /* BookedCancelledVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedCancelledVC.swift; sourceTree = "<group>"; };
+		8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutYourServiceVC.swift; sourceTree = "<group>"; };
+		8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewedVC.swift; sourceTree = "<group>"; };
 		8BB83A502E94CE02000FF710 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		8BB83A522E94EC71000FF710 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		8BB83A542E94EEC2000FF710 /* ChangeAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAddressVC.swift; sourceTree = "<group>"; };
@@ -523,11 +545,15 @@
 				8B97E7A82E8F8B2C006C5F30 /* Info.plist */,
 				8B97EBAE2E8FDB53006C5F30 /* AccountCreatedVC.swift */,
 				8B97E7A62E8F8B2C006C5F30 /* AppDelegate.swift */,
+				8BB5E94D2E965C8B00EA9E07 /* BookedCancelledVC.swift */,
+				8BB5E94B2E96598C00EA9E07 /* BookingConfirmedVC.swift */,
+				8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */,
 				8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */,
+				8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */,
 				8B97EBB42E8FDF1A006C5F30 /* BookingsVC.swift */,
+				8BB5E9432E96378900EA9E07 /* BookServiceDetailsVC.swift */,
 				8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */,
 				8B8DBCE12E93CD99005F8231 /* CancelConfirmPopupVC.swift */,
-				8BB83A782E953F61000FF710 /* SortByVC.swift */,
 				8BB83A542E94EEC2000FF710 /* ChangeAddressVC.swift */,
 				8BB83A522E94EC71000FF710 /* ChangePasswordVC.swift */,
 				8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */,
@@ -540,14 +566,17 @@
 				8B97EB1C2E8FA122006C5F30 /* LoginVC.swift */,
 				8BB83A5C2E94F580000FF710 /* NotificationVC.swift */,
 				8BB83A662E950F0A000FF710 /* OngoingServiceDetailsVC.swift */,
+				8BB5E9452E96456E00EA9E07 /* PaymentMethodVC.swift */,
 				8B97EBB62E8FDF33006C5F30 /* ProfileVC.swift */,
 				8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */,
 				8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */,
 				8B97E7AD2E8F8B2C006C5F30 /* SceneDelegate.swift */,
 				8BB83A762E9533EF000FF710 /* SearchVC.swift */,
 				8BB83A682E951B92000FF710 /* ServiceCompletedVC.swift */,
+				8BB5E93D2E96233100EA9E07 /* ServiceDetailsVC.swift */,
 				8B97EBB22E8FDF02006C5F30 /* ServicesVC.swift */,
 				8B97EB202E8FAC31006C5F30 /* SignupVC.swift */,
+				8BB83A782E953F61000FF710 /* SortByVC.swift */,
 				8B97EBB82E8FDFCD006C5F30 /* TabbarsVC.swift */,
 				8B97E8A92E8F90E4006C5F30 /* VaultInfo.swift */,
 				8B97EBA82E8FC465006C5F30 /* VerifyOTPVC.swift */,
@@ -826,11 +855,13 @@
 				8B97EBC32E8FF0B1006C5F30 /* HeaderCell.swift */,
 				8BB83A5E2E94F6E3000FF710 /* NotificationCell.swift */,
 				8B8DBCCB2E9388E8005F8231 /* OptionCell.swift */,
+				8BB5E9472E96468600EA9E07 /* PaymentMethodCell.swift */,
 				8BB83A6E2E952964000FF710 /* PhotoPreviewCell.swift */,
 				8B97EBD02E8FFAFB006C5F30 /* PopularServiceCell.swift */,
 				8B8DBCDD2E93C7FF005F8231 /* ReasonCell.swift */,
 				8BB83A582E94F117000FF710 /* ReviewCell.swift */,
 				8B97EBC52E8FF0B1006C5F30 /* ServiceCell.swift */,
+				8BB5E93F2E962E0B00EA9E07 /* ServiceReviewCell.swift */,
 				8B8DBCE72E93EFB0005F8231 /* SettingOptionCell.swift */,
 				8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */,
 				8B97EBCC2E8FF8C6006C5F30 /* TaskCell.swift */,
@@ -841,11 +872,13 @@
 				8B97EBC42E8FF0B1006C5F30 /* HeaderCell.xib */,
 				8BB83A5F2E94F6E3000FF710 /* NotificationCell.xib */,
 				8B8DBCCC2E9388E8005F8231 /* OptionCell.xib */,
+				8BB5E9482E96468600EA9E07 /* PaymentMethodCell.xib */,
 				8BB83A6F2E952964000FF710 /* PhotoPreviewCell.xib */,
 				8B97EBD12E8FFAFB006C5F30 /* PopularServiceCell.xib */,
 				8B8DBCDE2E93C7FF005F8231 /* ReasonCell.xib */,
 				8BB83A592E94F117000FF710 /* ReviewCell.xib */,
 				8B97EBC62E8FF0B1006C5F30 /* ServiceCell.xib */,
+				8BB5E9402E962E0B00EA9E07 /* ServiceReviewCell.xib */,
 				8B8DBCE82E93EFB0005F8231 /* SettingOptionCell.xib */,
 				8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */,
 				8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */,
@@ -953,6 +986,7 @@
 				8B97EA8B2E8F92D5006C5F30 /* Inter-MediumItalic.otf in Resources */,
 				8B97EA8C2E8F92D5006C5F30 /* Inter-Regular.otf in Resources */,
 				8B97EA8D2E8F92D5006C5F30 /* Inter-SemiBold.otf in Resources */,
+				8BB5E9422E962E0B00EA9E07 /* ServiceReviewCell.xib in Resources */,
 				8B97EBCF2E8FF8C6006C5F30 /* TaskCell.xib in Resources */,
 				8B97EA8E2E8F92D5006C5F30 /* Inter-SemiBoldItalic.otf in Resources */,
 				8B97EA8F2E8F92D5006C5F30 /* Inter-Thin.otf in Resources */,
@@ -1009,6 +1043,7 @@
 				8B97EABC2E8F92D5006C5F30 /* InterDisplay-ExtraLightItalic.ttf in Resources */,
 				8B97EABD2E8F92D5006C5F30 /* InterDisplay-Italic.ttf in Resources */,
 				8B97EABE2E8F92D5006C5F30 /* InterDisplay-Light.ttf in Resources */,
+				8BB5E94A2E96468600EA9E07 /* PaymentMethodCell.xib in Resources */,
 				8B97EABF2E8F92D5006C5F30 /* InterDisplay-LightItalic.ttf in Resources */,
 				8B97EAC02E8F92D5006C5F30 /* InterDisplay-Medium.ttf in Resources */,
 				8B97EAC12E8F92D5006C5F30 /* InterDisplay-MediumItalic.ttf in Resources */,
@@ -1148,6 +1183,7 @@
 				8B97EB7B2E8FACB4006C5F30 /* URLExt.swift in Sources */,
 				8B97EB7C2E8FACB4006C5F30 /* CircularGradientLoader.swift in Sources */,
 				8B97EB7D2E8FACB4006C5F30 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				8BB5E9492E96468600EA9E07 /* PaymentMethodCell.swift in Sources */,
 				8B8DBCD22E93B84B005F8231 /* RescheduleBookingVC.swift in Sources */,
 				8BB83A532E94EC71000FF710 /* ChangePasswordVC.swift in Sources */,
 				8BB83A772E9533EF000FF710 /* SearchVC.swift in Sources */,
@@ -1156,6 +1192,7 @@
 				8B97EBB52E8FDF1A006C5F30 /* BookingsVC.swift in Sources */,
 				8B97EB802E8FACB4006C5F30 /* Protocols.swift in Sources */,
 				8B8DBCE22E93CD99005F8231 /* CancelConfirmPopupVC.swift in Sources */,
+				8BB5E93E2E96233100EA9E07 /* ServiceDetailsVC.swift in Sources */,
 				8B97EB812E8FACB4006C5F30 /* ViewExt.swift in Sources */,
 				8B97EBC82E8FF0B1006C5F30 /* HeaderCell.swift in Sources */,
 				8B8DBCD02E9392DF005F8231 /* BookingDetailsVC.swift in Sources */,
@@ -1173,15 +1210,19 @@
 				8BB83A6B2E9522F1000FF710 /* DisputeSuccessfullyPopupVC.swift in Sources */,
 				8B97EB892E8FACB4006C5F30 /* TableViewExt.swift in Sources */,
 				8B97EB8A2E8FACB4006C5F30 /* CircularProgressBar.swift in Sources */,
+				8BB5E9502E9695D500EA9E07 /* AboutYourServiceVC.swift in Sources */,
 				8B97EBD22E8FFAFB006C5F30 /* PopularServiceCell.swift in Sources */,
 				8B97EB8B2E8FACB4006C5F30 /* UITextViewExtension.swift in Sources */,
 				8B97EBB12E8FDEF0006C5F30 /* HomeVC.swift in Sources */,
+				8BB5E9462E96456E00EA9E07 /* PaymentMethodVC.swift in Sources */,
 				8B97EB8C2E8FACB4006C5F30 /* Keyname.swift in Sources */,
+				8BB5E94C2E96598C00EA9E07 /* BookingConfirmedVC.swift in Sources */,
 				8B8DBCE62E93D77B005F8231 /* CompletedBookingDetails.swift in Sources */,
 				8BB83A642E94F857000FF710 /* TimeHeaderCell.swift in Sources */,
 				8B97EB8D2E8FACB4006C5F30 /* Constants.swift in Sources */,
 				8B97EB8E2E8FACB4006C5F30 /* Enums.swift in Sources */,
 				8B97EB8F2E8FACB4006C5F30 /* Settings.swift in Sources */,
+				8BB5E9412E962E0B00EA9E07 /* ServiceReviewCell.swift in Sources */,
 				8B97EB902E8FACB4006C5F30 /* StringExtension.swift in Sources */,
 				8B8DBCCD2E9388E8005F8231 /* OptionCell.swift in Sources */,
 				8B97EB912E8FACB4006C5F30 /* DropdownManager.swift in Sources */,
@@ -1194,6 +1235,7 @@
 				8B97EB952E8FACB4006C5F30 /* BarlowLabel.swift in Sources */,
 				8BB83A552E94EEC2000FF710 /* ChangeAddressVC.swift in Sources */,
 				8B97EBAF2E8FDB53006C5F30 /* AccountCreatedVC.swift in Sources */,
+				8BB5E94E2E965C8B00EA9E07 /* BookedCancelledVC.swift in Sources */,
 				8BB83A5A2E94F117000FF710 /* ReviewCell.swift in Sources */,
 				8B97EB962E8FACB4006C5F30 /* DispatchQueue.swift in Sources */,
 				8B97EB972E8FACB4006C5F30 /* UIColorExt.swift in Sources */,
@@ -1208,9 +1250,11 @@
 				8B97EB9E2E8FACB4006C5F30 /* KeyboardEventListener.swift in Sources */,
 				8B97EB9F2E8FACB4006C5F30 /* DataExt.swift in Sources */,
 				8B97EBA02E8FACB4006C5F30 /* DateUtils.swift in Sources */,
+				8BB5E9522E969C4A00EA9E07 /* ReviewedVC.swift in Sources */,
 				8B97EBA22E8FACB4006C5F30 /* LogHandler.swift in Sources */,
 				8B97EBA92E8FC465006C5F30 /* VerifyOTPVC.swift in Sources */,
 				8B97EBA32E8FACB4006C5F30 /* LocationPermissionUtil.swift in Sources */,
+				8BB5E9442E96378900EA9E07 /* BookServiceDetailsVC.swift in Sources */,
 				8B97EBA52E8FACB4006C5F30 /* DoubleExt.swift in Sources */,
 				8B97EBCE2E8FF8C6006C5F30 /* TaskCell.swift in Sources */,
 				8B97E7B52E8F8B2C006C5F30 /* SceneDelegate.swift in Sources */,

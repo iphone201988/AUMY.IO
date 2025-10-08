@@ -170,6 +170,10 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
             if selectedOption == "Upcoming Bookings" {
                 SharedMethods.shared.pushToWithoutData(destVC: BookingDetailsVC.self, isAnimated: true)
             }
+            
+            if selectedOption == "Cancelled Bookings" {
+                SharedMethods.shared.pushToWithoutData(destVC: BookedCancelledVC.self, isAnimated: true)
+            }
         }
     }
     

@@ -50,4 +50,8 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AvailableServicesCell.identifier, for: indexPath) as! AvailableServicesCell
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SharedMethods.shared.pushToWithoutData(destVC: ServiceDetailsVC.self, isAnimated: true)
+    }
 }

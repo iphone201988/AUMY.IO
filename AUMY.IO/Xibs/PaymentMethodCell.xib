@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="PaymentMethodCell" customModule="AUMY_IO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="426" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVv-n4-K1n">
+                        <rect key="frame" x="0.0" y="0.0" width="426" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 54" translatesAutoresizingMaskIntoConstraints="NO" id="9RD-wC-Fwx">
+                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="f2t-uZ-Y8d"/>
+                                    <constraint firstAttribute="width" secondItem="9RD-wC-Fwx" secondAttribute="height" multiplier="1:1" id="z5E-3T-cwa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stripe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGe-wV-wpv" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                <rect key="frame" x="67" y="18" width="43.333333333333343" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teenyicons_tick-circle-outline 1" translatesAutoresizingMaskIntoConstraints="NO" id="RhR-a8-ySY">
+                                <rect key="frame" x="410" y="19.666666666666668" width="16" height="16.000000000000004"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RhR-a8-ySY" secondAttribute="height" multiplier="1:1" id="TQr-6n-gvn"/>
+                                    <constraint firstAttribute="width" constant="16" id="jgF-XD-c3C"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7s-CL-NeI">
+                                <rect key="frame" x="0.0" y="71" width="426" height="1"/>
+                                <color key="backgroundColor" name="FFFFFF_40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="WK0-ys-Ncs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RhR-a8-ySY" secondAttribute="trailing" id="0cv-cV-qX1"/>
+                            <constraint firstItem="dGe-wV-wpv" firstAttribute="centerY" secondItem="9RD-wC-Fwx" secondAttribute="centerY" id="AHJ-g7-Z3y"/>
+                            <constraint firstItem="z7s-CL-NeI" firstAttribute="top" secondItem="9RD-wC-Fwx" secondAttribute="bottom" constant="16" id="BcC-mq-hox"/>
+                            <constraint firstItem="z7s-CL-NeI" firstAttribute="leading" secondItem="9RD-wC-Fwx" secondAttribute="leading" id="Lhx-zc-VVd"/>
+                            <constraint firstItem="RhR-a8-ySY" firstAttribute="centerY" secondItem="dGe-wV-wpv" secondAttribute="centerY" id="SiN-Ix-1dA"/>
+                            <constraint firstItem="dGe-wV-wpv" firstAttribute="leading" secondItem="9RD-wC-Fwx" secondAttribute="trailing" constant="12" id="TE4-wF-6kK"/>
+                            <constraint firstAttribute="bottom" secondItem="z7s-CL-NeI" secondAttribute="bottom" constant="16" id="XzT-2w-x6n"/>
+                            <constraint firstItem="z7s-CL-NeI" firstAttribute="centerX" secondItem="VVv-n4-K1n" secondAttribute="centerX" id="eM8-MM-Erl"/>
+                            <constraint firstItem="9RD-wC-Fwx" firstAttribute="leading" secondItem="VVv-n4-K1n" secondAttribute="leading" id="eYL-Hk-qeG"/>
+                            <constraint firstItem="9RD-wC-Fwx" firstAttribute="top" secondItem="VVv-n4-K1n" secondAttribute="top" id="yXp-jd-o4e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VVv-n4-K1n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RQT-nB-5SV"/>
+                    <constraint firstItem="VVv-n4-K1n" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="TP8-nk-0l2"/>
+                    <constraint firstAttribute="bottom" secondItem="VVv-n4-K1n" secondAttribute="bottom" id="Tq4-Av-pu3"/>
+                    <constraint firstItem="VVv-n4-K1n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a7p-s9-pza"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="icon" destination="9RD-wC-Fwx" id="78k-g8-gst"/>
+                <outlet property="selectedIcon" destination="RhR-a8-ySY" id="JCb-fw-Lv9"/>
+                <outlet property="title" destination="dGe-wV-wpv" id="2XV-m3-3eo"/>
+                <outlet property="underlineView" destination="z7s-CL-NeI" id="hgc-J2-Uue"/>
+            </connections>
+            <point key="canvasLocation" x="53.435114503816791" y="4.2253521126760569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 54" width="55" height="55"/>
+        <image name="teenyicons_tick-circle-outline 1" width="16" height="16"/>
+        <namedColor name="FFFFFF_40">
+            <color red="1" green="1" blue="1" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

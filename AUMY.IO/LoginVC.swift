@@ -13,6 +13,13 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTF: DTTextField!
     @IBOutlet weak var passwordTF: DTTextField!
     
+    @IBOutlet weak var appleView: UIView!
+    @IBOutlet weak var appleSpaciousView: UIView!
+    @IBOutlet weak var googleView: UIView!
+    @IBOutlet weak var googleSpaciousView: UIView!
+    @IBOutlet weak var orView: UIImageView!
+    @IBOutlet weak var orSpaciousView: UIView!
+    
     let firstNameMessage        = NSLocalizedString("First name is required.", comment: "")
     let lastNameMessage         = NSLocalizedString("Last name is required.", comment: "")
     let emailMessage            = NSLocalizedString("Email is required.", comment: "")
@@ -25,6 +32,24 @@ class LoginVC: UIViewController {
         setFloatPlaceholderFont([emailTF, passwordTF])
         setEditableTextFieldFont([emailTF, passwordTF])
         customPlaceHolder([emailTF, passwordTF])
+        
+        switch Constants.role {
+        case .serviceProvider:
+            appleView.isHidden = true
+            appleSpaciousView.isHidden = true
+            googleView.isHidden = true
+            googleSpaciousView.isHidden = true
+            orView.isHidden = true
+            orSpaciousView.isHidden = true
+            
+        case .user:
+            appleView.isHidden = false
+            appleSpaciousView.isHidden = false
+            googleView.isHidden = false
+            googleSpaciousView.isHidden = false
+            orView.isHidden = false
+            orSpaciousView.isHidden = false
+        }
     }
     
     func validateData() -> Bool {

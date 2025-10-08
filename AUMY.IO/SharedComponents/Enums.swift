@@ -47,3 +47,8 @@ enum Events {
     case updateProfile
     case updatePassword
 }
+
+enum Roles {
+    case serviceProvider
+    case user
+}
