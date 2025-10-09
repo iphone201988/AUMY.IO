@@ -33,16 +33,56 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Cleaning Service" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2s-DN-7UF" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="168" width="531" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="374151"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provider: James " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i79-dI-Lmu" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provider: James" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i79-dI-Lmu" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="189" width="531" height="12"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="374151"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2an-A4-efG">
+                                <rect key="frame" x="0.0" y="201" width="531" height="0.0"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBg-M9-r72">
+                                        <rect key="frame" x="0.0" y="0.0" width="531" height="4"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="7lr-bO-xzz"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cKo-tX-ZNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="531" height="15"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvk-Go-oXm" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" name="374151"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 2.1 km away" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOc-Ca-hh9" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="44.333333333333343" y="1.6666666666666856" width="61" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="GOc-Ca-hh9" firstAttribute="leading" secondItem="Kvk-Go-oXm" secondAttribute="trailing" id="7gT-TE-tIl"/>
+                                            <constraint firstItem="Kvk-Go-oXm" firstAttribute="top" secondItem="cKo-tX-ZNN" secondAttribute="top" id="HFU-WU-Zsw"/>
+                                            <constraint firstAttribute="height" constant="15" id="Ia2-Yz-GJS"/>
+                                            <constraint firstItem="Kvk-Go-oXm" firstAttribute="leading" secondItem="cKo-tX-ZNN" secondAttribute="leading" id="j3d-Bc-QNA"/>
+                                            <constraint firstItem="Kvk-Go-oXm" firstAttribute="centerY" secondItem="cKo-tX-ZNN" secondAttribute="centerY" id="ko8-8a-Z2x"/>
+                                            <constraint firstItem="GOc-Ca-hh9" firstAttribute="centerY" secondItem="Kvk-Go-oXm" secondAttribute="centerY" id="rpO-fm-gQO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NbM-re-MJ7">
                                 <rect key="frame" x="542.33333333333337" y="166.66666666666669" width="68.666666666666629" height="20"/>
                                 <subviews>
@@ -245,18 +285,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i79-dI-Lmu" firstAttribute="centerX" secondItem="O2s-DN-7UF" secondAttribute="centerX" id="3XB-M9-9v1"/>
+                            <constraint firstItem="2an-A4-efG" firstAttribute="centerX" secondItem="i79-dI-Lmu" secondAttribute="centerX" id="Bbu-vZ-1e6"/>
                             <constraint firstItem="i79-dI-Lmu" firstAttribute="leading" secondItem="O2s-DN-7UF" secondAttribute="leading" id="CNz-gI-bOm"/>
+                            <constraint firstItem="2an-A4-efG" firstAttribute="leading" secondItem="i79-dI-Lmu" secondAttribute="leading" id="Q0w-xP-ASC"/>
+                            <constraint firstItem="70F-gm-lOh" firstAttribute="top" secondItem="2an-A4-efG" secondAttribute="bottom" constant="8" id="QfM-XX-iej"/>
                             <constraint firstItem="70F-gm-lOh" firstAttribute="leading" secondItem="i79-dI-Lmu" secondAttribute="leading" id="TrH-Lh-kZu"/>
                             <constraint firstItem="NbM-re-MJ7" firstAttribute="trailing" secondItem="Pvy-Zn-SEI" secondAttribute="trailing" id="V2S-WC-Jpw"/>
                             <constraint firstItem="iYG-x6-fcM" firstAttribute="top" secondItem="70F-gm-lOh" secondAttribute="top" id="VVY-Jj-Uiz"/>
                             <constraint firstItem="NbM-re-MJ7" firstAttribute="centerY" secondItem="O2s-DN-7UF" secondAttribute="centerY" id="XRk-ab-Dnu"/>
                             <constraint firstItem="i79-dI-Lmu" firstAttribute="top" secondItem="O2s-DN-7UF" secondAttribute="bottom" constant="4" id="YkR-Ql-pMB"/>
                             <constraint firstItem="QGM-bA-bn6" firstAttribute="leading" secondItem="Pvy-Zn-SEI" secondAttribute="leading" constant="12" id="a3m-2v-dsa"/>
-                            <constraint firstItem="70F-gm-lOh" firstAttribute="top" secondItem="i79-dI-Lmu" secondAttribute="bottom" constant="8" id="aAz-VM-a84"/>
                             <constraint firstAttribute="bottom" secondItem="iYG-x6-fcM" secondAttribute="bottom" id="biE-ni-hON"/>
                             <constraint firstItem="Pvy-Zn-SEI" firstAttribute="top" secondItem="DBn-nT-lVT" secondAttribute="top" id="d6N-aj-uPG"/>
                             <constraint firstItem="O2s-DN-7UF" firstAttribute="top" secondItem="Pvy-Zn-SEI" secondAttribute="bottom" constant="8" id="eZ8-jb-2m8"/>
                             <constraint firstItem="iYG-x6-fcM" firstAttribute="centerX" secondItem="DBn-nT-lVT" secondAttribute="centerX" id="fR1-jH-HG4"/>
+                            <constraint firstItem="2an-A4-efG" firstAttribute="top" secondItem="i79-dI-Lmu" secondAttribute="bottom" id="jVF-Wn-ReG"/>
                             <constraint firstItem="O2s-DN-7UF" firstAttribute="leading" secondItem="Pvy-Zn-SEI" secondAttribute="leading" id="jxx-fK-rKd"/>
                             <constraint firstItem="Pvy-Zn-SEI" firstAttribute="leading" secondItem="DBn-nT-lVT" secondAttribute="leading" id="pOB-CX-aGI"/>
                             <constraint firstItem="QGM-bA-bn6" firstAttribute="top" secondItem="Pvy-Zn-SEI" secondAttribute="top" constant="12" id="rs1-jh-YWH"/>
@@ -279,6 +322,11 @@
                 <outlet property="cancelledView" destination="iYG-x6-fcM" id="xlL-Uf-rXJ"/>
                 <outlet property="giveReviewView" destination="HFT-1i-RwJ" id="yoH-Zt-mig"/>
                 <outlet property="imgHeight" destination="adf-dP-1a9" id="MNS-Fp-c4M"/>
+                <outlet property="locationLbl" destination="GOc-Ca-hh9" id="dbh-uB-o7Q"/>
+                <outlet property="locationSpaciousView" destination="YBg-M9-r72" id="bsA-Pj-4cV"/>
+                <outlet property="locationTitleLbl" destination="Kvk-Go-oXm" id="rLu-sa-5Aj"/>
+                <outlet property="locationView" destination="cKo-tX-ZNN" id="Xpr-E5-LXB"/>
+                <outlet property="providerOrCustomerLbl" destination="i79-dI-Lmu" id="F0y-Nl-k4T"/>
                 <outlet property="rescheduleView" destination="kkH-lZ-Kvh" id="ayq-ge-icp"/>
                 <outlet property="serviceNameLbl" destination="O2s-DN-7UF" id="Y0e-aq-Cau"/>
                 <outlet property="serviceStatusLbl" destination="NAZ-EC-qRv" id="gqW-5i-19u"/>

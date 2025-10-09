@@ -18,6 +18,11 @@ class ServiceCell: UICollectionViewCell {
     @IBOutlet weak var serviceStatusLbl: InterLabel!
     @IBOutlet weak var serviceNameLbl: InterLabel!
     @IBOutlet weak var cancelledView: UIView!
+    @IBOutlet weak var locationSpaciousView: UIView!
+    @IBOutlet weak var locationView: UIView!
+    @IBOutlet weak var locationTitleLbl: InterLabel!
+    @IBOutlet weak var locationLbl: InterLabel!
+    @IBOutlet weak var providerOrCustomerLbl: InterLabel!
     
     class var identifier: String {
         return String(describing: self)

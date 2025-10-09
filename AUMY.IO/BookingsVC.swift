@@ -101,7 +101,21 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
             return CGSize(width: lbl.frame.width + 24, height: 33)
         } else {
             let width = collectionView.frame.width
-            return CGSize(width: width, height: 231)
+            if Constants.role == .serviceProvider {
+                
+                if selectedOption == "Completed Bookings" {
+                    return CGSize(width: width, height: 231)
+                }
+                
+                if selectedOption == "Cancelled Bookings" {
+                    return CGSize(width: width, height: 221)
+                }
+                
+                return CGSize(width: width, height: 249)
+                
+            } else {
+                return CGSize(width: width, height: 231)
+            }
         }
     }
     
@@ -129,6 +143,8 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
             cell.giveReviewView.isHidden = true
             cell.bookAgainView.isHidden = true
             cell.cancelledView.isHidden = true
+            cell.locationSpaciousView.isHidden = true
+            cell.locationView.isHidden = true
             
             if selectedOption == "Ongoing Service" {
                 cell.viewDetailsView.isHidden = false
@@ -137,13 +153,25 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
                 
             } else if selectedOption == "Upcoming Bookings" {
                 cell.viewDetailsView.isHidden = false
-                cell.rescheduleView.isHidden = false
+                
+                if Constants.role == .serviceProvider {
+                    cell.rescheduleView.isHidden = true
+                } else {
+                    cell.rescheduleView.isHidden = false
+                }
+                
                 cell.serviceStatusView.backgroundColor = UIColor(named: "374151")
                 cell.serviceStatusLbl.text = "Aug 16, 2025 – 10:00 AM"
                 
             } else if selectedOption == "Completed Bookings" {
-                cell.giveReviewView.isHidden = false
-                cell.bookAgainView.isHidden = false
+                
+                if Constants.role == .serviceProvider {
+                    cell.viewDetailsView.isHidden = false
+                } else {
+                    cell.giveReviewView.isHidden = false
+                    cell.bookAgainView.isHidden = false
+                }
+                
                 cell.serviceStatusView.backgroundColor = UIColor(named: "4FB200")
                 cell.serviceStatusLbl.text = "Completed"
                 
@@ -151,6 +179,25 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
                 cell.serviceStatusView.backgroundColor = UIColor(named: "FF4141")
                 cell.serviceStatusLbl.text = "Cancelled"
                 cell.cancelledView.isHidden = false
+            }
+            
+            if Constants.role == .serviceProvider {
+                cell.providerOrCustomerLbl.text = "Customer: John Doe"
+                if selectedOption != "Completed Bookings" {
+                    cell.locationSpaciousView.isHidden = false
+                    cell.locationView.isHidden = false
+                }
+                
+                if selectedOption == "Cancelled Bookings" {
+                    cell.locationTitleLbl.text = "Date of Cancellation:"
+                    cell.locationLbl.text = " Mon, Aug 21"
+                } else {
+                    cell.locationTitleLbl.text = "Location:"
+                    cell.locationLbl.text = " 2.1 km away"
+                }
+                
+            } else {
+                cell.providerOrCustomerLbl.text = "Provider: James"
             }
             
             return cell

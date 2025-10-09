@@ -23,6 +23,29 @@ class TabbarsVC: UITabBarController {
         }
         
         addTopShadowToTabBar()
+        applyValidationForTabItems()
+    }
+    
+    func applyValidationForTabItems() {
+        guard let viewControllers = viewControllers, viewControllers.count > 1 else { return }
+        
+        let storyboard = AppStoryboards.main.storyboardInstance
+        let newVC: UIViewController
+        
+        if Constants.role == .serviceProvider {
+            newVC = storyboard.instantiateViewController(withIdentifier: "YourServicesVC")
+        } else {
+            newVC = storyboard.instantiateViewController(withIdentifier: "ServicesVC")
+        }
+        
+        // ✅ Preserve old tab bar item (icon, title, tag)
+        let oldTabBarItem = viewControllers[1].tabBarItem
+        newVC.tabBarItem = oldTabBarItem
+        
+        // Replace only that controller
+        var updatedControllers = viewControllers
+        updatedControllers[1] = newVC
+        self.viewControllers = updatedControllers
     }
     
     private func addTopShadowToTabBar() {

@@ -251,6 +251,13 @@
 		8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A782E953F61000FF710 /* SortByVC.swift */; };
 		8BB83A7C2E953FEF000FF710 /* SortByOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */; };
 		8BB83A7D2E953FEF000FF710 /* SortByOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */; };
+		8BED68182E97C2670067E377 /* EarningsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */; };
+		8BED681B2E97C7490067E377 /* TransactionsHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68192E97C7490067E377 /* TransactionsHistoryCell.swift */; };
+		8BED681C2E97C7490067E377 /* TransactionsHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */; };
+		8BED681F2E97CC510067E377 /* BadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED681D2E97CC510067E377 /* BadgeCell.swift */; };
+		8BED68202E97CC510067E377 /* BadgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED681E2E97CC510067E377 /* BadgeCell.xib */; };
+		8BED68222E97D1D20067E377 /* BadgesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68212E97D1D20067E377 /* BadgesVC.swift */; };
+		8BED68242E97DE5C0067E377 /* YourServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68232E97DE5C0067E377 /* YourServicesVC.swift */; };
 		C18A4D150116C3D45ED85246 /* Pods_AUMY_IO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299CD0D9EA9D00F3BA2F8FE3 /* Pods_AUMY_IO.framework */; };
 /* End PBXBuildFile section */
 
@@ -506,6 +513,13 @@
 		8BB83A782E953F61000FF710 /* SortByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByVC.swift; sourceTree = "<group>"; };
 		8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByOptionCell.swift; sourceTree = "<group>"; };
 		8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortByOptionCell.xib; sourceTree = "<group>"; };
+		8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsDetailsVC.swift; sourceTree = "<group>"; };
+		8BED68192E97C7490067E377 /* TransactionsHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryCell.swift; sourceTree = "<group>"; };
+		8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsHistoryCell.xib; sourceTree = "<group>"; };
+		8BED681D2E97CC510067E377 /* BadgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCell.swift; sourceTree = "<group>"; };
+		8BED681E2E97CC510067E377 /* BadgeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeCell.xib; sourceTree = "<group>"; };
+		8BED68212E97D1D20067E377 /* BadgesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesVC.swift; sourceTree = "<group>"; };
+		8BED68232E97DE5C0067E377 /* YourServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourServicesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,13 +557,13 @@
 			children = (
 				8B97E8A72E8F90C6006C5F30 /* AppVault.plist */,
 				8B97E7A82E8F8B2C006C5F30 /* Info.plist */,
+				8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */,
 				8B97EBAE2E8FDB53006C5F30 /* AccountCreatedVC.swift */,
 				8B97E7A62E8F8B2C006C5F30 /* AppDelegate.swift */,
+				8BED68212E97D1D20067E377 /* BadgesVC.swift */,
 				8BB5E94D2E965C8B00EA9E07 /* BookedCancelledVC.swift */,
 				8BB5E94B2E96598C00EA9E07 /* BookingConfirmedVC.swift */,
-				8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */,
 				8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */,
-				8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */,
 				8B97EBB42E8FDF1A006C5F30 /* BookingsVC.swift */,
 				8BB5E9432E96378900EA9E07 /* BookServiceDetailsVC.swift */,
 				8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */,
@@ -559,6 +573,7 @@
 				8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */,
 				8BB83A6C2E95249B000FF710 /* DisputeReasonVC.swift */,
 				8BB83A6A2E9522F1000FF710 /* DisputeSuccessfullyPopupVC.swift */,
+				8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */,
 				8BB83A502E94CE02000FF710 /* EditProfileVC.swift */,
 				8B97EBAC2E8FCD44006C5F30 /* HomeAddressVC.swift */,
 				8B97EBB02E8FDEF0006C5F30 /* HomeVC.swift */,
@@ -570,6 +585,7 @@
 				8B97EBB62E8FDF33006C5F30 /* ProfileVC.swift */,
 				8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */,
 				8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */,
+				8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */,
 				8B97E7AD2E8F8B2C006C5F30 /* SceneDelegate.swift */,
 				8BB83A762E9533EF000FF710 /* SearchVC.swift */,
 				8BB83A682E951B92000FF710 /* ServiceCompletedVC.swift */,
@@ -582,6 +598,7 @@
 				8B97EBA82E8FC465006C5F30 /* VerifyOTPVC.swift */,
 				8B97E7AE2E8F8B2C006C5F30 /* ViewController.swift */,
 				8BB83A562E94EFEE000FF710 /* YourReviewsVC.swift */,
+				8BED68232E97DE5C0067E377 /* YourServicesVC.swift */,
 				8B97E7A72E8F8B2C006C5F30 /* Assets.xcassets */,
 				8B97EA7E2E8F92D5006C5F30 /* Inter-4.1 */,
 				8B97E7AA2E8F8B2C006C5F30 /* LaunchScreen.storyboard */,
@@ -851,6 +868,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB83A722E952FFE000FF710 /* AvailableServicesCell.swift */,
+				8BED681D2E97CC510067E377 /* BadgeCell.swift */,
 				8B8DBCD32E93BB15005F8231 /* DateCell.swift */,
 				8B97EBC32E8FF0B1006C5F30 /* HeaderCell.swift */,
 				8BB83A5E2E94F6E3000FF710 /* NotificationCell.swift */,
@@ -867,7 +885,9 @@
 				8B97EBCC2E8FF8C6006C5F30 /* TaskCell.swift */,
 				8B8DBCD72E93C122005F8231 /* TimeCell.swift */,
 				8BB83A622E94F857000FF710 /* TimeHeaderCell.swift */,
+				8BED68192E97C7490067E377 /* TransactionsHistoryCell.swift */,
 				8BB83A732E952FFE000FF710 /* AvailableServicesCell.xib */,
+				8BED681E2E97CC510067E377 /* BadgeCell.xib */,
 				8B8DBCD42E93BB15005F8231 /* DateCell.xib */,
 				8B97EBC42E8FF0B1006C5F30 /* HeaderCell.xib */,
 				8BB83A5F2E94F6E3000FF710 /* NotificationCell.xib */,
@@ -884,6 +904,7 @@
 				8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */,
 				8B8DBCD82E93C122005F8231 /* TimeCell.xib */,
 				8BB83A632E94F857000FF710 /* TimeHeaderCell.xib */,
+				8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -1031,6 +1052,7 @@
 				8B97EAB12E8F92D5006C5F30 /* Inter-SemiBold.ttf in Resources */,
 				8B97EAB22E8F92D5006C5F30 /* Inter-SemiBoldItalic.ttf in Resources */,
 				8B97EAB32E8F92D5006C5F30 /* Inter-Thin.ttf in Resources */,
+				8BED68202E97CC510067E377 /* BadgeCell.xib in Resources */,
 				8B97EAB42E8F92D5006C5F30 /* Inter-ThinItalic.ttf in Resources */,
 				8B97EAB52E8F92D5006C5F30 /* InterDisplay-Black.ttf in Resources */,
 				8B97EAB62E8F92D5006C5F30 /* InterDisplay-BlackItalic.ttf in Resources */,
@@ -1094,6 +1116,7 @@
 				8B97EAEA2E8F92D5006C5F30 /* InterDisplay-ThinItalic.woff2 in Resources */,
 				8B97EB122E8F92D5006C5F30 /* help.txt in Resources */,
 				8B8DBCE02E93C7FF005F8231 /* ReasonCell.xib in Resources */,
+				8BED681C2E97C7490067E377 /* TransactionsHistoryCell.xib in Resources */,
 				8BB83A652E94F857000FF710 /* TimeHeaderCell.xib in Resources */,
 				8B97EB132E8F92D5006C5F30 /* Inter.ttc in Resources */,
 				8B97EB142E8F92D5006C5F30 /* InterVariable.ttf in Resources */,
@@ -1197,11 +1220,13 @@
 				8B97EBC82E8FF0B1006C5F30 /* HeaderCell.swift in Sources */,
 				8B8DBCD02E9392DF005F8231 /* BookingDetailsVC.swift in Sources */,
 				8BB83A602E94F6E3000FF710 /* NotificationCell.swift in Sources */,
+				8BED68242E97DE5C0067E377 /* YourServicesVC.swift in Sources */,
 				8B97EBC92E8FF0B1006C5F30 /* ServiceCell.swift in Sources */,
 				8B97EB822E8FACB4006C5F30 /* PopupUtil.swift in Sources */,
 				8B97EB832E8FACB4006C5F30 /* CollectionViewLayouts.swift in Sources */,
 				8B97EB852E8FACB4006C5F30 /* SharedMethods.swift in Sources */,
 				8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */,
+				8BED68222E97D1D20067E377 /* BadgesVC.swift in Sources */,
 				8B97EB862E8FACB4006C5F30 /* Transitions.swift in Sources */,
 				8B97EB872E8FACB4006C5F30 /* LimitedAssetPreviewCell.swift in Sources */,
 				8B8DBCE42E93D1BC005F8231 /* RescheduledBookingVC.swift in Sources */,
@@ -1219,6 +1244,7 @@
 				8BB5E94C2E96598C00EA9E07 /* BookingConfirmedVC.swift in Sources */,
 				8B8DBCE62E93D77B005F8231 /* CompletedBookingDetails.swift in Sources */,
 				8BB83A642E94F857000FF710 /* TimeHeaderCell.swift in Sources */,
+				8BED681F2E97CC510067E377 /* BadgeCell.swift in Sources */,
 				8B97EB8D2E8FACB4006C5F30 /* Constants.swift in Sources */,
 				8B97EB8E2E8FACB4006C5F30 /* Enums.swift in Sources */,
 				8B97EB8F2E8FACB4006C5F30 /* Settings.swift in Sources */,
@@ -1234,6 +1260,7 @@
 				8B97EB942E8FACB4006C5F30 /* StoredKeys.swift in Sources */,
 				8B97EB952E8FACB4006C5F30 /* BarlowLabel.swift in Sources */,
 				8BB83A552E94EEC2000FF710 /* ChangeAddressVC.swift in Sources */,
+				8BED68182E97C2670067E377 /* EarningsDetailsVC.swift in Sources */,
 				8B97EBAF2E8FDB53006C5F30 /* AccountCreatedVC.swift in Sources */,
 				8BB5E94E2E965C8B00EA9E07 /* BookedCancelledVC.swift in Sources */,
 				8BB83A5A2E94F117000FF710 /* ReviewCell.swift in Sources */,
@@ -1258,6 +1285,7 @@
 				8B97EBA52E8FACB4006C5F30 /* DoubleExt.swift in Sources */,
 				8B97EBCE2E8FF8C6006C5F30 /* TaskCell.swift in Sources */,
 				8B97E7B52E8F8B2C006C5F30 /* SceneDelegate.swift in Sources */,
+				8BED681B2E97C7490067E377 /* TransactionsHistoryCell.swift in Sources */,
 				8B97E7B62E8F8B2C006C5F30 /* ViewController.swift in Sources */,
 				8B8DBCE92E93EFB0005F8231 /* SettingOptionCell.swift in Sources */,
 				8B97E8A42E8F9089006C5F30 /* InterLabel.swift in Sources */,

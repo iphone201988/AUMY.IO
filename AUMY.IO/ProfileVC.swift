@@ -9,6 +9,13 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var earningsTopSpaciousView: UIView!
+    @IBOutlet weak var earningsView: UIView!
+    @IBOutlet weak var earningsBottomSpaciousView: UIView!
+    @IBOutlet weak var topPlusView: UIView!
+    @IBOutlet weak var bottomPlusView: UIView!
+    @IBOutlet weak var badgeIcon: UIImageView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerCellFromNib(cellID: SettingOptionCell.identifier)
@@ -22,16 +29,38 @@ class ProfileVC: UIViewController {
                    ["icon": "MapPinLine 2", "option": "Change Address"],
                    ["icon": "solar_star-linear", "option": "Your Reviews"],
                    ["icon": "BellRinging", "option": "Notification"],
+                   ["icon": "cil_badge", "option": "Badges"],
                    ["icon": "ic_outline-privacy-tip", "option": "Privacy Policy"],
                    ["icon": "solar_logout-2-broken", "option": "Log Out"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if Constants.role == .serviceProvider {
+            earningsTopSpaciousView.isHidden = false
+            earningsBottomSpaciousView.isHidden = true
+            earningsView.isHidden = false
+            topPlusView.isHidden = true
+            bottomPlusView.isHidden = false
+            badgeIcon.isHidden = false
+            profilePic.image = UIImage(named: "Mask group 2")
+        } else {
+            earningsTopSpaciousView.isHidden = true
+            earningsBottomSpaciousView.isHidden = false
+            earningsView.isHidden = true
+            topPlusView.isHidden = false
+            bottomPlusView.isHidden = true
+            badgeIcon.isHidden = true
+            profilePic.image = UIImage(named: "Group 73")
+        }
     }
     
     @IBAction func notification(_ sender: UIButton) {
         SharedMethods.shared.pushToWithoutData(destVC: NotificationVC.self, isAnimated: true)
+    }
+    
+    @IBAction func withdrawalDetails(_ sender: UIButton) {
+        SharedMethods.shared.pushToWithoutData(destVC: EarningsDetailsVC.self, isAnimated: true)
     }
 }
 
@@ -43,7 +72,15 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        if Constants.role == .serviceProvider {
+            return UITableView.automaticDimension
+        } else {
+            if indexPath.row == 5 {
+                return .zero
+            } else {
+                return UITableView.automaticDimension
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,6 +126,10 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         
         if title == "Your Reviews" {
             SharedMethods.shared.pushToWithoutData(destVC: YourReviewsVC.self, isAnimated: true)
+        }
+        
+        if title == "Badges" {
+            SharedMethods.shared.pushToWithoutData(destVC: BadgesVC.self, isAnimated: true)
         }
     }
 }

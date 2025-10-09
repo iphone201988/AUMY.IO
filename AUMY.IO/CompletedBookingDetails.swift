@@ -10,11 +10,30 @@ import UIKit
 class CompletedBookingDetails: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var jobCompletedView: UIView!
+    @IBOutlet weak var clientView: UIView!
+    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var timeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        jobCompletedView.isHidden = true
+        clientView.isHidden = true
+        addressView.isHidden = true
+        dateView.isHidden = true
+        timeView.isHidden = true
+        
+        if Constants.role == .serviceProvider {
+            clientView.isHidden = false
+            addressView.isHidden = false
+            dateView.isHidden = false
+            timeView.isHidden = false
+        } else {
+            jobCompletedView.isHidden = false
+        }
     }
     
     /*

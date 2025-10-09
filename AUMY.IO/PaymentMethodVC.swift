@@ -9,6 +9,7 @@ import UIKit
 
 class PaymentMethodVC: UIViewController {
     
+    @IBOutlet weak var titleLbl: InterLabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerCellFromNib(cellID: PaymentMethodCell.identifier)
@@ -27,6 +28,11 @@ class PaymentMethodVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if Constants.role == .serviceProvider {
+            titleLbl.text = "Withdrawal Money"
+        } else {
+            titleLbl.text = "Payment Method"
+        }
     }
     
     @IBAction func back(_ sender: InterButton) {
