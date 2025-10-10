@@ -59,7 +59,7 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
         } else if collectionView == ongoingCollectionView {
             return 1
         } else if collectionView == upcomingCollectionView {
-            return 2
+            return 5
         } else if collectionView == completedCollectionView {
             return 5
         } else if collectionView == cancelledCollectionView {
@@ -215,7 +215,28 @@ extension BookingsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
             }
             
             if selectedOption == "Upcoming Bookings" {
-                SharedMethods.shared.pushToWithoutData(destVC: BookingDetailsVC.self, isAnimated: true)
+                if Constants.role == .serviceProvider {
+                    let destVC = AppStoryboards.main.storyboardInstance.instantiateViewController(withIdentifier: "UpcomingServiceDetailsVC") as! UpcomingServiceDetailsVC
+                    if indexPath.row == 0 {
+                        destVC.event = .booked
+                    }
+                    
+                    if indexPath.row == 1 {
+                        destVC.event = .onTheWay
+                    }
+                    
+                    if indexPath.row == 2 {
+                        destVC.event = .started
+                    }
+                    
+                    if indexPath.row == 3 {
+                        destVC.event = .completed
+                    }
+                    
+                    SharedMethods.shared.pushTo(destVC: destVC, isAnimated: true)
+                } else {
+                    SharedMethods.shared.pushToWithoutData(destVC: BookingDetailsVC.self, isAnimated: true)
+                }
             }
             
             if selectedOption == "Cancelled Bookings" {

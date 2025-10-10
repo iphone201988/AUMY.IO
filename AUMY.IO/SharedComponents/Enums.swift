@@ -46,6 +46,13 @@ enum Events {
     case logout
     case updateProfile
     case updatePassword
+    case deleteOrEditService
+    case serviceDetails
+    case createService
+    case booked
+    case onTheWay
+    case started
+    case completed
 }
 
 enum Roles {

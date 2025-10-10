@@ -251,6 +251,16 @@
 		8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A782E953F61000FF710 /* SortByVC.swift */; };
 		8BB83A7C2E953FEF000FF710 /* SortByOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */; };
 		8BB83A7D2E953FEF000FF710 /* SortByOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */; };
+		8BE7C69D2E98ED1A00E5823C /* DeleteServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C69C2E98ED1A00E5823C /* DeleteServiceVC.swift */; };
+		8BE7C6A52E9905D200E5823C /* JobRequestDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6A42E9905D200E5823C /* JobRequestDetailVC.swift */; };
+		8BE7C6A72E990EDF00E5823C /* RejectJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6A62E990EDF00E5823C /* RejectJobVC.swift */; };
+		8BE7C6A92E990FC200E5823C /* CancelJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6A82E990FC200E5823C /* CancelJobVC.swift */; };
+		8BE7C6AB2E99110D00E5823C /* BookingAcceptedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6AA2E99110D00E5823C /* BookingAcceptedVC.swift */; };
+		8BE7C6AD2E9914DD00E5823C /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6AC2E9914DD00E5823C /* CreateServiceVC.swift */; };
+		8BE7C6B02E991BF700E5823C /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7C6AF2E991BF700E5823C /* DayCell.xib */; };
+		8BE7C6B12E991BF700E5823C /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6AE2E991BF700E5823C /* DayCell.swift */; };
+		8BE7C6B32E99306100E5823C /* ServicesCreatedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6B22E99306100E5823C /* ServicesCreatedVC.swift */; };
+		8BE7C6B52E99337400E5823C /* UpcomingServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6B42E99337400E5823C /* UpcomingServiceDetailsVC.swift */; };
 		8BED68182E97C2670067E377 /* EarningsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */; };
 		8BED681B2E97C7490067E377 /* TransactionsHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED68192E97C7490067E377 /* TransactionsHistoryCell.swift */; };
 		8BED681C2E97C7490067E377 /* TransactionsHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */; };
@@ -513,6 +523,16 @@
 		8BB83A782E953F61000FF710 /* SortByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByVC.swift; sourceTree = "<group>"; };
 		8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByOptionCell.swift; sourceTree = "<group>"; };
 		8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortByOptionCell.xib; sourceTree = "<group>"; };
+		8BE7C69C2E98ED1A00E5823C /* DeleteServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceVC.swift; sourceTree = "<group>"; };
+		8BE7C6A42E9905D200E5823C /* JobRequestDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRequestDetailVC.swift; sourceTree = "<group>"; };
+		8BE7C6A62E990EDF00E5823C /* RejectJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectJobVC.swift; sourceTree = "<group>"; };
+		8BE7C6A82E990FC200E5823C /* CancelJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelJobVC.swift; sourceTree = "<group>"; };
+		8BE7C6AA2E99110D00E5823C /* BookingAcceptedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingAcceptedVC.swift; sourceTree = "<group>"; };
+		8BE7C6AC2E9914DD00E5823C /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
+		8BE7C6AE2E991BF700E5823C /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		8BE7C6AF2E991BF700E5823C /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		8BE7C6B22E99306100E5823C /* ServicesCreatedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCreatedVC.swift; sourceTree = "<group>"; };
+		8BE7C6B42E99337400E5823C /* UpcomingServiceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingServiceDetailsVC.swift; sourceTree = "<group>"; };
 		8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsDetailsVC.swift; sourceTree = "<group>"; };
 		8BED68192E97C7490067E377 /* TransactionsHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryCell.swift; sourceTree = "<group>"; };
 		8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsHistoryCell.xib; sourceTree = "<group>"; };
@@ -562,27 +582,33 @@
 				8B97E7A62E8F8B2C006C5F30 /* AppDelegate.swift */,
 				8BED68212E97D1D20067E377 /* BadgesVC.swift */,
 				8BB5E94D2E965C8B00EA9E07 /* BookedCancelledVC.swift */,
+				8BE7C6AA2E99110D00E5823C /* BookingAcceptedVC.swift */,
 				8BB5E94B2E96598C00EA9E07 /* BookingConfirmedVC.swift */,
 				8B8DBCCF2E9392DF005F8231 /* BookingDetailsVC.swift */,
 				8B97EBB42E8FDF1A006C5F30 /* BookingsVC.swift */,
 				8BB5E9432E96378900EA9E07 /* BookServiceDetailsVC.swift */,
 				8B8DBCDB2E93C5E7005F8231 /* CancelBookingVC.swift */,
 				8B8DBCE12E93CD99005F8231 /* CancelConfirmPopupVC.swift */,
+				8BE7C6A82E990FC200E5823C /* CancelJobVC.swift */,
 				8BB83A542E94EEC2000FF710 /* ChangeAddressVC.swift */,
 				8BB83A522E94EC71000FF710 /* ChangePasswordVC.swift */,
 				8B8DBCE52E93D77B005F8231 /* CompletedBookingDetails.swift */,
+				8BE7C6AC2E9914DD00E5823C /* CreateServiceVC.swift */,
+				8BE7C69C2E98ED1A00E5823C /* DeleteServiceVC.swift */,
 				8BB83A6C2E95249B000FF710 /* DisputeReasonVC.swift */,
 				8BB83A6A2E9522F1000FF710 /* DisputeSuccessfullyPopupVC.swift */,
 				8BED68172E97C2670067E377 /* EarningsDetailsVC.swift */,
 				8BB83A502E94CE02000FF710 /* EditProfileVC.swift */,
 				8B97EBAC2E8FCD44006C5F30 /* HomeAddressVC.swift */,
 				8B97EBB02E8FDEF0006C5F30 /* HomeVC.swift */,
+				8BE7C6A42E9905D200E5823C /* JobRequestDetailVC.swift */,
 				8B97EBAA2E8FCA6A006C5F30 /* LocationPermissionVC.swift */,
 				8B97EB1C2E8FA122006C5F30 /* LoginVC.swift */,
 				8BB83A5C2E94F580000FF710 /* NotificationVC.swift */,
 				8BB83A662E950F0A000FF710 /* OngoingServiceDetailsVC.swift */,
 				8BB5E9452E96456E00EA9E07 /* PaymentMethodVC.swift */,
 				8B97EBB62E8FDF33006C5F30 /* ProfileVC.swift */,
+				8BE7C6A62E990EDF00E5823C /* RejectJobVC.swift */,
 				8B8DBCD12E93B84B005F8231 /* RescheduleBookingVC.swift */,
 				8B8DBCE32E93D1BC005F8231 /* RescheduledBookingVC.swift */,
 				8BB5E9512E969C4A00EA9E07 /* ReviewedVC.swift */,
@@ -590,10 +616,12 @@
 				8BB83A762E9533EF000FF710 /* SearchVC.swift */,
 				8BB83A682E951B92000FF710 /* ServiceCompletedVC.swift */,
 				8BB5E93D2E96233100EA9E07 /* ServiceDetailsVC.swift */,
+				8BE7C6B22E99306100E5823C /* ServicesCreatedVC.swift */,
 				8B97EBB22E8FDF02006C5F30 /* ServicesVC.swift */,
 				8B97EB202E8FAC31006C5F30 /* SignupVC.swift */,
 				8BB83A782E953F61000FF710 /* SortByVC.swift */,
 				8B97EBB82E8FDFCD006C5F30 /* TabbarsVC.swift */,
+				8BE7C6B42E99337400E5823C /* UpcomingServiceDetailsVC.swift */,
 				8B97E8A92E8F90E4006C5F30 /* VaultInfo.swift */,
 				8B97EBA82E8FC465006C5F30 /* VerifyOTPVC.swift */,
 				8B97E7AE2E8F8B2C006C5F30 /* ViewController.swift */,
@@ -870,6 +898,7 @@
 				8BB83A722E952FFE000FF710 /* AvailableServicesCell.swift */,
 				8BED681D2E97CC510067E377 /* BadgeCell.swift */,
 				8B8DBCD32E93BB15005F8231 /* DateCell.swift */,
+				8BE7C6AE2E991BF700E5823C /* DayCell.swift */,
 				8B97EBC32E8FF0B1006C5F30 /* HeaderCell.swift */,
 				8BB83A5E2E94F6E3000FF710 /* NotificationCell.swift */,
 				8B8DBCCB2E9388E8005F8231 /* OptionCell.swift */,
@@ -889,6 +918,7 @@
 				8BB83A732E952FFE000FF710 /* AvailableServicesCell.xib */,
 				8BED681E2E97CC510067E377 /* BadgeCell.xib */,
 				8B8DBCD42E93BB15005F8231 /* DateCell.xib */,
+				8BE7C6AF2E991BF700E5823C /* DayCell.xib */,
 				8B97EBC42E8FF0B1006C5F30 /* HeaderCell.xib */,
 				8BB83A5F2E94F6E3000FF710 /* NotificationCell.xib */,
 				8B8DBCCC2E9388E8005F8231 /* OptionCell.xib */,
@@ -1102,6 +1132,7 @@
 				8B97EADD2E8F92D5006C5F30 /* InterDisplay-ExtraBold.woff2 in Resources */,
 				8B97EADE2E8F92D5006C5F30 /* InterDisplay-ExtraBoldItalic.woff2 in Resources */,
 				8B97EBD32E8FFAFB006C5F30 /* PopularServiceCell.xib in Resources */,
+				8BE7C6B02E991BF700E5823C /* DayCell.xib in Resources */,
 				8B97EADF2E8F92D5006C5F30 /* InterDisplay-ExtraLight.woff2 in Resources */,
 				8B97EAE02E8F92D5006C5F30 /* InterDisplay-ExtraLightItalic.woff2 in Resources */,
 				8B97EAE12E8F92D5006C5F30 /* InterDisplay-Italic.woff2 in Resources */,
@@ -1185,6 +1216,7 @@
 				8B97E8AA2E8F90E4006C5F30 /* VaultInfo.swift in Sources */,
 				8BB83A7C2E953FEF000FF710 /* SortByOptionCell.swift in Sources */,
 				8B97E7B42E8F8B2C006C5F30 /* AppDelegate.swift in Sources */,
+				8BE7C69D2E98ED1A00E5823C /* DeleteServiceVC.swift in Sources */,
 				8B97EB1D2E8FA123006C5F30 /* LoginVC.swift in Sources */,
 				8B97EB6C2E8FACB4006C5F30 /* Gradients.swift in Sources */,
 				8B97EB6D2E8FACB4006C5F30 /* UIImageExt.swift in Sources */,
@@ -1202,6 +1234,7 @@
 				8B97EB762E8FACB4006C5F30 /* CollectionViewExt.swift in Sources */,
 				8B97EB772E8FACB4006C5F30 /* PickerManager.swift in Sources */,
 				8B97EB782E8FACB4006C5F30 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				8BE7C6B12E991BF700E5823C /* DayCell.swift in Sources */,
 				8B97EB7A2E8FACB4006C5F30 /* CustomMovieActivityItemSource.swift in Sources */,
 				8B97EB7B2E8FACB4006C5F30 /* URLExt.swift in Sources */,
 				8B97EB7C2E8FACB4006C5F30 /* CircularGradientLoader.swift in Sources */,
@@ -1224,12 +1257,14 @@
 				8B97EBC92E8FF0B1006C5F30 /* ServiceCell.swift in Sources */,
 				8B97EB822E8FACB4006C5F30 /* PopupUtil.swift in Sources */,
 				8B97EB832E8FACB4006C5F30 /* CollectionViewLayouts.swift in Sources */,
+				8BE7C6A52E9905D200E5823C /* JobRequestDetailVC.swift in Sources */,
 				8B97EB852E8FACB4006C5F30 /* SharedMethods.swift in Sources */,
 				8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */,
 				8BED68222E97D1D20067E377 /* BadgesVC.swift in Sources */,
 				8B97EB862E8FACB4006C5F30 /* Transitions.swift in Sources */,
 				8B97EB872E8FACB4006C5F30 /* LimitedAssetPreviewCell.swift in Sources */,
 				8B8DBCE42E93D1BC005F8231 /* RescheduledBookingVC.swift in Sources */,
+				8BE7C6AD2E9914DD00E5823C /* CreateServiceVC.swift in Sources */,
 				8B97EB882E8FACB4006C5F30 /* CometLoader.swift in Sources */,
 				8B97EBB32E8FDF02006C5F30 /* ServicesVC.swift in Sources */,
 				8BB83A6B2E9522F1000FF710 /* DisputeSuccessfullyPopupVC.swift in Sources */,
@@ -1263,10 +1298,12 @@
 				8BED68182E97C2670067E377 /* EarningsDetailsVC.swift in Sources */,
 				8B97EBAF2E8FDB53006C5F30 /* AccountCreatedVC.swift in Sources */,
 				8BB5E94E2E965C8B00EA9E07 /* BookedCancelledVC.swift in Sources */,
+				8BE7C6A72E990EDF00E5823C /* RejectJobVC.swift in Sources */,
 				8BB83A5A2E94F117000FF710 /* ReviewCell.swift in Sources */,
 				8B97EB962E8FACB4006C5F30 /* DispatchQueue.swift in Sources */,
 				8B97EB972E8FACB4006C5F30 /* UIColorExt.swift in Sources */,
 				8BB83A512E94CE02000FF710 /* EditProfileVC.swift in Sources */,
+				8BE7C6B52E99337400E5823C /* UpcomingServiceDetailsVC.swift in Sources */,
 				8BB83A572E94EFEE000FF710 /* YourReviewsVC.swift in Sources */,
 				8B97EB992E8FACB4006C5F30 /* Toast.swift in Sources */,
 				8B97EB9A2E8FACB4006C5F30 /* Extension.swift in Sources */,
@@ -1275,7 +1312,9 @@
 				8B97EB9C2E8FACB4006C5F30 /* InputFieldValidator.swift in Sources */,
 				8B8DBCD52E93BB15005F8231 /* DateCell.swift in Sources */,
 				8B97EB9E2E8FACB4006C5F30 /* KeyboardEventListener.swift in Sources */,
+				8BE7C6B32E99306100E5823C /* ServicesCreatedVC.swift in Sources */,
 				8B97EB9F2E8FACB4006C5F30 /* DataExt.swift in Sources */,
+				8BE7C6AB2E99110D00E5823C /* BookingAcceptedVC.swift in Sources */,
 				8B97EBA02E8FACB4006C5F30 /* DateUtils.swift in Sources */,
 				8BB5E9522E969C4A00EA9E07 /* ReviewedVC.swift in Sources */,
 				8B97EBA22E8FACB4006C5F30 /* LogHandler.swift in Sources */,
@@ -1289,6 +1328,7 @@
 				8B97E7B62E8F8B2C006C5F30 /* ViewController.swift in Sources */,
 				8B8DBCE92E93EFB0005F8231 /* SettingOptionCell.swift in Sources */,
 				8B97E8A42E8F9089006C5F30 /* InterLabel.swift in Sources */,
+				8BE7C6A92E990FC200E5823C /* CancelJobVC.swift in Sources */,
 				8B97EBB92E8FDFCD006C5F30 /* TabbarsVC.swift in Sources */,
 				8B97EB212E8FAC31006C5F30 /* SignupVC.swift in Sources */,
 				8B8DBCDF2E93C7FF005F8231 /* ReasonCell.swift in Sources */,

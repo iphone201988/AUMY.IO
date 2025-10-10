@@ -91,6 +91,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func createService(_ sender: InterButton) {
+        SharedMethods.shared.pushToWithoutData(destVC: CreateServiceVC.self, isAnimated: true)
     }
     
     // MARK: Shared Methods

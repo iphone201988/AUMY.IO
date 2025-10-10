@@ -14,7 +14,7 @@ class ServicesVC: UIViewController {
             collectionView.registerCellFromNib(cellID: PopularServiceCell.identifier)
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

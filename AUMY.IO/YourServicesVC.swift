@@ -39,7 +39,7 @@ class YourServicesVC: UIViewController {
 
 // MARK: Delegates and DataSources
 extension YourServicesVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         2
     }
@@ -67,5 +67,11 @@ extension YourServicesVC: UICollectionViewDataSource, UICollectionViewDelegate, 
         cell.locationView.isHidden = false
         cell.providerOrCustomerLbl.text = "Customer: John Doe"
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let destVC = AppStoryboards.main.storyboardInstance.instantiateViewController(withIdentifier: "ServiceDetailsVC") as! ServiceDetailsVC
+        destVC.event = .deleteOrEditService
+        SharedMethods.shared.pushTo(destVC: destVC, isAnimated: true)
     }
 }
