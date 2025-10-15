@@ -2040,7 +2040,7 @@ You can change it later.</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BLZ-WV-k9h">
                                                         <rect key="frame" x="0.0" y="315" width="345" height="55"/>
                                                         <subviews>
-                                                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-A4-6n4">
+                                                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-A4-6n4" customClass="CountryPickerView" customModule="CountryPickerView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="55"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-5I-DGP" customClass="DTTextField" customModule="DTTextField">
@@ -2371,6 +2371,7 @@ You can change it later.</string>
                     <connections>
                         <outlet property="appleSpaciousView" destination="kxj-6P-g9G" id="RIv-IE-med"/>
                         <outlet property="appleView" destination="8ep-E1-Mb4" id="aPb-UQ-5EV"/>
+                        <outlet property="countryPickerView" destination="fm9-A4-6n4" id="611-EY-1Wo"/>
                         <outlet property="emailTF" destination="22H-pH-nWU" id="gdu-KS-1Hu"/>
                         <outlet property="googleSpaciousView" destination="eDm-Le-sfD" id="lQE-oI-uBV"/>
                         <outlet property="googleView" destination="R4E-fs-lyz" id="Nss-b3-q6G"/>

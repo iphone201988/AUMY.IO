@@ -251,6 +251,10 @@
 		8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A782E953F61000FF710 /* SortByVC.swift */; };
 		8BB83A7C2E953FEF000FF710 /* SortByOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */; };
 		8BB83A7D2E953FEF000FF710 /* SortByOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */; };
+		8BD1DB6F2E9F5FF300B37907 /* CountryPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD1DB6E2E9F5FF300B37907 /* CountryPickerView */; };
+		8BD1DB722E9F620B00B37907 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1DB712E9F620600B37907 /* Endpoints.swift */; };
+		8BD1DB742E9F62AA00B37907 /* RemoteRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1DB732E9F62A900B37907 /* RemoteRequestManager.swift */; };
+		8BD1DB772E9F684700B37907 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1DB762E9F684100B37907 /* UserDetails.swift */; };
 		8BE7C69D2E98ED1A00E5823C /* DeleteServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C69C2E98ED1A00E5823C /* DeleteServiceVC.swift */; };
 		8BE7C6A52E9905D200E5823C /* JobRequestDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6A42E9905D200E5823C /* JobRequestDetailVC.swift */; };
 		8BE7C6A72E990EDF00E5823C /* RejectJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C6A62E990EDF00E5823C /* RejectJobVC.swift */; };
@@ -523,6 +527,9 @@
 		8BB83A782E953F61000FF710 /* SortByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByVC.swift; sourceTree = "<group>"; };
 		8BB83A7A2E953FEF000FF710 /* SortByOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByOptionCell.swift; sourceTree = "<group>"; };
 		8BB83A7B2E953FEF000FF710 /* SortByOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortByOptionCell.xib; sourceTree = "<group>"; };
+		8BD1DB712E9F620600B37907 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		8BD1DB732E9F62A900B37907 /* RemoteRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRequestManager.swift; sourceTree = "<group>"; };
+		8BD1DB762E9F684100B37907 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		8BE7C69C2E98ED1A00E5823C /* DeleteServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceVC.swift; sourceTree = "<group>"; };
 		8BE7C6A42E9905D200E5823C /* JobRequestDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRequestDetailVC.swift; sourceTree = "<group>"; };
 		8BE7C6A62E990EDF00E5823C /* RejectJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectJobVC.swift; sourceTree = "<group>"; };
@@ -547,6 +554,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD1DB6F2E9F5FF300B37907 /* CountryPickerView in Frameworks */,
 				C18A4D150116C3D45ED85246 /* Pods_AUMY_IO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +583,7 @@
 		8B97E7AF2E8F8B2C006C5F30 /* AUMY.IO */ = {
 			isa = PBXGroup;
 			children = (
+				8BD1DB752E9F682F00B37907 /* Models */,
 				8B97E8A72E8F90C6006C5F30 /* AppVault.plist */,
 				8B97E7A82E8F8B2C006C5F30 /* Info.plist */,
 				8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */,
@@ -886,6 +895,7 @@
 				8B97EB3F2E8FACB4006C5F30 /* Transitions.swift */,
 				8B97EB562E8FACB4006C5F30 /* Extensions */,
 				8B97EB5D2E8FACB4006C5F30 /* MediaPickerView */,
+				8BD1DB702E9F61F600B37907 /* RemoteRequestManager */,
 				8B97EB622E8FACB4006C5F30 /* TPKeyBoardAvoiding */,
 				8B97EB662E8FACB4006C5F30 /* UserDefaults */,
 			);
@@ -937,6 +947,23 @@
 				8BED681A2E97C7490067E377 /* TransactionsHistoryCell.xib */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		8BD1DB702E9F61F600B37907 /* RemoteRequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				8BD1DB712E9F620600B37907 /* Endpoints.swift */,
+				8BD1DB732E9F62A900B37907 /* RemoteRequestManager.swift */,
+			);
+			path = RemoteRequestManager;
+			sourceTree = "<group>";
+		};
+		8BD1DB752E9F682F00B37907 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BD1DB762E9F684100B37907 /* UserDetails.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8E416312B88AE1A7D5EA00CC /* Frameworks */ = {
@@ -1002,6 +1029,9 @@
 			);
 			mainGroup = 8B97E7852E8F8B21006C5F30;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8B97E78F2E8F8B21006C5F30 /* Products */;
 			projectDirPath = "";
@@ -1258,12 +1288,14 @@
 				8B97EB822E8FACB4006C5F30 /* PopupUtil.swift in Sources */,
 				8B97EB832E8FACB4006C5F30 /* CollectionViewLayouts.swift in Sources */,
 				8BE7C6A52E9905D200E5823C /* JobRequestDetailVC.swift in Sources */,
+				8BD1DB742E9F62AA00B37907 /* RemoteRequestManager.swift in Sources */,
 				8B97EB852E8FACB4006C5F30 /* SharedMethods.swift in Sources */,
 				8BB83A792E953F61000FF710 /* SortByVC.swift in Sources */,
 				8BED68222E97D1D20067E377 /* BadgesVC.swift in Sources */,
 				8B97EB862E8FACB4006C5F30 /* Transitions.swift in Sources */,
 				8B97EB872E8FACB4006C5F30 /* LimitedAssetPreviewCell.swift in Sources */,
 				8B8DBCE42E93D1BC005F8231 /* RescheduledBookingVC.swift in Sources */,
+				8BD1DB722E9F620B00B37907 /* Endpoints.swift in Sources */,
 				8BE7C6AD2E9914DD00E5823C /* CreateServiceVC.swift in Sources */,
 				8B97EB882E8FACB4006C5F30 /* CometLoader.swift in Sources */,
 				8B97EBB32E8FDF02006C5F30 /* ServicesVC.swift in Sources */,
@@ -1289,6 +1321,7 @@
 				8B97EB912E8FACB4006C5F30 /* DropdownManager.swift in Sources */,
 				8BB83A742E952FFE000FF710 /* AvailableServicesCell.swift in Sources */,
 				8B97EBAB2E8FCA6A006C5F30 /* LocationPermissionVC.swift in Sources */,
+				8BD1DB772E9F684700B37907 /* UserDetails.swift in Sources */,
 				8B97EBAD2E8FCD44006C5F30 /* HomeAddressVC.swift in Sources */,
 				8B97EB922E8FACB4006C5F30 /* InspectableTextField.swift in Sources */,
 				8B97EB932E8FACB4006C5F30 /* UIWindowExtension.swift in Sources */,
@@ -1578,6 +1611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kizitonwose/CountryPickerView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BD1DB6E2E9F5FF300B37907 /* CountryPickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */;
+			productName = CountryPickerView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B97E7862E8F8B21006C5F30 /* Project object */;
 }

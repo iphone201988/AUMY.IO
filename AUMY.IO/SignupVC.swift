@@ -7,6 +7,7 @@
 
 import UIKit
 import DTTextField
+import CountryPickerView
 
 class SignupVC: UIViewController {
     
@@ -15,6 +16,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var phoneCodeTF: DTTextField!
     @IBOutlet weak var phoneNoTF: DTTextField!
     @IBOutlet weak var passwordTF: DTTextField!
+    @IBOutlet weak var countryPickerView: CountryPickerView!
     
     @IBOutlet weak var appleView: UIView!
     @IBOutlet weak var appleSpaciousView: UIView!
@@ -33,6 +35,8 @@ class SignupVC: UIViewController {
     let passwordMessage         = NSLocalizedString("Password is required.", comment: "")
     let confirmPasswordMessage  = NSLocalizedString("Confirm password is required.", comment: "")
     let mismatchPasswordMessage = NSLocalizedString("Password and Confirm password are not matching.", comment: "")
+    
+    fileprivate var selectedPhoneCode = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +64,21 @@ class SignupVC: UIViewController {
             orSpaciousView.isHidden = false
             termsConditionSpaciousView.isHidden = false
             termsConditionView.isHidden = false
+        }
+        
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
+        
+        // Hide any visible text (name/code/phone) in the picker view
+        countryPickerView.showCountryCodeInView = false
+        countryPickerView.showPhoneCodeInView = false
+        countryPickerView.showCountryNameInView = false
+        countryPickerView.flagImageView.isHidden = true
+        
+        // Set current locale's country as default
+        let currentCountry = countryPickerView.getCountryByCode(Locale.current.region?.identifier ?? "US")
+        if let country = currentCountry {
+            selectedPhoneCode = country.phoneCode
         }
     }
     
@@ -90,8 +109,17 @@ class SignupVC: UIViewController {
     
     @IBAction func signup(_ sender: InterButton) {
         guard validateData() else { return }
-        
-        SharedMethods.shared.pushToWithoutData(destVC: VerifyOTPVC.self, isAnimated: true)
+        let params = [
+            "email": nameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            "password": passwordTF.text ?? "",
+            "name": nameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            "phoneNumber": phoneNoTF.text ?? "",
+            "countryCode": phoneCodeTF.text ?? "",
+            "deviceType": Constants.deviceType,
+            "deviceToken": UserDefaults.standard[.deviceToken] ?? "",
+            "role": Constants.role.type
+        ] as [String : Any]
+        Task { await signup(params) }
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -102,5 +130,33 @@ class SignupVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+// MARK: Delegates and DataSources
+extension SignupVC: CountryPickerViewDelegate, CountryPickerViewDataSource {
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
+        let phoneCode = country.phoneCode
+        selectedPhoneCode = phoneCode
+        phoneCodeTF.text = phoneCode
+    }
+}
+
+extension SignupVC {
+    fileprivate func signup(_ params: [String: Any]) async {
+        let res = await RemoteRequestManager.shared.dataTask(endpoint: .signup,
+                                                             model: UserDetails.self,
+                                                             params: params,
+                                                             method: .post)
+        await MainActor.run {
+            switch res {
+            case .failure(let err):
+                Toast.show(message: err.localizedDescription)
+                
+            case .success(let details):
+                UserDefaults.standard[.loggedUserDetails] = details
+                SharedMethods.shared.pushToWithoutData(destVC: VerifyOTPVC.self, isAnimated: true)
+            }
+        }
+    }
 }
 

@@ -13,7 +13,7 @@ struct CurrentLocation {
 
 struct Constants {
     static var role: Roles = .user
-    static var deviceType = 1
+    static var deviceType = 2
     static var lblFloatPlaceholderFont = UIFont(name: "Inter-Light", size: 11.0) ?? .systemFont(ofSize: 11.0, weight: .light)
     static var editableTextFieldFont = UIFont(name: "Inter-Regular", size: 16.0)
 }

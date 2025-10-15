@@ -56,6 +56,13 @@ enum Events {
 }
 
 enum Roles {
-    case serviceProvider
     case user
+    case serviceProvider
+    
+    var type: Int {
+        switch self {
+        case .user: return 1
+        case .serviceProvider: return 2
+        }
+    }
 }

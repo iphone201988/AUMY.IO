@@ -7,13 +7,9 @@ struct StoredKeys<Value> {
     init(_ name: Keyname) {
         self.name = name.rawValue
     }
-    
-    static var userID: StoredKeys<String> {
-        return StoredKeys<String>(Keyname.userID)
-    }
-    
-    static var email: StoredKeys<String> {
-        return StoredKeys<String>(Keyname.email)
+
+    static var loggedUserDetails: StoredKeys<UserDetails> {
+        return StoredKeys<UserDetails>(Keyname.loggedUserDetails)
     }
     
     static var deviceToken: StoredKeys<String> {
