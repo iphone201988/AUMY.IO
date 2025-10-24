@@ -54,9 +54,16 @@ class HomeAddressVC: UIViewController {
     
     @IBAction func saveAddress(_ sender: InterButton) {
         guard validateData() else { return }
-        let destVC = AppStoryboards.main.storyboardInstance.instantiateViewController(withIdentifier: "AccountCreatedVC") as! AccountCreatedVC
-        destVC.servicesEventsDelegate = self
-        SharedMethods.shared.presentVC(destVC: destVC, modalPresentationStyle: .overFullScreen, isAnimated: true)
+        let params = [
+            "address": "",
+            "houseNumber": houseNoTF.text ?? "",
+            "street": streetTF.text ?? "",
+            "apartment": apartmentTF.text ?? "",
+            "floor": floorTF.text ?? "",
+            "lat":  CurrentLocation.latitude,
+            "long":  CurrentLocation.longitude
+        ] as [String : Any]
+        Task { await completeOnboarding(params) }
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -76,6 +83,27 @@ extension HomeAddressVC: ServicesEvents {
             let storyboard = AppStoryboards.main.storyboardInstance
             let rootVC = storyboard.instantiateViewController(withIdentifier: "TabbarsVC") as! TabbarsVC
             SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+        }
+    }
+}
+
+extension HomeAddressVC {
+    fileprivate func completeOnboarding(_ params: [String: Any]) async {
+        let res = await RemoteRequestManager.shared.uploadTask(endpoint: .completeOnboarding,
+                                                             model: UserDetails.self,
+                                                             params: params,
+                                                             method: .post,
+                                                             body: .formData)
+        await MainActor.run {
+            switch res {
+            case .failure(let err):
+                Toast.show(message: err.localizedDescription)
+                
+            case .success:
+                let destVC = AppStoryboards.main.storyboardInstance.instantiateViewController(withIdentifier: "AccountCreatedVC") as! AccountCreatedVC
+                destVC.servicesEventsDelegate = self
+                SharedMethods.shared.presentVC(destVC: destVC, modalPresentationStyle: .overFullScreen, isAnimated: true)
+            }
         }
     }
 }

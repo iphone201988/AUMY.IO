@@ -26,6 +26,8 @@ class LoginVC: UIViewController {
     let passwordMessage         = NSLocalizedString("Password is required.", comment: "")
     let confirmPasswordMessage  = NSLocalizedString("Confirm password is required.", comment: "")
     let mismatchPasswordMessage = NSLocalizedString("Password and Confirm password are not matching.", comment: "")
+
+    var workItem: DispatchWorkItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +71,14 @@ class LoginVC: UIViewController {
     
     @IBAction func login(_ sender: InterButton) {
         guard validateData() else { return }
-        
-        let storyboard = AppStoryboards.main.storyboardInstance
-        let rootVC = storyboard.instantiateViewController(withIdentifier: "TabbarsVC") as! TabbarsVC
-        SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+        let params = [
+            "email": emailTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            "password": passwordTF.text ?? "",
+            "deviceType": Constants.deviceType,
+            "deviceToken": UserDefaults.standard[.deviceToken] ?? "123",
+            //"role": Constants.role.type
+        ] as [String : Any]
+        Task { await login(params) }
     }
     
     @IBAction func signup(_ sender: UIButton) {
@@ -82,6 +88,33 @@ class LoginVC: UIViewController {
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
 
+extension LoginVC {
+    fileprivate func login(_ params: [String: Any]) async {
+        let res = await RemoteRequestManager.shared.dataTask(endpoint: .login,
+                                                             model: UserDetails.self,
+                                                             params: params,
+                                                             method: .post,
+                                                             body: .rawJSON)
+        await MainActor.run {
+            switch res {
+            case .failure(let err):
+                Toast.show(message: err.localizedDescription)
+                
+            case .success(let details):
+                if let user = details.user {
+                    UserDefaults.standard[.loggedUserDetails] = user
+                }
+                
+                if let token = details.token {
+                    UserDefaults.standard[.accessToken] = token
+                }
+                
+                let storyboard = AppStoryboards.main.storyboardInstance
+                let rootVC = storyboard.instantiateViewController(withIdentifier: "TabbarsVC") as! TabbarsVC
+                SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+            }
+        }
+    }
+}

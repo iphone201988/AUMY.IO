@@ -8,8 +8,8 @@ struct StoredKeys<Value> {
         self.name = name.rawValue
     }
 
-    static var loggedUserDetails: StoredKeys<UserDetails> {
-        return StoredKeys<UserDetails>(Keyname.loggedUserDetails)
+    static var loggedUserDetails: StoredKeys<UserData> {
+        return StoredKeys<UserData>(Keyname.loggedUserDetails)
     }
     
     static var deviceToken: StoredKeys<String> {

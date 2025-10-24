@@ -2,7 +2,7 @@ import UIKit
 
 class LogHandler {
     
-    static func responseLog(_ data: Data?, _ response: URLResponse?, _ err: Error?) {
+    static func responseLog(_ data: Data?, _ response: URLResponse? = nil, _ err: Error? = nil) {
         guard let response, let data, err == nil else { return }
         let responseDesc = "\(response)"
         _ = responseDesc.replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil)

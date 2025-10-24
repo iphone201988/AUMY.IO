@@ -8,6 +8,8 @@
 enum Endpoints: String {
     case signup = "common/signup"
     case login  = "common/login"
+    case accountVerify = "common/account-verify"
+    case completeOnboarding = "common/complete-onboarding"
 }
 
 enum HttpMehtods: String {
@@ -15,4 +17,12 @@ enum HttpMehtods: String {
     case post   = "POST"
     case put    = "PUT"
     case delete = "DELETE"
+}
+
+enum HttpBodyType: String {
+    case formData
+    case urlEncoded
+    case rawJSON
+    case binary
+    case graphQL
 }

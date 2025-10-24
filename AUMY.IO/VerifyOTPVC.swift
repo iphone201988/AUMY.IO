@@ -47,14 +47,8 @@ class VerifyOTPVC: UIViewController {
         } else {
             let otp = otp1 + otp2 + otp3 + otp4
             let _ = Int(otp) ?? 0
-            
-            switch Constants.role {
-            case .serviceProvider:
-                SharedMethods.shared.pushToWithoutData(destVC: AboutYourServiceVC.self, isAnimated: true)
-                
-            case .user:
-                SharedMethods.shared.pushToWithoutData(destVC: LocationPermissionVC.self, isAnimated: true)
-            }
+            let params = ["email": email, "otp": otp]
+            Task { await accountVerify(params) }
         }
     }
     
@@ -134,6 +128,40 @@ class VerifyOTPVC: UIViewController {
                 case otp3TF: otp4TF.becomeFirstResponder()
                 case otp4TF: otp4TF.resignFirstResponder()
                 default: break
+                }
+            }
+        }
+    }
+}
+
+extension VerifyOTPVC {
+    fileprivate func accountVerify(_ params: [String: Any]) async {
+        let res = await RemoteRequestManager.shared.dataTask(endpoint: .accountVerify,
+                                                             model: UserDetails.self,
+                                                             params: params,
+                                                             method: .post,
+                                                             body: .rawJSON)
+        await MainActor.run {
+            switch res {
+            case .failure(let err):
+                Toast.show(message: err.localizedDescription)
+                
+            case .success(let details):
+                
+                if let user = details.user {
+                    UserDefaults.standard[.loggedUserDetails] = user
+                }
+                
+                if let token = details.token {
+                    UserDefaults.standard[.accessToken] = token
+                }
+                
+                switch Constants.role {
+                case .serviceProvider:
+                    SharedMethods.shared.pushToWithoutData(destVC: AboutYourServiceVC.self, isAnimated: true)
+                    
+                case .user:
+                    SharedMethods.shared.pushToWithoutData(destVC: LocationPermissionVC.self, isAnimated: true)
                 }
             }
         }

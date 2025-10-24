@@ -110,13 +110,13 @@ class SignupVC: UIViewController {
     @IBAction func signup(_ sender: InterButton) {
         guard validateData() else { return }
         let params = [
-            "email": nameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+            "email": emailTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
             "password": passwordTF.text ?? "",
             "name": nameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
             "phoneNumber": phoneNoTF.text ?? "",
             "countryCode": phoneCodeTF.text ?? "",
             "deviceType": Constants.deviceType,
-            "deviceToken": UserDefaults.standard[.deviceToken] ?? "",
+            "deviceToken": UserDefaults.standard[.deviceToken] ?? "123",
             "role": Constants.role.type
         ] as [String : Any]
         Task { await signup(params) }
@@ -146,17 +146,19 @@ extension SignupVC {
         let res = await RemoteRequestManager.shared.dataTask(endpoint: .signup,
                                                              model: UserDetails.self,
                                                              params: params,
-                                                             method: .post)
+                                                             method: .post,
+                                                             body: .rawJSON)
         await MainActor.run {
             switch res {
             case .failure(let err):
                 Toast.show(message: err.localizedDescription)
                 
-            case .success(let details):
-                UserDefaults.standard[.loggedUserDetails] = details
-                SharedMethods.shared.pushToWithoutData(destVC: VerifyOTPVC.self, isAnimated: true)
+            case .success:
+                let sb = AppStoryboards.main.storyboardInstance
+                let vc = sb.instantiateViewController(withIdentifier: "VerifyOTPVC") as! VerifyOTPVC
+                vc.email = emailTF.text ?? ""
+                SharedMethods.shared.pushTo(destVC: vc, isAnimated: true)
             }
         }
     }
 }
-

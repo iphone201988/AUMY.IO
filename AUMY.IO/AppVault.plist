@@ -38,19 +38,7 @@
 	<key>BetaTesting_Base_URL</key>
 	<string></string>
 	<key>Development_Base_URL</key>
-	<string>http://52.14.142.77:8000/api
-
-http://52.14.142.77:8000/api
-
-http://52.14.142.77:8000/api
-
-http://52.14.142.77:8000/api
-
-http://52.14.142.77:8000/api
-
-http://52.14.142.77:8000/api
-
-</string>
+	<string>http://52.14.142.77:8000/api</string>
 	<key>Production_Base_URL</key>
 	<string></string>
 	<key>Media_Load_Base_URL</key>
