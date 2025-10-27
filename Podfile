@@ -7,5 +7,6 @@ target 'AUMY.IO' do
 
   # Pods for AUMY.IO
 pod 'DTTextField'
+pod 'GooglePlaces'
 
 end

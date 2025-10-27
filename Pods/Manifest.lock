@@ -1,16 +1,20 @@
 PODS:
   - DTTextField (0.7.0)
+  - GooglePlaces (9.0.0)
 
 DEPENDENCIES:
   - DTTextField
+  - GooglePlaces
 
 SPEC REPOS:
   trunk:
     - DTTextField
+    - GooglePlaces
 
 SPEC CHECKSUMS:
   DTTextField: 768d5991211599145f289971e5936f8bb29990bb
+  GooglePlaces: cf1f5b61297da7ac64bcb147cfa7b435d74ed6d9
 
-PODFILE CHECKSUM: 5fe86915baf806a1bbbaad595d5d1c6b8aa32ebb
+PODFILE CHECKSUM: 0734bd5e9e35b5728cc403b18608a3fc58e970c8
 
 COCOAPODS: 1.16.2

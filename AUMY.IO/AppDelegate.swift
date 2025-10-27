@@ -9,6 +9,10 @@ import UIKit
 import UserNotifications
 import UserNotificationsUI
 import CoreLocation
+import GooglePlaces
+import GoogleMaps
+
+let googleMap_key =  "AIzaSyBUpF2C7SrWTnrVaewvzWQO3bL17uTrAI8"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             //go with the regular flow
         }
+        
+        GMSServices.provideAPIKey(googleMap_key)
+        GMSPlacesClient.provideAPIKey(googleMap_key)
         
         return true
     }

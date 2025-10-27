@@ -3031,6 +3031,10 @@ You can change it later.</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </mapView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-tw-rS7" customClass="GMSMapView">
+                                                <rect key="frame" x="24" y="70.666666666666686" width="345" height="156"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4je-BR-8EN">
                                                 <rect key="frame" x="24" y="242.66666666666669" width="345" height="62"/>
                                                 <subviews>
@@ -3299,17 +3303,21 @@ You can change it later.</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="leading" secondItem="Tyn-7f-OCU" secondAttribute="leading" id="1Ed-Nt-Stn"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="leading" secondItem="X9m-tg-4ZS" secondAttribute="leading" constant="24" id="2LR-be-hPI"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="centerX" secondItem="X9m-tg-4ZS" secondAttribute="centerX" id="6qY-9s-AuS"/>
                                             <constraint firstItem="4je-BR-8EN" firstAttribute="top" secondItem="Tyn-7f-OCU" secondAttribute="bottom" constant="16" id="8xc-Y4-0Gh"/>
+                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="top" secondItem="Tyn-7f-OCU" secondAttribute="top" id="DgW-Jh-WMp"/>
                                             <constraint firstItem="Tyn-7f-OCU" firstAttribute="centerX" secondItem="AGO-e4-Id8" secondAttribute="centerX" id="Jaf-U5-YOg"/>
                                             <constraint firstAttribute="bottom" secondItem="Bss-c7-Ual" secondAttribute="bottom" constant="10" id="LUO-f8-beA"/>
+                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="centerX" secondItem="Tyn-7f-OCU" secondAttribute="centerX" id="Npz-xi-7rH"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="centerX" secondItem="RYW-5Y-YDM" secondAttribute="centerX" id="QOc-IY-qf8"/>
                                             <constraint firstItem="Tyn-7f-OCU" firstAttribute="top" secondItem="AGO-e4-Id8" secondAttribute="bottom" constant="42" id="Uqq-dp-vEQ"/>
                                             <constraint firstItem="4je-BR-8EN" firstAttribute="centerX" secondItem="Tyn-7f-OCU" secondAttribute="centerX" id="Wnv-5X-7o3"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="leading" secondItem="RYW-5Y-YDM" secondAttribute="leading" id="XYG-Rw-fAv"/>
                                             <constraint firstItem="RYW-5Y-YDM" firstAttribute="top" secondItem="4je-BR-8EN" secondAttribute="bottom" constant="24" id="ZEd-Jn-zxb"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="top" secondItem="RYW-5Y-YDM" secondAttribute="bottom" constant="12" id="cop-Tl-2rV"/>
+                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="centerY" secondItem="Tyn-7f-OCU" secondAttribute="centerY" id="d24-be-Wr3"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="top" secondItem="X9m-tg-4ZS" secondAttribute="top" id="d8W-eA-tbS"/>
                                             <constraint firstItem="Tyn-7f-OCU" firstAttribute="leading" secondItem="AGO-e4-Id8" secondAttribute="leading" id="eSf-Bn-NDO"/>
                                             <constraint firstItem="4je-BR-8EN" firstAttribute="leading" secondItem="Tyn-7f-OCU" secondAttribute="leading" id="f9i-l3-99V"/>
@@ -3344,9 +3352,12 @@ You can change it later.</string>
                     </view>
                     <navigationItem key="navigationItem" id="mO2-k3-Oqp"/>
                     <connections>
+                        <outlet property="addressLbl" destination="R2E-lD-Za9" id="GYy-dz-fBp"/>
                         <outlet property="apartmentTF" destination="ItV-cV-7Ea" id="JdN-uE-mMK"/>
                         <outlet property="floorTF" destination="CSQ-hu-9lK" id="yyA-86-srr"/>
                         <outlet property="houseNoTF" destination="aXf-Bp-2UD" id="Pvl-y5-mYJ"/>
+                        <outlet property="mapView" destination="Tyn-7f-OCU" id="xDo-HF-U5z"/>
+                        <outlet property="stateCityLbl" destination="rtM-Mm-c7v" id="paI-r1-h3H"/>
                         <outlet property="streetTF" destination="ggv-V8-zi0" id="mDU-y5-y2N"/>
                     </connections>
                 </viewController>

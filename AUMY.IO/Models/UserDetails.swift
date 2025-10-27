@@ -5,8 +5,6 @@
 //  Created by iOS Developer on 15/10/25.
 //
 
-
-
 import Foundation
 
 // MARK: - UserDetails

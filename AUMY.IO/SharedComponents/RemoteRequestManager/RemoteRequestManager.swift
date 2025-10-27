@@ -28,7 +28,7 @@ class RemoteRequestManager {
         var urlRequest = URLRequest(url: url)
         var headers = ["Content-Type": "application/json", "Accept": "application/json"]
         if let accessToken = UserDefaults.standard[.accessToken] {
-            headers["Bearer"] = accessToken
+            headers["Authorization"] = "Bearer \(accessToken)"
         }
         
         urlRequest.allHTTPHeaderFields = headers
@@ -104,12 +104,11 @@ class RemoteRequestManager {
     }
     
     func uploadTask<Model: Codable> (endpoint: Endpoints,
-                                   tail: String? = nil,
-                                   model: Model.Type,
-                                   params: [String: Any]? = nil,
-                                   method: HttpMehtods = .get,
-                                   body: HttpBodyType = .urlEncoded,
-                                   medias: [Media] = []) async -> Result<Model, Error> {
+                                     tail: String? = nil,
+                                     model: Model.Type,
+                                     params: [String: Any]? = nil,
+                                     method: HttpMehtods = .get,
+                                     medias: [Media] = []) async -> Result<Model, Error> {
         
         guard let baseURL = baseURL(), !baseURL.isEmpty
         else { return .failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)) }
@@ -120,10 +119,8 @@ class RemoteRequestManager {
         var urlRequest = URLRequest(url: url)
         var headers = ["Accept": "application/json"]
         
-        
-        
         if let accessToken = UserDefaults.standard[.accessToken] {
-            headers["Bearer"] = accessToken
+            headers["Authorization"] = "Bearer \(accessToken)"
         }
         
         urlRequest.allHTTPHeaderFields = headers
@@ -131,52 +128,28 @@ class RemoteRequestManager {
         urlRequest.httpBody = nil
         var formData = Data()
         
-        switch method {
-        case .get: break
-        case .post, .put:
-            switch body {
-            case .rawJSON:
-                if let params {
-                    do {
-                        let jsonData = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-                        urlRequest.httpBody = jsonData
-                    }
-                    catch(let error) { return .failure(error) }
-                }
-                
-            case .formData:
-               
-                let boundary = UUID().uuidString
-                
-                urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-                
-                if let params {
-                    for(key, value) in params {
-                        formData.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-                        formData.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
-                        formData.append("\(value)".data(using: .utf8)!)
-                    }
-                }
-                
-                if !medias.isEmpty {
-                    for media in medias {
-                        formData.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-                        formData.append("Content-Disposition: form-data; name=\"\(media.keyname)\"; filename=\"\(media.filename)\"\r\n".data(using: .utf8)!)
-                        formData.append("Content-Type: \(media.contentType)\r\n\r\n".data(using: .utf8)!)
-                        formData.append(media.data)
-                    }
-                }
-                
-                formData.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
-                
-               // urlRequest.httpBody = body
-                
-            default: if let params { urlRequest.httpBody = params.percentEncoding() }
+        let boundary = UUID().uuidString
+        
+        urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        if let params {
+            for(key, value) in params {
+                formData.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+                formData.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
+                formData.append("\(value)".data(using: .utf8)!)
             }
-            
-        case .delete:
-            if let params { urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params) }
         }
+        
+        if !medias.isEmpty {
+            for media in medias {
+                formData.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+                formData.append("Content-Disposition: form-data; name=\"\(media.keyname)\"; filename=\"\(media.filename)\"\r\n".data(using: .utf8)!)
+                formData.append("Content-Type: \(media.contentType)\r\n\r\n".data(using: .utf8)!)
+                formData.append(media.data)
+            }
+        }
+        
+        formData.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
         
         LogHandler.requestLog(urlRequest)
         

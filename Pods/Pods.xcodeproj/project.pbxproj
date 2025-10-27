@@ -6,19 +6,48 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C77040D703478EDADEB4E839F298401F /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+				5C53F63B615C49C159CEC84184FD1687 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				42F3B132831ABFB879ECB20C4CB073A6 /* PBXTargetDependency */,
+			);
+			name = GooglePlaces;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		16E11074AC6150AA88B9C4C6C2BE48D2 /* DTTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D4A41A422C52699B71C7FFD4EF17D /* DTTextField-dummy.m */; };
-		3E4FDEE0B806E27BBCB7ED2A8B722744 /* DTTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2856E4D3F1AE31B60E33634665FD0A87 /* DTTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43CADAAB3CF313E48C24343699634B12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
-		B87E1C2BD46A2A41114EBAAF985FB597 /* Pods-AUMY.IO-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD65B0D51B42616EC7E3E1F4566C740A /* Pods-AUMY.IO-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0A70EEF71D7BAD9D16CDFF6146EF91E /* DTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B784D91A2BE6B01B681FDA95066FC1 /* DTTextField.swift */; };
-		EF43845CC2B488BF2996644A7E29837A /* Pods-AUMY.IO-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AB0529544B667DA29DF601EEB6B189 /* Pods-AUMY.IO-dummy.m */; };
+		16E11074AC6150AA88B9C4C6C2BE48D2 /* DTTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B75FA895724CBB85151F3577C0A91 /* DTTextField-dummy.m */; };
+		35CD459426BA9214FE4C4737016CBC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
+		3E4FDEE0B806E27BBCB7ED2A8B722744 /* DTTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CB51515E79FDF05899EC479C826BD9 /* DTTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		823B252E905DFC8EDD6D986A9EB2CD64 /* Pods-AUMY.IO-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1176427871C05F3E3DDE2E08D465A8A /* Pods-AUMY.IO-dummy.m */; };
+		DB6A2B91D0A11DDC675E8C3CCF93B32A /* Pods-AUMY.IO-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B843F9C9A1D1965F845DAA457F51AB1C /* Pods-AUMY.IO-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0A70EEF71D7BAD9D16CDFF6146EF91E /* DTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A0BD467D417586C5159FE26AA9EFA7 /* DTTextField.swift */; };
+		E1FB3DD4F4D073BD09649F2B9D73AE82 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D8C7A001AE85E34539EC68BDAFAA1E89 /* GooglePlaces.bundle */; };
 		F4F7E87359E8922FC0A4327F3E3929B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */; };
 		FF2AE9CDE900955D3A44C819E3C3A5A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B96889E9E7B1775A422DBFEF3C94FAF9 /* PBXContainerItemProxy */ = {
+		7AA1EC76EFA854F834FE2AF9C55A9ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 285AAD0A8192022DACE2DAFE30D6CD52;
+			remoteInfo = "GooglePlaces-GooglePlacesResources";
+		};
+		8A210B4FC8FF129225CF938A5FA2D3F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		9F4FC1C4FD8BFD19A9C0D51FCAB21F0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -28,36 +57,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A2DB11773EC7EC1533F65DFC5230396 /* Pods-AUMY.IO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AUMY.IO.debug.xcconfig"; sourceTree = "<group>"; };
-		222D4A41A422C52699B71C7FFD4EF17D /* DTTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTTextField-dummy.m"; sourceTree = "<group>"; };
-		2856E4D3F1AE31B60E33634665FD0A87 /* DTTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTTextField-umbrella.h"; sourceTree = "<group>"; };
-		29F203647769C60FFDA70EFDA7FBDA5D /* Pods-AUMY.IO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AUMY.IO.release.xcconfig"; sourceTree = "<group>"; };
-		2BE8156C657CF678F8F73F82482E79C4 /* Pods-AUMY.IO-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AUMY.IO-Info.plist"; sourceTree = "<group>"; };
-		5554C0F9F8F7FB73426084B4A2624330 /* DTTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DTTextField.modulemap; sourceTree = "<group>"; };
+		0BCF4F572CFDDC350EA03B9BD3A0818E /* Pods-AUMY.IO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AUMY.IO.debug.xcconfig"; sourceTree = "<group>"; };
+		15A0BD467D417586C5159FE26AA9EFA7 /* DTTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTTextField.swift; path = Sources/DTTextField/DTTextField.swift; sourceTree = "<group>"; };
+		262FF7134A1350D1E6AA5626B3E9E1D8 /* DTTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTTextField.debug.xcconfig; sourceTree = "<group>"; };
+		34D37745C8E0FBA4FC17E76D07088513 /* Pods-AUMY.IO-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AUMY.IO-acknowledgements.plist"; sourceTree = "<group>"; };
+		5476FBCF6025E45D3FF17169BEA9E07D /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		58D55567BE5BB377C4B0D89C1322D23E /* GooglePlaces-GooglePlacesResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "GooglePlaces-GooglePlacesResources"; path = GooglePlacesResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DTTextField; path = DTTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EFF702DBD718BD8E30656B3B9101C0F /* ResourceBundle-GooglePlacesResources-GooglePlaces-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GooglePlacesResources-GooglePlaces-Info.plist"; sourceTree = "<group>"; };
+		6E4B75FA895724CBB85151F3577C0A91 /* DTTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTTextField-dummy.m"; sourceTree = "<group>"; };
+		71CB51515E79FDF05899EC479C826BD9 /* DTTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTTextField-umbrella.h"; sourceTree = "<group>"; };
 		75B6D36232AB0DC950A62E70F71BA6A7 /* Pods-AUMY.IO */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AUMY.IO"; path = Pods_AUMY_IO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BD2869E35A3350DA9630FD663CF405C /* DTTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTTextField.release.xcconfig; sourceTree = "<group>"; };
 		8193349D819536E58C58A34C1B7DF545 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		85AB0529544B667DA29DF601EEB6B189 /* Pods-AUMY.IO-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AUMY.IO-dummy.m"; sourceTree = "<group>"; };
+		82F2C77B7471505D905A26744B7C8E0E /* DTTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DTTextField-Info.plist"; sourceTree = "<group>"; };
+		83A96FF5B97B66D2BE5710F9A588D36A /* GooglePlaces.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GooglePlaces.xcframework; path = Frameworks/GooglePlaces.xcframework; sourceTree = "<group>"; };
+		8449ECA2BB286ED4864B9F439B744DA0 /* DTTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DTTextField.modulemap; sourceTree = "<group>"; };
+		91C304E4478F410613D90E08021C9F41 /* GooglePlaces-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GooglePlaces-xcframeworks.sh"; sourceTree = "<group>"; };
+		95B2128765ABAF61791CEA2EC1B1D5B5 /* Pods-AUMY.IO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AUMY.IO.release.xcconfig"; sourceTree = "<group>"; };
+		983F7E9F79589070A534FF5EE948F54A /* Pods-AUMY.IO.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AUMY.IO.modulemap"; sourceTree = "<group>"; };
+		9AE9C0297A04B95E86157E137FB33D41 /* Pods-AUMY.IO-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AUMY.IO-resources.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0BBD1B7B115A9011CAF264989B30EEA /* Pods-AUMY.IO-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AUMY.IO-acknowledgements.plist"; sourceTree = "<group>"; };
-		A2B784D91A2BE6B01B681FDA95066FC1 /* DTTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTTextField.swift; path = Sources/DTTextField/DTTextField.swift; sourceTree = "<group>"; };
-		C1C00BC705FF490EB0886F89352C1E49 /* Pods-AUMY.IO-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AUMY.IO-frameworks.sh"; sourceTree = "<group>"; };
-		C3A4B54E7B3BDFD516DA1459E2317B16 /* DTTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTTextField-prefix.pch"; sourceTree = "<group>"; };
-		CB0A1C4E93969E407F4D1720735C66FA /* DTTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTTextField.debug.xcconfig; sourceTree = "<group>"; };
-		D2EB2245C40FA9A3C0ACA54AD6FBF805 /* Pods-AUMY.IO.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AUMY.IO.modulemap"; sourceTree = "<group>"; };
-		E73E116F09210336B4D630F4D7EA1340 /* Pods-AUMY.IO-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AUMY.IO-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AD95A064F89DD95E4ECD2F750BCC13F6 /* Pods-AUMY.IO-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AUMY.IO-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B843F9C9A1D1965F845DAA457F51AB1C /* Pods-AUMY.IO-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AUMY.IO-umbrella.h"; sourceTree = "<group>"; };
+		C1176427871C05F3E3DDE2E08D465A8A /* Pods-AUMY.IO-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AUMY.IO-dummy.m"; sourceTree = "<group>"; };
+		C6E9384F971AF77612404865FB3E9F39 /* Pods-AUMY.IO-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AUMY.IO-frameworks.sh"; sourceTree = "<group>"; };
+		CAEBFB1D1E4C43952A7C83A60F1229EE /* GMSEmpty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GMSEmpty.h; path = Sources/GMSEmpty.h; sourceTree = "<group>"; };
+		D8B4E393BD7612500EF1E1313C4A04AD /* DTTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTTextField-prefix.pch"; sourceTree = "<group>"; };
+		D8C7A001AE85E34539EC68BDAFAA1E89 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Resources/GooglePlacesResources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		ECF4CA3AF5536D14B4E015504E7AEEC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F0E60E15E80005E773270CA5390ED207 /* DTTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DTTextField-Info.plist"; sourceTree = "<group>"; };
-		FD65B0D51B42616EC7E3E1F4566C740A /* Pods-AUMY.IO-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AUMY.IO-umbrella.h"; sourceTree = "<group>"; };
+		F373A59E2956F202931B6646A4ED2FFF /* Pods-AUMY.IO-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AUMY.IO-Info.plist"; sourceTree = "<group>"; };
+		F841E945F312FB7D2E0AC87BD38F9218 /* DTTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTTextField.release.xcconfig; sourceTree = "<group>"; };
+		F9C8EC937D18DE3E46A866E9E71B7D82 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B63A3DB9C0FB6858345FB39DA1FD0F3D /* Frameworks */ = {
+		608A2E89B9EC5545C8864270F87BCD22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CADAAB3CF313E48C24343699634B12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85ACD64E25F168632AD301CE25DF58A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35CD459426BA9214FE4C4737016CBC4A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,37 +118,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		008B0C601016AA29C2DCCE72E295E7EF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5554C0F9F8F7FB73426084B4A2624330 /* DTTextField.modulemap */,
-				222D4A41A422C52699B71C7FFD4EF17D /* DTTextField-dummy.m */,
-				F0E60E15E80005E773270CA5390ED207 /* DTTextField-Info.plist */,
-				C3A4B54E7B3BDFD516DA1459E2317B16 /* DTTextField-prefix.pch */,
-				2856E4D3F1AE31B60E33634665FD0A87 /* DTTextField-umbrella.h */,
-				CB0A1C4E93969E407F4D1720735C66FA /* DTTextField.debug.xcconfig */,
-				7BD2869E35A3350DA9630FD663CF405C /* DTTextField.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DTTextField";
-			sourceTree = "<group>";
-		};
-		155503A72937EB2F9769AE3A31993CA5 /* DTTextField */ = {
-			isa = PBXGroup;
-			children = (
-				A2B784D91A2BE6B01B681FDA95066FC1 /* DTTextField.swift */,
-				008B0C601016AA29C2DCCE72E295E7EF /* Support Files */,
-			);
-			name = DTTextField;
-			path = DTTextField;
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1DE6440B6853131A80C53DDA34375AAB /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B6FAD8AE6346FC80463E4D4F77C0904 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBFB1D1E4C43952A7C83A60F1229EE /* GMSEmpty.h */,
+				65E2AF888DEE4C8C582CC95DF88FC7A6 /* Frameworks */,
+				54FFB085871B0FBBA51DC7EA2006D42A /* Resources */,
+				A711A6A21D4B35798C303C8EC85F2808 /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
 		1DE6440B6853131A80C53DDA34375AAB /* iOS */ = {
@@ -115,29 +147,102 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6D65B3FBC2A9EC8D0F27BE93CF648F36 /* Products */ = {
+		36ACF852DC9C287294322BC1673EBC91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8449ECA2BB286ED4864B9F439B744DA0 /* DTTextField.modulemap */,
+				6E4B75FA895724CBB85151F3577C0A91 /* DTTextField-dummy.m */,
+				82F2C77B7471505D905A26744B7C8E0E /* DTTextField-Info.plist */,
+				D8B4E393BD7612500EF1E1313C4A04AD /* DTTextField-prefix.pch */,
+				71CB51515E79FDF05899EC479C826BD9 /* DTTextField-umbrella.h */,
+				262FF7134A1350D1E6AA5626B3E9E1D8 /* DTTextField.debug.xcconfig */,
+				F841E945F312FB7D2E0AC87BD38F9218 /* DTTextField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DTTextField";
+			sourceTree = "<group>";
+		};
+		525680CA2E682AB8640125B2F7909347 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				5C9B0547BA39FD6CE55E6D6611FE5CC2 /* DTTextField */,
+				58D55567BE5BB377C4B0D89C1322D23E /* GooglePlaces-GooglePlacesResources */,
 				75B6D36232AB0DC950A62E70F71BA6A7 /* Pods-AUMY.IO */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6EF2837B1A7C7410495746817DBB202D /* Targets Support Files */ = {
+		54FFB085871B0FBBA51DC7EA2006D42A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DDEB22CC441220C2DDF031008D2A120E /* Pods-AUMY.IO */,
+				D8C7A001AE85E34539EC68BDAFAA1E89 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		65E2AF888DEE4C8C582CC95DF88FC7A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83A96FF5B97B66D2BE5710F9A588D36A /* GooglePlaces.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		755B0CB27748A230B094D78607A25AD9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98B42D8B0F229209F16689A930BF6E5 /* Pods-AUMY.IO */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B284BD632D2A87F54308C34F2E3290CA /* Pods */ = {
+		8C46DAD36708709E79E3D03BA7314096 /* DTTextField */ = {
 			isa = PBXGroup;
 			children = (
-				155503A72937EB2F9769AE3A31993CA5 /* DTTextField */,
+				15A0BD467D417586C5159FE26AA9EFA7 /* DTTextField.swift */,
+				36ACF852DC9C287294322BC1673EBC91 /* Support Files */,
+			);
+			name = DTTextField;
+			path = DTTextField;
+			sourceTree = "<group>";
+		};
+		A39953F1E33D445C19A8D18BECDEBAE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C46DAD36708709E79E3D03BA7314096 /* DTTextField */,
+				1B6FAD8AE6346FC80463E4D4F77C0904 /* GooglePlaces */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A711A6A21D4B35798C303C8EC85F2808 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C304E4478F410613D90E08021C9F41 /* GooglePlaces-xcframeworks.sh */,
+				5476FBCF6025E45D3FF17169BEA9E07D /* GooglePlaces.debug.xcconfig */,
+				F9C8EC937D18DE3E46A866E9E71B7D82 /* GooglePlaces.release.xcconfig */,
+				5EFF702DBD718BD8E30656B3B9101C0F /* ResourceBundle-GooglePlacesResources-GooglePlaces-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
+		B98B42D8B0F229209F16689A930BF6E5 /* Pods-AUMY.IO */ = {
+			isa = PBXGroup;
+			children = (
+				983F7E9F79589070A534FF5EE948F54A /* Pods-AUMY.IO.modulemap */,
+				AD95A064F89DD95E4ECD2F750BCC13F6 /* Pods-AUMY.IO-acknowledgements.markdown */,
+				34D37745C8E0FBA4FC17E76D07088513 /* Pods-AUMY.IO-acknowledgements.plist */,
+				C1176427871C05F3E3DDE2E08D465A8A /* Pods-AUMY.IO-dummy.m */,
+				C6E9384F971AF77612404865FB3E9F39 /* Pods-AUMY.IO-frameworks.sh */,
+				F373A59E2956F202931B6646A4ED2FFF /* Pods-AUMY.IO-Info.plist */,
+				9AE9C0297A04B95E86157E137FB33D41 /* Pods-AUMY.IO-resources.sh */,
+				B843F9C9A1D1965F845DAA457F51AB1C /* Pods-AUMY.IO-umbrella.h */,
+				0BCF4F572CFDDC350EA03B9BD3A0818E /* Pods-AUMY.IO.debug.xcconfig */,
+				95B2128765ABAF61791CEA2EC1B1D5B5 /* Pods-AUMY.IO.release.xcconfig */,
+			);
+			name = "Pods-AUMY.IO";
+			path = "Target Support Files/Pods-AUMY.IO";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -145,32 +250,23 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				B284BD632D2A87F54308C34F2E3290CA /* Pods */,
-				6D65B3FBC2A9EC8D0F27BE93CF648F36 /* Products */,
-				6EF2837B1A7C7410495746817DBB202D /* Targets Support Files */,
+				A39953F1E33D445C19A8D18BECDEBAE3 /* Pods */,
+				525680CA2E682AB8640125B2F7909347 /* Products */,
+				755B0CB27748A230B094D78607A25AD9 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		DDEB22CC441220C2DDF031008D2A120E /* Pods-AUMY.IO */ = {
-			isa = PBXGroup;
-			children = (
-				D2EB2245C40FA9A3C0ACA54AD6FBF805 /* Pods-AUMY.IO.modulemap */,
-				E73E116F09210336B4D630F4D7EA1340 /* Pods-AUMY.IO-acknowledgements.markdown */,
-				A0BBD1B7B115A9011CAF264989B30EEA /* Pods-AUMY.IO-acknowledgements.plist */,
-				85AB0529544B667DA29DF601EEB6B189 /* Pods-AUMY.IO-dummy.m */,
-				C1C00BC705FF490EB0886F89352C1E49 /* Pods-AUMY.IO-frameworks.sh */,
-				2BE8156C657CF678F8F73F82482E79C4 /* Pods-AUMY.IO-Info.plist */,
-				FD65B0D51B42616EC7E3E1F4566C740A /* Pods-AUMY.IO-umbrella.h */,
-				1A2DB11773EC7EC1533F65DFC5230396 /* Pods-AUMY.IO.debug.xcconfig */,
-				29F203647769C60FFDA70EFDA7FBDA5D /* Pods-AUMY.IO.release.xcconfig */,
-			);
-			name = "Pods-AUMY.IO";
-			path = "Target Support Files/Pods-AUMY.IO";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		30011A470FA5B2340C9F135F64B50B5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6A2B91D0A11DDC675E8C3CCF93B32A /* Pods-AUMY.IO-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4CB8AD5196F5953552A117B0A5DB43A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,17 +275,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD22BC8329CA15ABEC55E23F0E5EA3B0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B87E1C2BD46A2A41114EBAAF985FB597 /* Pods-AUMY.IO-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		285AAD0A8192022DACE2DAFE30D6CD52 /* GooglePlaces-GooglePlacesResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CD72C17C73B6808B9FAA542E186D868 /* Build configuration list for PBXNativeTarget "GooglePlaces-GooglePlacesResources" */;
+			buildPhases = (
+				FA6E8948DE53E787B1FAFE8C2E752775 /* Sources */,
+				608A2E89B9EC5545C8864270F87BCD22 /* Frameworks */,
+				C2D941B1F48A9393F3C3195F091A04DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GooglePlaces-GooglePlacesResources";
+			productName = GooglePlacesResources;
+			productReference = 58D55567BE5BB377C4B0D89C1322D23E /* GooglePlaces-GooglePlacesResources */;
+			productType = "com.apple.product-type.bundle";
+		};
 		66802D2DB565AB26B03BBF87DB94F22F /* DTTextField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E4E532FC0D078F74E4BD780CA484B87 /* Build configuration list for PBXNativeTarget "DTTextField" */;
@@ -210,17 +315,18 @@
 		};
 		FED6FFA1CC4967ECDC2FC77A42CB6C22 /* Pods-AUMY.IO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 069E10DB87A399AFEA5632C96546D939 /* Build configuration list for PBXNativeTarget "Pods-AUMY.IO" */;
+			buildConfigurationList = BD8E8C7A402454E0E52AFFDBB8857AD2 /* Build configuration list for PBXNativeTarget "Pods-AUMY.IO" */;
 			buildPhases = (
-				FD22BC8329CA15ABEC55E23F0E5EA3B0 /* Headers */,
-				4D22E49DAAF52968CB82D8B34D02720B /* Sources */,
-				B63A3DB9C0FB6858345FB39DA1FD0F3D /* Frameworks */,
-				522000F26380348C7797915EB9E9B9FB /* Resources */,
+				30011A470FA5B2340C9F135F64B50B5F /* Headers */,
+				217AE8DF488CEC71A09853E6A7A79124 /* Sources */,
+				85ACD64E25F168632AD301CE25DF58A3 /* Frameworks */,
+				503C86C6BF3AE73C488EE0CE1B888518 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0B14F31E86D9395394C1D67F68AF9A71 /* PBXTargetDependency */,
+				F2CB298F237B4676268B01A4F6928B8C /* PBXTargetDependency */,
+				063B3D0C66A2FDC95B428F1662EA70E9 /* PBXTargetDependency */,
 			);
 			name = "Pods-AUMY.IO";
 			productName = Pods_AUMY_IO;
@@ -247,18 +353,20 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 6D65B3FBC2A9EC8D0F27BE93CF648F36 /* Products */;
+			productRefGroup = 525680CA2E682AB8640125B2F7909347 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				66802D2DB565AB26B03BBF87DB94F22F /* DTTextField */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
+				285AAD0A8192022DACE2DAFE30D6CD52 /* GooglePlaces-GooglePlacesResources */,
 				FED6FFA1CC4967ECDC2FC77A42CB6C22 /* Pods-AUMY.IO */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		522000F26380348C7797915EB9E9B9FB /* Resources */ = {
+		503C86C6BF3AE73C488EE0CE1B888518 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,14 +380,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2D941B1F48A9393F3C3195F091A04DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FB3DD4F4D073BD09649F2B9D73AE82 /* GooglePlaces.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C53F63B615C49C159CEC84184FD1687 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GooglePlaces/GooglePlaces-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/GooglePlaces/GooglePlaces-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/GooglePlaces/GooglePlaces-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		4D22E49DAAF52968CB82D8B34D02720B /* Sources */ = {
+		217AE8DF488CEC71A09853E6A7A79124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF43845CC2B488BF2996644A7E29837A /* Pods-AUMY.IO-dummy.m in Sources */,
+				823B252E905DFC8EDD6D986A9EB2CD64 /* Pods-AUMY.IO-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,21 +428,94 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA6E8948DE53E787B1FAFE8C2E752775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B14F31E86D9395394C1D67F68AF9A71 /* PBXTargetDependency */ = {
+		063B3D0C66A2FDC95B428F1662EA70E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 8A210B4FC8FF129225CF938A5FA2D3F7 /* PBXContainerItemProxy */;
+		};
+		42F3B132831ABFB879ECB20C4CB073A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GooglePlaces-GooglePlacesResources";
+			target = 285AAD0A8192022DACE2DAFE30D6CD52 /* GooglePlaces-GooglePlacesResources */;
+			targetProxy = 7AA1EC76EFA854F834FE2AF9C55A9ABB /* PBXContainerItemProxy */;
+		};
+		F2CB298F237B4676268B01A4F6928B8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DTTextField;
 			target = 66802D2DB565AB26B03BBF87DB94F22F /* DTTextField */;
-			targetProxy = B96889E9E7B1775A422DBFEF3C94FAF9 /* PBXContainerItemProxy */;
+			targetProxy = 9F4FC1C4FD8BFD19A9C0D51FCAB21F0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2BB7DB8F0865B9E6D4BAEE65CC290CD8 /* Debug */ = {
+		027F13E43433D1A09B59D484F6BFB482 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A2DB11773EC7EC1533F65DFC5230396 /* Pods-AUMY.IO.debug.xcconfig */;
+			baseConfigurationReference = 5476FBCF6025E45D3FF17169BEA9E07D /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GooglePlaces";
+				IBSC_MODULE = GooglePlaces;
+				INFOPLIST_FILE = "Target Support Files/GooglePlaces/ResourceBundle-GooglePlacesResources-GooglePlaces-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_NAME = GooglePlacesResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		0294E14E225E1D28BFB9CB27413C3E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C8EC937D18DE3E46A866E9E71B7D82 /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03AF7043535FFDA7AE31F2CE8246A436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5476FBCF6025E45D3FF17169BEA9E07D /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D29334967D933BF8AAE472FDE829BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BCF4F572CFDDC350EA03B9BD3A0818E /* Pods-AUMY.IO.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -342,46 +551,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		3226EAE78E01E0F5B179BEB725434CB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29F203647769C60FFDA70EFDA7FBDA5D /* Pods-AUMY.IO.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		3F591C7A2D08F728C262ED7972A8AC07 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -445,9 +614,26 @@
 			};
 			name = Release;
 		};
+		792BB1372CC6430CB8D138B536DE1FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C8EC937D18DE3E46A866E9E71B7D82 /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GooglePlaces";
+				IBSC_MODULE = GooglePlaces;
+				INFOPLIST_FILE = "Target Support Files/GooglePlaces/ResourceBundle-GooglePlacesResources-GooglePlaces-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_NAME = GooglePlacesResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		9F1AF1A97D83055CA754EC42C82D78A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BD2869E35A3350DA9630FD663CF405C /* DTTextField.release.xcconfig */;
+			baseConfigurationReference = F841E945F312FB7D2E0AC87BD38F9218 /* DTTextField.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -486,7 +672,7 @@
 		};
 		CFE7EF88E321271EBF7B3983B10B4F81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB0A1C4E93969E407F4D1720735C66FA /* DTTextField.debug.xcconfig */;
+			baseConfigurationReference = 262FF7134A1350D1E6AA5626B3E9E1D8 /* DTTextField.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -588,18 +774,49 @@
 			};
 			name = Debug;
 		};
+		EC36B094CB01AED904E4B0930EBBEF06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B2128765ABAF61791CEA2EC1B1D5B5 /* Pods-AUMY.IO.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AUMY.IO/Pods-AUMY.IO.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		069E10DB87A399AFEA5632C96546D939 /* Build configuration list for PBXNativeTarget "Pods-AUMY.IO" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2BB7DB8F0865B9E6D4BAEE65CC290CD8 /* Debug */,
-				3226EAE78E01E0F5B179BEB725434CB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -609,11 +826,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5CD72C17C73B6808B9FAA542E186D868 /* Build configuration list for PBXNativeTarget "GooglePlaces-GooglePlacesResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027F13E43433D1A09B59D484F6BFB482 /* Debug */,
+				792BB1372CC6430CB8D138B536DE1FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E4E532FC0D078F74E4BD780CA484B87 /* Build configuration list for PBXNativeTarget "DTTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFE7EF88E321271EBF7B3983B10B4F81 /* Debug */,
 				9F1AF1A97D83055CA754EC42C82D78A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD8E8C7A402454E0E52AFFDBB8857AD2 /* Build configuration list for PBXNativeTarget "Pods-AUMY.IO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D29334967D933BF8AAE472FDE829BDA /* Debug */,
+				EC36B094CB01AED904E4B0930EBBEF06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C77040D703478EDADEB4E839F298401F /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03AF7043535FFDA7AE31F2CE8246A436 /* Debug */,
+				0294E14E225E1D28BFB9CB27413C3E81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
