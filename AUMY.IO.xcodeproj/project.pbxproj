@@ -217,6 +217,7 @@
 		8B97EBCF2E8FF8C6006C5F30 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B97EBCD2E8FF8C6006C5F30 /* TaskCell.xib */; };
 		8B97EBD22E8FFAFB006C5F30 /* PopularServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97EBD02E8FFAFB006C5F30 /* PopularServiceCell.swift */; };
 		8B97EBD32E8FFAFB006C5F30 /* PopularServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B97EBD12E8FFAFB006C5F30 /* PopularServiceCell.xib */; };
+		8BB0F62F2EB0D329007AB1FD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB0F62E2EB0D329007AB1FD /* Kingfisher */; };
 		8BB5E93E2E96233100EA9E07 /* ServiceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E93D2E96233100EA9E07 /* ServiceDetailsVC.swift */; };
 		8BB5E9412E962E0B00EA9E07 /* ServiceReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5E93F2E962E0B00EA9E07 /* ServiceReviewCell.swift */; };
 		8BB5E9422E962E0B00EA9E07 /* ServiceReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB5E9402E962E0B00EA9E07 /* ServiceReviewCell.xib */; };
@@ -556,6 +557,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB0F62F2EB0D329007AB1FD /* Kingfisher in Frameworks */,
 				8BD1DB6F2E9F5FF300B37907 /* CountryPickerView in Frameworks */,
 				C18A4D150116C3D45ED85246 /* Pods_AUMY_IO.framework in Frameworks */,
 				8BFDB5B62EAF537000666F67 /* GoogleMaps in Frameworks */,
@@ -586,7 +588,6 @@
 		8B97E7AF2E8F8B2C006C5F30 /* AUMY.IO */ = {
 			isa = PBXGroup;
 			children = (
-				8BD1DB752E9F682F00B37907 /* Models */,
 				8B97E8A72E8F90C6006C5F30 /* AppVault.plist */,
 				8B97E7A82E8F8B2C006C5F30 /* Info.plist */,
 				8BB5E94F2E9695D500EA9E07 /* AboutYourServiceVC.swift */,
@@ -643,6 +644,7 @@
 				8B97EA7E2E8F92D5006C5F30 /* Inter-4.1 */,
 				8B97E7AA2E8F8B2C006C5F30 /* LaunchScreen.storyboard */,
 				8B97E7AC2E8F8B2C006C5F30 /* Main.storyboard */,
+				8BD1DB752E9F682F00B37907 /* Models */,
 				8B97EB6B2E8FACB4006C5F30 /* SharedComponents */,
 				8B97EBC72E8FF0B1006C5F30 /* Xibs */,
 			);
@@ -1037,6 +1039,7 @@
 			packageReferences = (
 				8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */,
 				8BFDB5B42EAF537000666F67 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				8BB0F62D2EB0D329007AB1FD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8B97E78F2E8F8B21006C5F30 /* Products */;
@@ -1433,8 +1436,12 @@
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AUMY.IO/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide personalized content and improve your experience.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location in the background to provide timely updates and notifications.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to let you take profile photos.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs location access to display current location.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs location access to display current location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to show your address on the map.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save edited images to your gallery.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need photo library access to choose photos from your gallery.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1472,8 +1479,12 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AUMY.IO/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide personalized content and improve your experience.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use your location in the background to provide timely updates and notifications.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to let you take profile photos.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs location access to display current location.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app needs location access to display current location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to show your address on the map.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need permission to save edited images to your gallery.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need photo library access to choose photos from your gallery.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1642,6 +1653,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8BB0F62D2EB0D329007AB1FD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.1;
+			};
+		};
 		8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kizitonwose/CountryPickerView.git";
@@ -1661,6 +1680,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8BB0F62E2EB0D329007AB1FD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BB0F62D2EB0D329007AB1FD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		8BD1DB6E2E9F5FF300B37907 /* CountryPickerView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8BD1DB6D2E9F5FF300B37907 /* XCRemoteSwiftPackageReference "CountryPickerView" */;

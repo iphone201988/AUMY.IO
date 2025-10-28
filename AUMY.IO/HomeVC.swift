@@ -7,10 +7,15 @@
 
 
 import UIKit
+import CoreLocation
+import GooglePlaces
+import GoogleMaps
 
 class HomeVC: UIViewController {
     
     // MARK: Outlets
+    @IBOutlet weak var nameLbl: InterLabel!
+    @IBOutlet weak var currentLocLbl: InterLabel!
     @IBOutlet weak var searchSpaciousView: UIView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var emptySpaciousView: UIView!
@@ -65,6 +70,7 @@ class HomeVC: UIViewController {
     
     // MARK: Variables
     fileprivate var sections = [String]()
+    fileprivate let geocoder = GMSGeocoder()
     
     // MARK: Controller Lifecycle
     override func viewDidLoad() {
@@ -83,6 +89,14 @@ class HomeVC: UIViewController {
             createServiceBtn.isHidden = true
             emptySpaciousView.isHidden = true
         }
+        
+       let name = UserDefaults.standard[.loggedUserDetails]?.name ?? ""
+        if !name.isEmpty {
+            nameLbl.text = "Hello, \(name) 👋 "
+        } else {
+            nameLbl.text = "Hello 👋 "
+        }
+        reverseGeocode()
     }
     
     // MARK: IB Actions
@@ -219,6 +233,29 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
                 destVC.isCompleted = true
             }
             SharedMethods.shared.pushTo(destVC: destVC, isAnimated: true)
+        }
+    }
+}
+
+extension HomeVC {
+    private func reverseGeocode() {
+        let lat = CurrentLocation.latitude
+        let long = CurrentLocation.longitude
+        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        geocoder.reverseGeocodeCoordinate(coordinate) { [weak self] response, error in
+            guard let self = self else { return }
+            guard error == nil else {
+                LogHandler.debugLog("❌ Geocoding error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            if let result = response?.firstResult(), let lines = result.lines {
+                let fullAddress = lines.joined(separator: ", ")
+                DispatchQueue.main.async {
+                    self.currentLocLbl.text = "\(result.subLocality ?? ""), \(result.administrativeArea ?? "")"
+                }
+                LogHandler.debugLog("📍 Address: \(fullAddress)")
+            }
         }
     }
 }

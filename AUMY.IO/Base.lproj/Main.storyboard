@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Exn-1K-Wf9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3SW-wH-5eh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -556,7 +556,7 @@ AI-Powered Helpers</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szg-mD-wH4">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="565"/>
                                         <subviews>
-                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-px-CnI">
+                                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-px-CnI">
                                                 <rect key="frame" x="122.66666666666666" y="0.0" width="100" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 73" translatesAutoresizingMaskIntoConstraints="NO" id="LYP-mu-0He">
@@ -647,20 +647,20 @@ AI-Powered Helpers</string>
                                                     <constraint firstItem="Ngo-pF-BsS" firstAttribute="centerY" secondItem="gJi-hD-ATR" secondAttribute="centerY" id="zn0-P1-C2B"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IQ-R5-i26" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="345" height="19.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IQ-R5-i26" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="112" width="345" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JohnDoe123@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-Pd-LcQ" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="133.33333333333331" width="345" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-Pd-LcQ" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="114" width="345" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" name="374151"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-GS-nzL">
-                                                <rect key="frame" x="0.0" y="150.33333333333331" width="345" height="171"/>
+                                                <rect key="frame" x="0.0" y="114" width="345" height="171"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akG-Y5-cca">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="12"/>
@@ -683,7 +683,7 @@ AI-Powered Helpers</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earnings Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oy-Ag-9LN" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                        <rect key="frame" x="33" y="2.3333333333333712" width="136" height="19.333333333333332"/>
+                                                                        <rect key="frame" x="33" y="2.3333333333333144" width="136" height="19.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -712,7 +712,7 @@ AI-Powered Helpers</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTi-ex-7MR" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="17.333333333333371" width="107" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="17.333333333333314" width="107" height="17"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -739,7 +739,7 @@ AI-Powered Helpers</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duL-b1-cpv" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="17.333333333333371" width="107" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="17.333333333333314" width="107" height="17"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -766,7 +766,7 @@ AI-Powered Helpers</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$620" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j97-gK-ZZY" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="17.333333333333371" width="107" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="17.333333333333314" width="107" height="17"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -892,7 +892,7 @@ AI-Powered Helpers</string>
                                                 </subviews>
                                             </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5w2-EL-ZGb">
-                                                <rect key="frame" x="0.0" y="345.33333333333337" width="345" height="155.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="309" width="345" height="192"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
@@ -909,7 +909,7 @@ AI-Powered Helpers</string>
                                                     <color key="titleColor" name="FF4141"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cancelBooking:" destination="C7L-Gp-gue" eventType="touchUpInside" id="R4T-LM-rb7"/>
+                                                    <action selector="deleteAccount:" destination="3zQ-Dr-hGZ" eventType="touchUpInside" id="00Z-bt-zj1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -972,6 +972,8 @@ AI-Powered Helpers</string>
                         <outlet property="earningsBottomSpaciousView" destination="EVg-lP-k2c" id="BBT-bC-457"/>
                         <outlet property="earningsTopSpaciousView" destination="akG-Y5-cca" id="hFN-OJ-ZZy"/>
                         <outlet property="earningsView" destination="o3i-JA-mvR" id="Ipg-Ts-LN0"/>
+                        <outlet property="emailLbl" destination="KEJ-Pd-LcQ" id="all-97-v5R"/>
+                        <outlet property="nameLbl" destination="4IQ-R5-i26" id="Vhh-A0-Jto"/>
                         <outlet property="profilePic" destination="LYP-mu-0He" id="3hI-Db-HGO"/>
                         <outlet property="tableView" destination="5w2-EL-ZGb" id="2Pq-TL-Rsr"/>
                         <outlet property="topPlusView" destination="ZbB-NG-TDA" id="gZI-qu-4La"/>
@@ -1000,23 +1002,23 @@ AI-Powered Helpers</string>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4X-ld-rhM">
-                                        <rect key="frame" x="46" y="0.0" width="262" height="40.333333333333336"/>
+                                        <rect key="frame" x="46" y="8.3333333333333268" width="262" height="23.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, John Doe 👋 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKu-Ze-tXD" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello 👋 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKu-Ze-tXD" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="262" height="19.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapPinLine" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-Rd-qfj">
-                                                <rect key="frame" x="0.0" y="23.333333333333343" width="16" height="16"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333329" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="3Mg-GE-oa8"/>
                                                     <constraint firstAttribute="width" secondItem="zTB-Rd-qfj" secondAttribute="height" multiplier="1:1" id="V4b-S8-bgB"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California, USA" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0B-3c-LBi" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="23.333333333333343" width="222" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0B-3c-LBi" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="23.333333333333329" width="222" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="374151"/>
                                                 <nil key="highlightedColor"/>
@@ -1232,7 +1234,9 @@ AI-Powered Helpers</string>
                     <connections>
                         <outlet property="collectionView" destination="mJY-LD-EAC" id="EFK-bA-jGJ"/>
                         <outlet property="createServiceBtn" destination="5ug-CB-kmg" id="qBp-bn-fnT"/>
+                        <outlet property="currentLocLbl" destination="V0B-3c-LBi" id="MsJ-YJ-djY"/>
                         <outlet property="emptySpaciousView" destination="WZw-og-AvV" id="VyY-wg-Cp1"/>
+                        <outlet property="nameLbl" destination="fKu-Ze-tXD" id="4vk-Q6-4Zj"/>
                         <outlet property="searchSpaciousView" destination="vVt-3w-NAk" id="wES-FN-J5D"/>
                         <outlet property="searchView" destination="obM-gv-jzl" id="23G-N0-VEU"/>
                     </connections>
@@ -3011,7 +3015,7 @@ You can change it later.</string>
                                 <rect key="frame" x="0.0" y="188" width="393" height="596"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9m-tg-4ZS">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="707.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="713.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm your home address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGO-e4-Id8" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="0.0" width="345" height="28.666666666666668"/>
@@ -3019,24 +3023,30 @@ You can change it later.</string>
                                                 <color key="textColor" name="374151"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Tyn-7f-OCU">
+                                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-Di-xUI">
                                                 <rect key="frame" x="24" y="70.666666666666686" width="345" height="156"/>
+                                                <subviews>
+                                                    <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-tw-rS7" customClass="GMSMapView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="156"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="156" id="LIP-oZ-ID7"/>
+                                                    <constraint firstAttribute="height" constant="156" id="3Q8-Rt-cd5"/>
+                                                    <constraint firstItem="fvN-tw-rS7" firstAttribute="centerY" secondItem="8SE-Di-xUI" secondAttribute="centerY" id="9w0-OH-ao6"/>
+                                                    <constraint firstItem="fvN-tw-rS7" firstAttribute="leading" secondItem="8SE-Di-xUI" secondAttribute="leading" id="Fe3-5X-vqe"/>
+                                                    <constraint firstItem="fvN-tw-rS7" firstAttribute="top" secondItem="8SE-Di-xUI" secondAttribute="top" id="blF-Cl-gqB"/>
+                                                    <constraint firstItem="fvN-tw-rS7" firstAttribute="centerX" secondItem="8SE-Di-xUI" secondAttribute="centerX" id="uHo-lY-KET"/>
                                                 </constraints>
-                                                <standardMapConfiguration key="preferredConfiguration"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </mapView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-tw-rS7" customClass="GMSMapView">
-                                                <rect key="frame" x="24" y="70.666666666666686" width="345" height="156"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4je-BR-8EN">
-                                                <rect key="frame" x="24" y="242.66666666666669" width="345" height="62"/>
+                                                <rect key="frame" x="24" y="242.66666666666669" width="345" height="68"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 427319688" translatesAutoresizingMaskIntoConstraints="NO" id="F84-pi-riJ">
                                                         <rect key="frame" x="12" y="15" width="32" height="32"/>
@@ -3046,7 +3056,7 @@ You can change it later.</string>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYW-vd-46n">
-                                                        <rect key="frame" x="60" y="12" width="269" height="38"/>
+                                                        <rect key="frame" x="60" y="15" width="269" height="38"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoover Tower" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2E-lD-Za9" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="269" height="17"/>
@@ -3075,10 +3085,10 @@ You can change it later.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" name="98C9A8"/>
                                                 <constraints>
+                                                    <constraint firstItem="uYW-vd-46n" firstAttribute="top" secondItem="F84-pi-riJ" secondAttribute="top" id="APa-em-ddC"/>
+                                                    <constraint firstItem="F84-pi-riJ" firstAttribute="top" secondItem="4je-BR-8EN" secondAttribute="top" constant="15" id="DPE-Uv-ase"/>
                                                     <constraint firstAttribute="trailing" secondItem="uYW-vd-46n" secondAttribute="trailing" constant="16" id="MMx-S6-Jcv"/>
-                                                    <constraint firstItem="uYW-vd-46n" firstAttribute="centerY" secondItem="F84-pi-riJ" secondAttribute="centerY" id="hBe-cN-EDG"/>
-                                                    <constraint firstItem="F84-pi-riJ" firstAttribute="centerY" secondItem="4je-BR-8EN" secondAttribute="centerY" id="mtT-BY-RI9"/>
-                                                    <constraint firstAttribute="height" constant="62" id="niP-uk-sUN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uYW-vd-46n" secondAttribute="bottom" constant="15" id="SNz-vZ-bbH"/>
                                                     <constraint firstItem="uYW-vd-46n" firstAttribute="leading" secondItem="F84-pi-riJ" secondAttribute="trailing" constant="16" id="nwd-ju-EZK"/>
                                                     <constraint firstItem="F84-pi-riJ" firstAttribute="leading" secondItem="4je-BR-8EN" secondAttribute="leading" constant="12" id="q13-t0-Aug"/>
                                                 </constraints>
@@ -3095,13 +3105,13 @@ You can change it later.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional information" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYW-5Y-YDM" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="328.66666666666663" width="345" height="21.666666666666686"/>
+                                                <rect key="frame" x="24" y="334.66666666666663" width="345" height="21.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-c7-Ual">
-                                                <rect key="frame" x="24" y="362.33333333333337" width="345" height="335"/>
+                                                <rect key="frame" x="24" y="368.33333333333337" width="345" height="335"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Q8b-XX-bj0">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="55"/>
@@ -3303,26 +3313,22 @@ You can change it later.</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="leading" secondItem="Tyn-7f-OCU" secondAttribute="leading" id="1Ed-Nt-Stn"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="leading" secondItem="X9m-tg-4ZS" secondAttribute="leading" constant="24" id="2LR-be-hPI"/>
+                                            <constraint firstItem="4je-BR-8EN" firstAttribute="leading" secondItem="8SE-Di-xUI" secondAttribute="leading" id="4FL-P6-WQY"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="centerX" secondItem="X9m-tg-4ZS" secondAttribute="centerX" id="6qY-9s-AuS"/>
-                                            <constraint firstItem="4je-BR-8EN" firstAttribute="top" secondItem="Tyn-7f-OCU" secondAttribute="bottom" constant="16" id="8xc-Y4-0Gh"/>
-                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="top" secondItem="Tyn-7f-OCU" secondAttribute="top" id="DgW-Jh-WMp"/>
-                                            <constraint firstItem="Tyn-7f-OCU" firstAttribute="centerX" secondItem="AGO-e4-Id8" secondAttribute="centerX" id="Jaf-U5-YOg"/>
+                                            <constraint firstItem="4je-BR-8EN" firstAttribute="centerX" secondItem="8SE-Di-xUI" secondAttribute="centerX" id="79x-hr-6rt"/>
+                                            <constraint firstItem="4je-BR-8EN" firstAttribute="top" secondItem="8SE-Di-xUI" secondAttribute="bottom" constant="16" id="F8x-Bc-YNX"/>
+                                            <constraint firstItem="8SE-Di-xUI" firstAttribute="centerX" secondItem="AGO-e4-Id8" secondAttribute="centerX" id="GVz-Rj-cSv"/>
                                             <constraint firstAttribute="bottom" secondItem="Bss-c7-Ual" secondAttribute="bottom" constant="10" id="LUO-f8-beA"/>
-                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="centerX" secondItem="Tyn-7f-OCU" secondAttribute="centerX" id="Npz-xi-7rH"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="centerX" secondItem="RYW-5Y-YDM" secondAttribute="centerX" id="QOc-IY-qf8"/>
-                                            <constraint firstItem="Tyn-7f-OCU" firstAttribute="top" secondItem="AGO-e4-Id8" secondAttribute="bottom" constant="42" id="Uqq-dp-vEQ"/>
-                                            <constraint firstItem="4je-BR-8EN" firstAttribute="centerX" secondItem="Tyn-7f-OCU" secondAttribute="centerX" id="Wnv-5X-7o3"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="leading" secondItem="RYW-5Y-YDM" secondAttribute="leading" id="XYG-Rw-fAv"/>
                                             <constraint firstItem="RYW-5Y-YDM" firstAttribute="top" secondItem="4je-BR-8EN" secondAttribute="bottom" constant="24" id="ZEd-Jn-zxb"/>
                                             <constraint firstItem="Bss-c7-Ual" firstAttribute="top" secondItem="RYW-5Y-YDM" secondAttribute="bottom" constant="12" id="cop-Tl-2rV"/>
-                                            <constraint firstItem="fvN-tw-rS7" firstAttribute="centerY" secondItem="Tyn-7f-OCU" secondAttribute="centerY" id="d24-be-Wr3"/>
                                             <constraint firstItem="AGO-e4-Id8" firstAttribute="top" secondItem="X9m-tg-4ZS" secondAttribute="top" id="d8W-eA-tbS"/>
-                                            <constraint firstItem="Tyn-7f-OCU" firstAttribute="leading" secondItem="AGO-e4-Id8" secondAttribute="leading" id="eSf-Bn-NDO"/>
-                                            <constraint firstItem="4je-BR-8EN" firstAttribute="leading" secondItem="Tyn-7f-OCU" secondAttribute="leading" id="f9i-l3-99V"/>
+                                            <constraint firstItem="8SE-Di-xUI" firstAttribute="top" secondItem="AGO-e4-Id8" secondAttribute="bottom" constant="42.000000000000014" id="flx-5o-W99"/>
                                             <constraint firstItem="RYW-5Y-YDM" firstAttribute="centerX" secondItem="4je-BR-8EN" secondAttribute="centerX" id="hHB-b3-xjt"/>
                                             <constraint firstItem="RYW-5Y-YDM" firstAttribute="leading" secondItem="4je-BR-8EN" secondAttribute="leading" id="mQY-xM-KsW"/>
+                                            <constraint firstItem="8SE-Di-xUI" firstAttribute="leading" secondItem="AGO-e4-Id8" secondAttribute="leading" id="n9q-oG-4sh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -3356,7 +3362,7 @@ You can change it later.</string>
                         <outlet property="apartmentTF" destination="ItV-cV-7Ea" id="JdN-uE-mMK"/>
                         <outlet property="floorTF" destination="CSQ-hu-9lK" id="yyA-86-srr"/>
                         <outlet property="houseNoTF" destination="aXf-Bp-2UD" id="Pvl-y5-mYJ"/>
-                        <outlet property="mapView" destination="Tyn-7f-OCU" id="xDo-HF-U5z"/>
+                        <outlet property="mapView" destination="fvN-tw-rS7" id="ywr-hJ-Aom"/>
                         <outlet property="stateCityLbl" destination="rtM-Mm-c7v" id="paI-r1-h3H"/>
                         <outlet property="streetTF" destination="ggv-V8-zi0" id="mDU-y5-y2N"/>
                     </connections>
@@ -12130,6 +12136,9 @@ you within 24 hours</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kam-7z-aQA">
                                                         <rect key="frame" x="-5" y="-5" width="110" height="110"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="profilePic:" destination="kZC-rF-5og" eventType="touchUpInside" id="MUe-2r-NuJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -12180,18 +12189,21 @@ you within 24 hours</string>
                                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="f0K-JX-pYJ">
                                                 <rect key="frame" x="24" y="222" width="345" height="180"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-XB-CHB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="180"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-dW-kg2">
-                                                        <rect key="frame" x="145.33333333333334" y="65.333333333333314" width="54.666666666666657" height="49.333333333333343"/>
+                                                        <rect key="frame" x="98" y="65.333333333333314" width="149" height="49.333333333333343"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="solar_upload-linear" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-Yt-jHg">
-                                                                <rect key="frame" x="15.333333333333314" y="0.0" width="24" height="24"/>
+                                                                <rect key="frame" x="62.666666666666657" y="0.0" width="24" height="24"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="0LN-Yt-jHg" secondAttribute="height" multiplier="1:1" id="18a-TN-PFP"/>
                                                                     <constraint firstAttribute="height" constant="24" id="1qv-xG-1lj"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add pic" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye3-p5-CoQ" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="30" width="54.666666666666664" height="19.333333333333329"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload ID Document" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye3-p5-CoQ" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30" width="149" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <color key="textColor" name="374151"/>
                                                                 <nil key="highlightedColor"/>
@@ -12210,17 +12222,24 @@ you within 24 hours</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-dZ-1ww">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="180"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="uploadIDDoc:" destination="kZC-rF-5og" eventType="touchUpInside" id="Ssx-GT-JP9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="E0E3DB"/>
                                                 <constraints>
                                                     <constraint firstItem="4lM-dZ-1ww" firstAttribute="leading" secondItem="f0K-JX-pYJ" secondAttribute="leading" id="5gd-Kw-ELZ"/>
+                                                    <constraint firstItem="iKV-XB-CHB" firstAttribute="top" secondItem="f0K-JX-pYJ" secondAttribute="top" id="Mbi-Yk-LwG"/>
                                                     <constraint firstItem="Qra-dW-kg2" firstAttribute="centerX" secondItem="f0K-JX-pYJ" secondAttribute="centerX" id="Q3S-1d-fBT"/>
+                                                    <constraint firstItem="iKV-XB-CHB" firstAttribute="centerY" secondItem="f0K-JX-pYJ" secondAttribute="centerY" id="R76-kG-5jE"/>
                                                     <constraint firstAttribute="height" constant="180" id="RpT-8y-abW"/>
                                                     <constraint firstItem="4lM-dZ-1ww" firstAttribute="top" secondItem="f0K-JX-pYJ" secondAttribute="top" id="TAL-cc-7i2"/>
+                                                    <constraint firstItem="iKV-XB-CHB" firstAttribute="leading" secondItem="f0K-JX-pYJ" secondAttribute="leading" id="k4M-pc-wsj"/>
                                                     <constraint firstItem="Qra-dW-kg2" firstAttribute="centerY" secondItem="f0K-JX-pYJ" secondAttribute="centerY" id="mCD-2I-F36"/>
                                                     <constraint firstItem="4lM-dZ-1ww" firstAttribute="centerX" secondItem="f0K-JX-pYJ" secondAttribute="centerX" id="mcD-HA-Jqh"/>
                                                     <constraint firstItem="4lM-dZ-1ww" firstAttribute="centerY" secondItem="f0K-JX-pYJ" secondAttribute="centerY" id="reh-0d-oN9"/>
+                                                    <constraint firstItem="iKV-XB-CHB" firstAttribute="centerX" secondItem="f0K-JX-pYJ" secondAttribute="centerX" id="wEp-U5-2ql"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -12237,18 +12256,21 @@ you within 24 hours</string>
                                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4Hz-12-6Jy">
                                                 <rect key="frame" x="24" y="414" width="345" height="180"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ZA-Xm-VEB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="180"/>
+                                                    </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-09-Q0X">
-                                                        <rect key="frame" x="145.33333333333334" y="65.333333333333371" width="54.666666666666657" height="49.333333333333343"/>
+                                                        <rect key="frame" x="37.666666666666657" y="65.333333333333371" width="270" height="49.333333333333343"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="solar_upload-linear" translatesAutoresizingMaskIntoConstraints="NO" id="jib-Of-dYv">
-                                                                <rect key="frame" x="15.333333333333314" y="0.0" width="24" height="24"/>
+                                                                <rect key="frame" x="123" y="0.0" width="24" height="24"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="24" id="VKp-us-FY5"/>
                                                                     <constraint firstAttribute="width" secondItem="jib-Of-dYv" secondAttribute="height" multiplier="1:1" id="fbj-Km-fj1"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add pic" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCj-dR-5F6" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="30" width="54.666666666666664" height="19.333333333333329"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Background Check Certificate" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCj-dR-5F6" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30" width="270" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                                 <color key="textColor" name="374151"/>
                                                                 <nil key="highlightedColor"/>
@@ -12267,6 +12289,9 @@ you within 24 hours</string>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byn-84-VnH">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="180"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="uploadCertificateBG:" destination="kZC-rF-5og" eventType="touchUpInside" id="A3l-eS-eE2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="E0E3DB"/>
@@ -12274,9 +12299,13 @@ you within 24 hours</string>
                                                     <constraint firstItem="tG4-09-Q0X" firstAttribute="centerY" secondItem="4Hz-12-6Jy" secondAttribute="centerY" id="0aF-0q-LY5"/>
                                                     <constraint firstItem="byn-84-VnH" firstAttribute="centerY" secondItem="4Hz-12-6Jy" secondAttribute="centerY" id="InB-Er-2sS"/>
                                                     <constraint firstItem="byn-84-VnH" firstAttribute="leading" secondItem="4Hz-12-6Jy" secondAttribute="leading" id="LwR-51-mkD"/>
+                                                    <constraint firstItem="2ZA-Xm-VEB" firstAttribute="centerY" secondItem="4Hz-12-6Jy" secondAttribute="centerY" id="brk-ES-bMo"/>
+                                                    <constraint firstItem="2ZA-Xm-VEB" firstAttribute="centerX" secondItem="4Hz-12-6Jy" secondAttribute="centerX" id="cfm-fc-RgY"/>
                                                     <constraint firstItem="tG4-09-Q0X" firstAttribute="centerX" secondItem="4Hz-12-6Jy" secondAttribute="centerX" id="gUJ-ec-hXL"/>
+                                                    <constraint firstItem="2ZA-Xm-VEB" firstAttribute="top" secondItem="4Hz-12-6Jy" secondAttribute="top" id="gqh-Tm-G49"/>
                                                     <constraint firstItem="byn-84-VnH" firstAttribute="top" secondItem="4Hz-12-6Jy" secondAttribute="top" id="khe-Rp-XpK"/>
                                                     <constraint firstAttribute="height" constant="180" id="qun-tb-3kt"/>
+                                                    <constraint firstItem="2ZA-Xm-VEB" firstAttribute="leading" secondItem="4Hz-12-6Jy" secondAttribute="leading" id="yjS-er-oKA"/>
                                                     <constraint firstItem="byn-84-VnH" firstAttribute="centerX" secondItem="4Hz-12-6Jy" secondAttribute="centerX" id="zF7-wg-grE"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -12360,6 +12389,11 @@ you within 24 hours</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6qo-QY-7Kg"/>
+                    <connections>
+                        <outlet property="certificateBG" destination="2ZA-Xm-VEB" id="xND-1m-98e"/>
+                        <outlet property="idDoc" destination="iKV-XB-CHB" id="zWn-CA-338"/>
+                        <outlet property="userProfilePic" destination="0XY-W2-Mca" id="lrv-6T-Vvg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaD-A5-bqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -12384,23 +12418,23 @@ you within 24 hours</string>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVd-9y-ycs">
-                                        <rect key="frame" x="46" y="0.0" width="262" height="40.333333333333336"/>
+                                        <rect key="frame" x="46" y="8.3333333333333268" width="262" height="23.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, John Doe 👋 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-we-ydL" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello 👋 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-we-ydL" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="262" height="19.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapPinLine" translatesAutoresizingMaskIntoConstraints="NO" id="biW-3t-eoN">
-                                                <rect key="frame" x="0.0" y="23.333333333333343" width="16" height="16"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333329" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="biW-3t-eoN" secondAttribute="height" multiplier="1:1" id="fuz-As-6AL"/>
                                                     <constraint firstAttribute="width" constant="16" id="i1m-bs-w85"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="California, USA" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-gH-aPC" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="23.333333333333343" width="222" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sj-gH-aPC" customClass="InterLabel" customModule="AUMY_IO" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="23.333333333333329" width="222" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="374151"/>
                                                 <nil key="highlightedColor"/>
@@ -12638,6 +12672,10 @@ you within 24 hours</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="linear" selectedImage="Frame 866" id="GRp-Ej-V4u"/>
+                    <connections>
+                        <outlet property="currentLocLbl" destination="5sj-gH-aPC" id="YX3-x4-lZG"/>
+                        <outlet property="nameLbl" destination="fYb-we-ydL" id="caT-MX-cJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVz-4O-e20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,5 +1,6 @@
 import UIKit
 import Foundation
+import Kingfisher
 
 class SharedMethods {
     
@@ -161,5 +162,85 @@ class SharedMethods {
             }
         }
         completion()
+    }
+    
+    // MARK: - Email Validation
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+        return emailPred.evaluate(with: email)
+    }
+    
+    // MARK: - Phone Validation
+    func isValidPhone(_ phone: String) -> Bool {
+        // Accepts only digits (no +, -, or spaces), length between 10–12
+        let phoneRegex = "^[0-9]{10,12}$"
+        let phonePred = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phonePred.evaluate(with: phone)
+    }
+    
+    func setImage(imageView: UIImageView,
+                  url: String,
+                  loaderStyle: UIActivityIndicatorView.Style = .medium,
+                  fallbackImage: UIImage = UIImage(named: "emptyUser") ?? UIImage()) {
+        // --- 1. Prepare URL and early exits (non-UI, so no @MainActor needed) ---
+        guard !url.isEmpty
+        else {
+            Task { @MainActor in
+                imageView.image = fallbackImage
+            }
+            return
+        }
+        
+        let baseURL = VaultInfo.shared.getKeyValue(by: "Media_Load_Base_URL").1 as? String ?? ""
+        let completeURL = "\(baseURL)\(url)"
+        
+        guard let imageURL = URL(string: completeURL) else {
+            Task { @MainActor in
+                imageView.image = fallbackImage
+            }
+            return
+        }
+        
+        // --- 2. All UI actions isolated to main thread ---
+        Task { @MainActor in
+            // Cancel any existing Kingfisher task
+            imageView.kf.cancelDownloadTask()
+            
+            // Setup loader
+            let loaderTag = 9999
+            imageView.viewWithTag(loaderTag)?.removeFromSuperview()
+            
+            let activityIndicator = UIActivityIndicatorView(style: loaderStyle)
+            activityIndicator.tag = loaderTag
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            
+            imageView.addSubview(activityIndicator)
+            NSLayoutConstraint.activate([
+                activityIndicator.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+                activityIndicator.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
+            ])
+            activityIndicator.startAnimating()
+            
+            // --- 3. Start async image load (Kingfisher handles background work) ---
+            imageView.kf.setImage(
+                with: imageURL,
+                placeholder: nil,
+                options: [
+                    .transition(.fade(0.3)),
+                    .cacheOriginalImage,
+                    .processor(DefaultImageProcessor.default)
+                ]
+            ) { result in
+                Task { @MainActor in
+                    activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
+                    if case .failure(_) = result {
+                        imageView.image = fallbackImage
+                    }
+                }
+            }
+        }
     }
 }

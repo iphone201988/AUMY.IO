@@ -39,7 +39,7 @@ public class DTTextField: UITextField {
     
     fileprivate let paddingX:CGFloat                        = 0.0
     
-    fileprivate let paddingHeight:CGFloat                   = 10.0
+    fileprivate let paddingHeight:CGFloat                   = 0.0 //10.0
     fileprivate var borderLayer:CALayer                     = CALayer()
     public var dtLayer:CALayer                              = CALayer()
     public var floatPlaceholderColor:UIColor                = UIColor.black
@@ -232,11 +232,11 @@ public class DTTextField: UITextField {
         }
     }
     
-//    override public var attributedPlaceholder: NSAttributedString?{
-//        didSet {
-//            lblFloatPlaceholder.text = placeholderFinal
-//        }
-//    }
+    //    override public var attributedPlaceholder: NSAttributedString?{
+    //        didSet {
+    //            lblFloatPlaceholder.text = placeholderFinal
+    //        }
+    //    }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -251,13 +251,13 @@ public class DTTextField: UITextField {
     public func showError(message:String? = nil) {
         if let msg = message { errorMessage = msg }
         showErrorLabel = true
+        hideFlotingLabel(isFirstResponder)
     }
     
     public func hideError()  {
         showErrorLabel = false
     }
     
-
     fileprivate func commonInit() {
         
         dtborderStyle               = .rounded
@@ -279,20 +279,21 @@ public class DTTextField: UITextField {
         lblError.isHidden           = true
         
         addTarget(self, action: #selector(textFieldTextChanged), for: .editingChanged)
-
+        
         addSubview(lblError)
         
         layer.insertSublayer(dtLayer, at: 0)
     }
     
     fileprivate func showErrorMessage(){
-        
         lblError.text = errorMessage
         lblError.isHidden = false
         let boundWithPadding = CGSize(width: bounds.width - (paddingX * 2), height: bounds.height)
-        lblError.frame = CGRect(x: paddingX, y: 0, width: boundWithPadding.width, height: boundWithPadding.height)
+        lblError.frame = CGRect(x: paddingX,
+                                y: 0,
+                                width: boundWithPadding.width,
+                                height: boundWithPadding.height)
         lblError.sizeToFit()
-        
         invalidateIntrinsicContentSize()
     }
     
@@ -329,7 +330,7 @@ public class DTTextField: UITextField {
             if UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft{
                 newFrame.origin.x = bounds.width - paddingX - newFrame.size.width
             }
-        
+            
         }
         
         lblFloatPlaceholder.frame = newFrame
@@ -357,9 +358,9 @@ public class DTTextField: UITextField {
                            delay: 0.0,
                            options: [.beginFromCurrentState,.curveEaseOut],
                            animations: animations){ status in
-                            DispatchQueue.main.async {
-                                self.layoutIfNeeded()
-                            }
+                DispatchQueue.main.async {
+                    self.layoutIfNeeded()
+                }
             }
         }else{
             animations()
@@ -381,9 +382,9 @@ public class DTTextField: UITextField {
                            delay: 0.0,
                            options: [.beginFromCurrentState,.curveEaseOut],
                            animations: animations){ status in
-                            DispatchQueue.main.async {
-                                self.layoutIfNeeded()
-                            }
+                DispatchQueue.main.async {
+                    self.layoutIfNeeded()
+                }
             }
         }else{
             animations()
@@ -401,7 +402,7 @@ public class DTTextField: UITextField {
     }
     
     fileprivate func insetRectForBounds(rect:CGRect) -> CGRect {
-        
+
         guard let placeholderText = lblFloatPlaceholder.text,!placeholderText.isEmptyStr  else {
             return insetRectForEmptyBounds(rect: rect)
         }
@@ -438,6 +439,7 @@ public class DTTextField: UITextField {
             lblFloatPlaceholder.sizeToFit()
             return CGSize(width: textFieldIntrinsicContentSize.width,
                           height: textFieldIntrinsicContentSize.height + paddingYFloatLabel + paddingYErrorLabel + lblFloatPlaceholder.bounds.size.height + lblError.bounds.size.height + paddingHeight)
+            
         }else{
             return CGSize(width: textFieldIntrinsicContentSize.width,
                           height: textFieldIntrinsicContentSize.height + paddingYFloatLabel + lblFloatPlaceholder.bounds.size.height + paddingHeight)
@@ -493,7 +495,7 @@ public class DTTextField: UITextField {
         if showErrorLabel {
             
             var lblErrorFrame = lblError.frame
-            lblErrorFrame.origin.y = dtLayer.frame.origin.y + dtLayer.frame.size.height + paddingYErrorLabel
+            lblErrorFrame.origin.y = dtLayer.frame.origin.y + dtLayer.frame.size.height + paddingYErrorLabel + 2.5
             lblError.frame = lblErrorFrame
         }
         

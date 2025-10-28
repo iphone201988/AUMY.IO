@@ -7,7 +7,6 @@
 
 import UIKit
 import DTTextField
-import MapKit
 import CoreLocation
 import GooglePlaces
 import GoogleMaps
@@ -18,7 +17,7 @@ class HomeAddressVC: UIViewController {
     @IBOutlet weak var streetTF: DTTextField!
     @IBOutlet weak var apartmentTF: DTTextField!
     @IBOutlet weak var floorTF: DTTextField!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressLbl: InterLabel!
     @IBOutlet weak var stateCityLbl: InterLabel!
     
@@ -27,9 +26,13 @@ class HomeAddressVC: UIViewController {
     let apartmentMessage         = NSLocalizedString("Apartment is required.", comment: "")
     let floorMessage         = NSLocalizedString("Floor is required.", comment: "")
     
-    private let locationManager = CLLocationManager()
-    private var currentCoordinate: CLLocationCoordinate2D?
-    private var currentAnnotation: MKPointAnnotation?
+    fileprivate let locationManager = CLLocationManager()
+    fileprivate var mapZoomValue: Float = 15.0
+    fileprivate var userDidMoveCamera = false
+    fileprivate let geocoder = GMSGeocoder()
+    fileprivate var autoPanTimer: CADisplayLink?
+    fileprivate var panDirection: CGPoint = .zero
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,30 @@ class HomeAddressVC: UIViewController {
         setupMap()
         setupLocationManager()
     }
-
+    
+    private func setupMap() {
+        mapView.delegate = self
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
+    }
+    
+    private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func moveCameraToCurrentLocation(_ location: CLLocation) {
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                              longitude: location.coordinate.longitude,
+                                              zoom: mapZoomValue)
+        mapView.animate(to: camera)
+        placedMarker(lat: location.coordinate.latitude, long: location.coordinate.longitude)
+        reverseGeocode(lat: location.coordinate.latitude, long: location.coordinate.longitude)
+    }
+    
     func validateData() -> Bool {
         
         guard !houseNoTF.text!.isEmptyStr else {
@@ -120,79 +146,190 @@ extension HomeAddressVC {
     }
 }
 
-extension HomeAddressVC: MKMapViewDelegate {
-    
-    // MARK: - Setup Map & Location
-    private func setupMap() {
-        mapView.delegate = self
-        mapView.showsUserLocation = true
-        mapView.userTrackingMode = .none
-        
-        // Add a “current location” button
-        let locateButton = UIButton(type: .system)
-        locateButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
-        locateButton.tintColor = .systemBlue
-        locateButton.backgroundColor = UIColor.white.withAlphaComponent(0.9)
-        locateButton.layer.cornerRadius = 25
-        locateButton.frame = CGRect(x: mapView.frame.width - 70, y: mapView.frame.height - 90, width: 50, height: 50)
-        locateButton.autoresizingMask = [.flexibleLeftMargin, .flexibleTopMargin]
-        locateButton.addTarget(self, action: #selector(moveToCurrentLocation), for: .touchUpInside)
-        mapView.addSubview(locateButton)
-    }
-    
-    private func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
-    @objc private func moveToCurrentLocation() {
-        guard let coordinate = currentCoordinate else { return }
-        centerMap(on: coordinate)
-    }
-    
-    private func centerMap(on coordinate: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinate,
-                                        latitudinalMeters: 500,
-                                        longitudinalMeters: 500)
-        mapView.setRegion(region, animated: true)
-    }
-    
-    private func addMarker(at coordinate: CLLocationCoordinate2D) {
-        if let existing = currentAnnotation {
-            mapView.removeAnnotation(existing)
-        }
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "Your Location"
-        mapView.addAnnotation(annotation)
-        currentAnnotation = annotation
-    }
-}
-
 extension HomeAddressVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        currentCoordinate = location.coordinate
         CurrentLocation.latitude = location.coordinate.latitude
         CurrentLocation.longitude = location.coordinate.longitude
-        
-        centerMap(on: location.coordinate)
-        addMarker(at: location.coordinate)
-        
-        // Optional: reverse-geocode
-        CLGeocoder().reverseGeocodeLocation(location) { [weak self] placemarks, _ in
-            guard let self, let placemark = placemarks?.first else { return }
-            self.addressLbl.text = placemark.name ?? ""
-            self.stateCityLbl.text = "\(placemark.locality ?? ""), \(placemark.administrativeArea ?? "")"
+        if !userDidMoveCamera { // Only center map once
+            moveCameraToCurrentLocation(location)
+            userDidMoveCamera = true
         }
-        
-        locationManager.stopUpdatingLocation()
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        Toast.show(message: "Unable to fetch location: \(error.localizedDescription)")
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            manager.startUpdatingLocation()
+        }
+    }
+}
+
+extension HomeAddressVC: GMSMapViewDelegate {
+    
+    func placedMarker(lat: CLLocationDegrees, long: CLLocationDegrees) {
+        mapView.clear()
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        marker.icon = UIImage(named: "markers")
+        marker.isDraggable = true        // ✅ allow dragging
+        marker.map = mapView
+    }
+    
+    // User starts dragging marker
+    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
+        LogHandler.debugLog("🖐️ Marker drag started")
+        // Optional bounce animation
+        UIView.animate(withDuration: 0.2) {
+            marker.iconView?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }
+    }
+    
+    // Marker position changes while dragging
+    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
+        CurrentLocation.latitude = marker.position.latitude
+        CurrentLocation.longitude = marker.position.longitude
+        updatePanDirection(for: marker) // calculate direction but don’t move immediately
+    }
+    
+    // User finished dragging marker
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        LogHandler.debugLog("📍 Marker drag ended at \(marker.position.latitude), \(marker.position.longitude)")
+        UIView.animate(withDuration: 0.2) {
+            marker.iconView?.transform = .identity
+        }
+        
+        // Update coordinates globally
+        CurrentLocation.latitude = marker.position.latitude
+        CurrentLocation.longitude = marker.position.longitude
+        
+        stopAutoPan()
+        // 🔁 Get address for new marker position
+        reverseGeocode(lat: marker.position.latitude, long: marker.position.longitude)
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        guard let location = mapView.myLocation else { return false }
+        moveCameraToCurrentLocation(location)
+        LogHandler.debugLog("✅ My location button tapped")
+        return true
+    }
+    
+    // Optional: Also call geocode when map stops moving manually
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        LogHandler.debugLog("🗺️ Map idle at new position")
+    }
+    
+    private func reverseGeocode(lat: CLLocationDegrees, long: CLLocationDegrees) {
+        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        geocoder.reverseGeocodeCoordinate(coordinate) { [weak self] response, error in
+            guard let self = self else { return }
+            guard error == nil else {
+                LogHandler.debugLog("❌ Geocoding error: \(error?.localizedDescription ?? "")")
+                return
+            }
+            
+            if let result = response?.firstResult(), let lines = result.lines {
+                let fullAddress = lines.joined(separator: ", ")
+                let components = fullAddress.components(separatedBy: ",")
+                    .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                let placeName = components.first ?? ""
+                
+                DispatchQueue.main.async {
+                    self.addressLbl.text = fullAddress
+                    self.houseNoTF.text = placeName
+                    self.stateCityLbl.text = "\(result.subLocality ?? ""), \(result.locality ?? ""), \(result.administrativeArea ?? "")"
+                }
+                LogHandler.debugLog("📍 Address: \(fullAddress)")
+            }
+        }
+    }
+}
+
+extension HomeAddressVC {
+    
+    /// Keep marker always visible while dragging
+    func autoPanMapIfNeededO(for marker: GMSMarker) {
+        let projection = mapView.projection
+        let markerPoint = projection.point(for: marker.position)
+        let mapBounds = mapView.bounds
+        
+        let padding: CGFloat = 40 // Distance from edge before panning starts
+        var cameraUpdate: GMSCameraUpdate?
+        
+        // Move camera depending on which edge marker is near
+        if markerPoint.x < padding {
+            cameraUpdate = GMSCameraUpdate.scrollBy(x: -30, y: 0)
+        } else if markerPoint.x > mapBounds.size.width - padding {
+            cameraUpdate = GMSCameraUpdate.scrollBy(x: 30, y: 0)
+        }
+        
+        if markerPoint.y < padding {
+            cameraUpdate = GMSCameraUpdate.scrollBy(x: 0, y: -30)
+        } else if markerPoint.y > mapBounds.size.height - padding {
+            cameraUpdate = GMSCameraUpdate.scrollBy(x: 0, y: 30)
+        }
+        
+        if let update = cameraUpdate {
+            mapView.moveCamera(update)
+        }
+    }
+}
+
+extension HomeAddressVC {
+    
+    /// Determine which direction to pan based on marker’s position
+    func updatePanDirection(for marker: GMSMarker) {
+        let projection = mapView.projection
+        let markerPoint = projection.point(for: marker.position)
+        let bounds = mapView.bounds
+        let padding: CGFloat = 40
+        
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+        
+        if markerPoint.x < padding {
+            x = -1
+        } else if markerPoint.x > bounds.width - padding {
+            x = 1
+        }
+        
+        if markerPoint.y < padding {
+            y = -1
+        } else if markerPoint.y > bounds.height - padding {
+            y = 1
+        }
+        
+        panDirection = CGPoint(x: x, y: y)
+        
+        if panDirection != .zero {
+            startAutoPan()
+        } else {
+            stopAutoPan()
+        }
+    }
+    
+    /// Starts smooth continuous camera movement
+    func startAutoPan() {
+        if autoPanTimer != nil { return } // already running
+        autoPanTimer = CADisplayLink(target: self, selector: #selector(handleAutoPan))
+        autoPanTimer?.add(to: .main, forMode: .common)
+    }
+    
+    /// Stops camera movement
+    func stopAutoPan() {
+        autoPanTimer?.invalidate()
+        autoPanTimer = nil
+        panDirection = .zero
+    }
+    
+    /// Moves map slowly every frame while dragging near edge
+    @objc func handleAutoPan() {
+        guard panDirection != .zero else { return }
+        let speed: CGFloat = 2.0 // 👈 slower = smoother pan
+        let update = GMSCameraUpdate.scrollBy(x: panDirection.x * speed, y: panDirection.y * speed)
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        mapView.moveCamera(update)
+        CATransaction.commit()
     }
 }

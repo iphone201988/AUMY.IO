@@ -16,6 +16,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var topPlusView: UIView!
     @IBOutlet weak var bottomPlusView: UIView!
     @IBOutlet weak var badgeIcon: UIImageView!
+    @IBOutlet weak var nameLbl: InterLabel!
+    @IBOutlet weak var emailLbl: InterLabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerCellFromNib(cellID: SettingOptionCell.identifier)
@@ -32,6 +34,8 @@ class ProfileVC: UIViewController {
                    ["icon": "cil_badge", "option": "Badges"],
                    ["icon": "ic_outline-privacy-tip", "option": "Privacy Policy"],
                    ["icon": "solar_logout-2-broken", "option": "Log Out"]]
+    
+    fileprivate var userDetails: UserData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +59,29 @@ class ProfileVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Task { await getUser() }
+    }
+    
     @IBAction func notification(_ sender: UIButton) {
         SharedMethods.shared.pushToWithoutData(destVC: NotificationVC.self, isAnimated: true)
     }
     
     @IBAction func withdrawalDetails(_ sender: UIButton) {
         SharedMethods.shared.pushToWithoutData(destVC: EarningsDetailsVC.self, isAnimated: true)
+    }
+    
+    @IBAction func deleteAccount(_ sender: InterButton) {
+        PopupUtil.popupAlert(title: "AUMY.IO",
+                             message: "delete_account_msg".localized(),
+                             actionTitles: ["Delete", "No"],
+                             actions: [{ _, _ in
+            UserDefaults.standard.clearAllLocallySavedData()
+            let storyboard = AppStoryboards.main.storyboardInstance
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+        }])
     }
 }
 
@@ -131,5 +152,43 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         if title == "Badges" {
             SharedMethods.shared.pushToWithoutData(destVC: BadgesVC.self, isAnimated: true)
         }
+        
+        if title == "Log Out" {
+            PopupUtil.popupAlert(title: "AUMY.IO",
+                                 message: "logout_msg".localized(),
+                                 actionTitles: ["Logout", "No"],
+                                 actions: [{ _, _ in
+                UserDefaults.standard.clearAllLocallySavedData()
+                let storyboard = AppStoryboards.main.storyboardInstance
+                let rootVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                SharedMethods.shared.navigateToRootVC(rootVC: rootVC)
+            }])
+        }
+    }
+}
+
+extension ProfileVC {
+    fileprivate func getUser() async {
+        let res = await RemoteRequestManager.shared.dataTask(endpoint: .getUser,
+                                                             model: UserDetails.self,
+                                                             method: .get)
+        await MainActor.run {
+            switch res {
+            case .failure(let err):
+                Toast.show(message: err.localizedDescription)
+                
+            case .success(let details):
+                if let user = details.user {
+                    userDetails = user
+                    populateData()
+                }
+            }
+        }
+    }
+    
+    fileprivate func populateData() {
+        nameLbl.text = userDetails?.name ?? ""
+        emailLbl.text = userDetails?.email ?? ""
+        SharedMethods.shared.setImage(imageView: profilePic, url: userDetails?.profileImage ?? "")
     }
 }

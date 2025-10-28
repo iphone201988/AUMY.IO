@@ -243,5 +243,6 @@ struct Media {
     enum Keyname: String {
         case document = "document"
         case backgroundCheckCertificate = "backgroundCheckCertificate"
+        case profileImage = "profileImage"
     }
 }

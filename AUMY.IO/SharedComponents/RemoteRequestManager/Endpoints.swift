@@ -10,6 +10,7 @@ enum Endpoints: String {
     case login  = "common/login"
     case accountVerify = "common/account-verify"
     case completeOnboarding = "common/complete-onboarding"
+    case getUser = "common/get-user"
 }
 
 enum HttpMehtods: String {

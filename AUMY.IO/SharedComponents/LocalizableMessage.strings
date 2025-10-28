@@ -59,7 +59,7 @@
 //General
 "dismiss" = "Dismiss";
 "logout_msg" = "Do you want to logout?";
-"delete_account_msg" = "Are you certain that you wanted to permanently delete your account? This action will erase all of your surveys and any other information pertaining to you.";
+"delete_account_msg" = "Are you certain that you wanted to permanently delete your account? This action will erase all of your information pertaining to you.";
 "yes" = "Yes";
 "no" = "No";
 "no_further_information_available" = "No further information is available at this time";
@@ -79,7 +79,7 @@
 "no_further_information_available" = "No further information is available at this time";
 "update_interface_title" = "Update interface title";
 "in_app_purchase_product_info" = "product info is: %@ and product price is: %@";
-"delete_account_msg" = "Are you sure you want to delete your account?";
+//"delete_account_msg" = "Are you sure you want to delete your account?";
 "delete_chat_msg" = "Are you sure you want to delete this chat?";
 "delete_all_records_msg" = "Are you sure you want to delete all call logs and mood scores?";
 "delete_call_logs_msg" = "Are you sure you want to delete all call logs";

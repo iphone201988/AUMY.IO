@@ -81,26 +81,49 @@ class SignupVC: UIViewController {
             selectedPhoneCode = country.phoneCode
         }
     }
-    
+
     func validateData() -> Bool {
-        
+        // MARK: - 1️⃣ Name
         guard !nameTF.text!.isEmptyStr else {
             nameTF.showError(message: nameMessage)
             return false
         }
         
+        guard nameTF.text?.count ?? 0 >= 2 else {
+            nameTF.showError(message: "Name should be at least 2 characters.")
+            return false
+        }
+        
+        // MARK: - 2️⃣ Email
         guard !emailTF.text!.isEmptyStr else {
             emailTF.showError(message: emailMessage)
             return false
         }
         
+        guard SharedMethods.shared.isValidEmail(emailTF.text ?? "") else {
+            emailTF.showError(message: "Please enter a valid email address.")
+            return false
+        }
+        
+        // MARK: - 3️⃣ Phone
         guard !phoneNoTF.text!.isEmptyStr else {
             phoneNoTF.showError(message: phoneMessage)
             return false
         }
         
+        guard SharedMethods.shared.isValidPhone(phoneNoTF.text ?? "") else {
+            phoneNoTF.showError(message: "Please enter a valid phone number.")
+            return false
+        }
+        
+        // MARK: - 4️⃣ Password
         guard !passwordTF.text!.isEmptyStr else {
             passwordTF.showError(message: passwordMessage)
+            return false
+        }
+        
+        guard passwordTF.text?.count ?? 0 >= 6 else {
+            passwordTF.showError(message: "Password must be at least 6 characters long.")
             return false
         }
         
